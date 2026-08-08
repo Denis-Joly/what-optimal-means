@@ -1,0 +1,58 @@
+
+The 1947 problem, all 77 commodities
+------------------------------------
+commodities offered   77
+solved in             1.1 ms
+daily cost            $0.1087
+annual cost           $39.66
+
+commodity                         unit    $/year   units/year
+Navy Beans, Dried                1 lb.     22.28        377.5
+Wheat Flour (Enriched)          10 lb.     10.77         29.9
+Cabbage                          1 lb.      4.09        110.6
+Spinach                          1 lb.      1.83         22.6
+Liver (Beef)                     1 lb.      0.69          2.6
+
+the certificate: shadow price of each nutritional minimum
+--------------------------------------------------------
+nutrient                    $/day per unit   binding
+calcium_g                         0.031738       yes
+riboflavin_mg                     0.016358       yes
+calories_kcal_thousands           0.008765       yes
+vitamin_a_kiu                     0.000400       yes
+ascorbic_acid_mg                  0.000144       yes
+protein_g                        -0.000000        no
+iron_mg                          -0.000000        no
+thiamine_mg                      -0.000000        no
+niacin_mg                        -0.000000        no
+
+what each nutrient costs alone, and what it costs in the diet
+------------------------------------------------------------------------------
+nutrient                  cheapest single source   $/unit alone   in diet saving
+calories_kcal_thousands   Wheat Flour (Enriched)        0.02237   0.00877   2.6x
+protein_g                 Navy Beans, Dried             0.00059      free       
+calcium_g                 Cheese (Cheddar)              0.06098   0.03174   1.9x
+iron_mg                   Navy Beans, Dried             0.00126      free       
+vitamin_a_kiu             Spinach                       0.00109   0.00040   2.7x
+thiamine_mg               Wheat Flour (Enriched)        0.01805      free       
+riboflavin_mg             Liver (Beef)                  0.01969   0.01636   1.2x
+niacin_mg                 Peanut Butter                 0.00212      free       
+ascorbic_acid_mg          Cabbage                       0.00019   0.00014   1.3x
+
+Riboflavin is the one with nowhere to hide, which is why beef liver is in
+the basket at all and why riboflavin is the largest single line in the bill.
+
+primal objective      $0.108662 per day
+dual objective        $0.108662 per day
+duality gap           1.39e-17
+
+Stigler, by hand, 1945:      $39.93 per year
+Laderman, by simplex, 1947:  $39.69 per year
+this run:                    $39.66 per year
+The residual gap against Dantzig's reported $39.69 is rounding in the
+transcribed nutrient table and the 365-day convention, not a different answer.
+
+Same problem with beef liver struck from the list: $39.80 per year (+0.35%)
+
+wrote /Users/genericlcsb/projects/what-optimal-means/post-01-the-last-place-optimal-means-anything/out/stigler_solution.csv
+wrote /Users/genericlcsb/projects/what-optimal-means/post-01-the-last-place-optimal-means-anything/out/stigler_duals.csv

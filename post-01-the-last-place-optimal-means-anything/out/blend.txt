@@ -1,0 +1,25 @@
+optimal blend
+-------------
+  soybean      60.00 lb
+  corn         40.00 lb
+  cost      $  37.20
+
+constraints at the optimum
+--------------------------
+name           slack   shadow price
+batch          0.000         0.0977
+protein        0.000         0.9143
+fibre          2.600        -0.0000
+silo          20.000        -0.0000
+
+every corner of the feasible polygon
+------------------------------------
+   soybean      corn      cost
+     55.91     60.00     38.75
+     60.00     40.00     37.20  <- optimum
+     96.67     60.00     59.13
+    100.00      0.00     50.00
+    116.67      0.00     58.33
+
+The cheapest corner is the cheapest point. That is the theorem the
+simplex method exploits: it never looks anywhere else.

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 250" width="100%" role="img" aria-label="A saddle point, in two slices">
+<title>A saddle point, in two slices</title><desc>Two small plots of the surface z = x squared minus y squared through the same point. Along one direction the point is the bottom of a curve; along the other it is the top.</desc>
+<style>text{font:11px/1.2 "IBM Plex Mono",ui-monospace,monospace;fill:var(--ink, #0a0a0a)} .lbl{font-size:10px;fill:var(--muted, #6b6b6b)} .tag{font-size:10px;fill:var(--d4, #2b2b28)}</style>
+<text x="60" y="38">slice along x:  z = x&#178;</text>
+<line x1="60" y1="132" x2="345" y2="132" stroke="var(--rule, #dcdcda)" stroke-width=".5"/>
+<polyline points="60.0,97.0 64.8,101.6 69.5,106.0 74.2,110.3 79.0,114.4 83.8,118.4 88.5,122.2 93.2,125.9 98.0,129.4 102.8,132.7 107.5,135.9 112.2,138.9 117.0,141.8 121.8,144.5 126.5,147.1 131.2,149.5 136.0,151.8 140.8,153.9 145.5,155.8 150.2,157.6 155.0,159.2 159.8,160.7 164.5,162.0 169.2,163.2 174.0,164.2 178.8,165.1 183.5,165.8 188.2,166.3 193.0,166.7 197.8,166.9 202.5,167.0 207.3,166.9 212.0,166.7 216.8,166.3 221.5,165.8 226.2,165.1 231.0,164.2 235.8,163.2 240.5,162.0 245.2,160.7 250.0,159.2 254.8,157.6 259.5,155.8 264.2,153.9 269.0,151.8 273.8,149.5 278.5,147.1 283.2,144.5 288.0,141.8 292.8,138.9 297.5,135.9 302.2,132.7 307.0,129.4 311.8,125.9 316.5,122.2 321.2,118.4 326.0,114.4 330.8,110.3 335.5,106.0 340.2,101.6 345.0,97.0" fill="none" stroke="var(--d4, #2b2b28)" stroke-width="1.6"/>
+<circle cx="202.5" cy="167.0" r="4.5" fill="var(--signal, #d6001c)"/>
+<line x1="156.5" y1="167.0" x2="248.5" y2="167.0" stroke="var(--signal, #d6001c)" stroke-width="1" stroke-dasharray="3 3"/>
+<text class="tag" x="202.5" y="191.0" text-anchor="middle">a minimum</text>
+<text x="415" y="38">slice along y:  z = &#8722;y&#178;</text>
+<line x1="415" y1="132" x2="700" y2="132" stroke="var(--rule, #dcdcda)" stroke-width=".5"/>
+<polyline points="415.0,167.0 419.8,162.4 424.5,158.0 429.2,153.7 434.0,149.6 438.8,145.6 443.5,141.8 448.2,138.1 453.0,134.6 457.8,131.3 462.5,128.1 467.2,125.1 472.0,122.2 476.8,119.5 481.5,116.9 486.2,114.5 491.0,112.2 495.8,110.1 500.5,108.2 505.2,106.4 510.0,104.8 514.8,103.3 519.5,102.0 524.2,100.8 529.0,99.8 533.8,98.9 538.5,98.2 543.2,97.7 548.0,97.3 552.8,97.1 557.5,97.0 562.2,97.1 567.0,97.3 571.8,97.7 576.5,98.2 581.2,98.9 586.0,99.8 590.8,100.8 595.5,102.0 600.2,103.3 605.0,104.8 609.8,106.4 614.5,108.2 619.2,110.1 624.0,112.2 628.8,114.5 633.5,116.9 638.2,119.5 643.0,122.2 647.8,125.1 652.5,128.1 657.2,131.3 662.0,134.6 666.8,138.1 671.5,141.8 676.2,145.6 681.0,149.6 685.8,153.7 690.5,158.0 695.2,162.4 700.0,167.0" fill="none" stroke="var(--d4, #2b2b28)" stroke-width="1.6"/>
+<circle cx="557.5" cy="97.0" r="4.5" fill="var(--signal, #d6001c)"/>
+<line x1="511.5" y1="97.0" x2="603.5" y2="97.0" stroke="var(--signal, #d6001c)" stroke-width="1" stroke-dasharray="3 3"/>
+<text class="tag" x="557.5" y="83.0" text-anchor="middle">a maximum</text>
+<text class="lbl" x="380" y="236" text-anchor="middle">the same point, and a flat tangent in both cases, which is why a first-order condition cannot separate them</text>
+</svg>

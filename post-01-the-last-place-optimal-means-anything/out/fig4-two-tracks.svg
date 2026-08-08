@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 236" width="100%" role="img" aria-label="Two origins, no contact">
+<title>Two origins, no contact</title><desc>A timeline with two parallel tracks, Leningrad from 1938 and Washington from 1946, converging on the same mathematics and meeting the Nobel committee in 1975 without ever meeting each other.</desc>
+<style>text{font:11px/1.2 "IBM Plex Mono",ui-monospace,monospace;fill:var(--ink, #0a0a0a)} .lbl{font-size:10px;fill:var(--muted, #6b6b6b)} .tag{font-size:10px;fill:var(--d4, #2b2b28)}</style>
+<line x1="96" y1="76" x2="734" y2="76" stroke="var(--d3, #5c5c56)" stroke-width="1"/>
+<text class="tag" x="86" y="80" text-anchor="end">Leningrad</text>
+<line x1="96" y1="168" x2="734" y2="168" stroke="var(--d3, #5c5c56)" stroke-width="1"/>
+<text class="tag" x="86" y="172" text-anchor="end">Washington</text>
+<circle cx="120.5" cy="76" r="4" fill="var(--paper, #ffffff)" stroke="var(--d4, #2b2b28)" stroke-width="1.2"/>
+<text class="tag" x="126.5" y="62" text-anchor="start">1938&#8211;39</text>
+<text class="lbl" x="126.5" y="48" text-anchor="start">the Plywood Trust asks, and the booklet follows</text>
+<circle cx="717.6" cy="76" r="4" fill="var(--paper, #ffffff)" stroke="var(--d4, #2b2b28)" stroke-width="1.2"/>
+<text class="tag" x="711.6" y="62" text-anchor="end">1975</text>
+<text class="lbl" x="711.6" y="48" text-anchor="end">Nobel, shared with Koopmans</text>
+<circle cx="251.4" cy="168" r="4" fill="var(--paper, #ffffff)" stroke="var(--d4, #2b2b28)" stroke-width="1.2"/>
+<text class="tag" x="257.4" y="188" text-anchor="start">1946&#8211;47</text>
+<text class="lbl" x="257.4" y="202" text-anchor="start">the Air Force asks, then von Neumann answers</text>
+<circle cx="717.6" cy="168" r="4" fill="var(--paper, #ffffff)" stroke="var(--d4, #2b2b28)" stroke-width="1.2"/>
+<text class="tag" x="711.6" y="188" text-anchor="end">1975</text>
+<text class="lbl" x="711.6" y="202" text-anchor="end">National Medal of Science</text>
+<text x="96" y="26">The same mathematics, invented twice, eight years and one iron curtain apart.</text>
+<text class="lbl" x="734" y="226" text-anchor="end">no rung between the two rails</text>
+</svg>
