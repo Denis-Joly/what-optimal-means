@@ -38,17 +38,17 @@ def head(w, h, title, desc):
     return (f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {w} {h}" '
             f'width="100%" role="img" aria-label="{title}">\n'
             f'<title>{title}</title><desc>{desc}</desc>\n'
-            f'<style>text{{font:11px/1.2 "IBM Plex Mono",ui-monospace,monospace;'
-            f'fill:{c("--ink")}}} .lbl{{font-size:10px;fill:{c("--muted")}}} '
-            f'.tag{{font-size:10px;fill:{c("--d4")}}}</style>\n')
+            f'<style>text{{font:13px/1.25 "IBM Plex Mono",ui-monospace,monospace;'
+            f'fill:{c("--ink")}}} .lbl{{font-size:11.5px;fill:{c("--muted")}}} '
+            f'.tag{{font-size:12px;fill:{c("--d4")}}}</style>\n')
 
 
 # ------------------------------------------------------------------ figure 1
 def fig_polytope(out=OUT / "fig1-blend-polytope.svg"):
     import math
 
-    W, H = 760, 360
-    PAD = dict(l=52, r=46, t=26, b=40)
+    W, H = 748, 380
+    PAD = dict(l=58, r=52, t=28, b=46)
     XMAX, YMAX = 125.0, 76.0
 
     def px(v):
@@ -69,18 +69,21 @@ def fig_polytope(out=OUT / "fig1-blend-polytope.svg"):
              "inside the shaded region. The cheapest blend sits on a corner.")
 
     # grid
+    # grid lines every 20, but a tick label only every 40: the reader needs a
+    # scale, not a ruler
     for v in range(0, int(YMAX) + 1, 20):
         s += (f'<line x1="{PAD["l"]}" x2="{W-PAD["r"]}" y1="{py(v):.1f}" '
-              f'y2="{py(v):.1f}" stroke="{c("--rule")}" stroke-width=".5"/>\n'
-              f'<text class="lbl" x="{PAD["l"]-6}" y="{py(v)+3:.1f}" '
-              f'text-anchor="end">{v}</text>\n')
-    for v in range(0, int(XMAX) + 1, 20):
-        s += (f'<text class="lbl" x="{px(v):.1f}" y="{H-PAD["b"]+15}" '
+              f'y2="{py(v):.1f}" stroke="{c("--rule")}" stroke-width=".5"/>\n')
+        if v % 40 == 0:
+            s += (f'<text class="lbl" x="{PAD["l"]-8}" y="{py(v)+4:.1f}" '
+                  f'text-anchor="end">{v}</text>\n')
+    for v in range(0, int(XMAX) + 1, 40):
+        s += (f'<text class="lbl" x="{px(v):.1f}" y="{H-PAD["b"]+18}" '
               f'text-anchor="middle">{v}</text>\n')
 
     # feasible region
     pts = " ".join(f"{px(x):.1f},{py(y):.1f}" for x, y in verts)
-    s += f'<polygon points="{pts}" fill="{c("--d1")}" opacity=".28"/>\n'
+    s += f'<polygon points="{pts}" fill="{c("--d1")}" opacity=".38"/>\n'
 
     def clip(a, b, rhs):
         """The segment of a*x + b*y = rhs inside the axes box."""
@@ -105,52 +108,52 @@ def fig_polytope(out=OUT / "fig1-blend-polytope.svg"):
         lx, ly = x1 + t * (x2 - x1), y1 + t * (y2 - y1)
         dx = 8 if anchor == "start" else -8
         return (f'<line x1="{px(x1):.1f}" y1="{py(y1):.1f}" x2="{px(x2):.1f}" '
-                f'y2="{py(y2):.1f}" stroke="{c("--d3")}" stroke-width="1"{d}/>\n'
+                f'y2="{py(y2):.1f}" stroke="{c("--d3")}" stroke-width="1.4"{d}/>\n'
                 f'<text class="tag" x="{px(lx)+dx:.1f}" y="{py(ly)-5:.1f}" '
                 f'text-anchor="{anchor}">{label}</text>\n')
 
-    s += seg(0, 1, blend.CORN_MAX, "silo &#8804; 60 lb corn", 0.06)
-    s += seg(1, 1, blend.BATCH_MIN, "batch &#8805; 100 lb", 0.62, anchor="end")
+    s += seg(0, 1, blend.CORN_MAX, "silo", 0.10)
+    s += seg(1, 1, blend.BATCH_MIN, "batch", 0.86, anchor="end")
     s += seg(blend.PROTEIN["soybean"], blend.PROTEIN["corn"],
-             blend.PROTEIN_MIN, "protein &#8805; 30 lb", 0.72, anchor="end")
+             blend.PROTEIN_MIN, "protein", 0.55, anchor="end")
     s += seg(blend.FIBRE["soybean"], blend.FIBRE["corn"],
-             blend.FIBRE_MAX, "fibre &#8804; 7 lb", 0.55)
+             blend.FIBRE_MAX, "fibre", 0.20)
 
     # iso-cost line through the optimum
     _, sol = blend.solve()
     ox, oy = sol["soybean"], sol["corn"]
     cost = blend.COST["soybean"] * ox + blend.COST["corn"] * oy
     s += seg(blend.COST["soybean"], blend.COST["corn"], cost,
-             f"every blend on this line costs ${cost:.2f}", 0.56,
+             f"same price all along here", 0.78,
              dash=True, anchor="end")
 
-    # corners, cost labels pushed outward from the centroid
+    costs = sorted(blend.COST["soybean"] * a + blend.COST["corn"] * b
+                   for a, b in verts)
+    runner_up = costs[1]
+
     for x, y in verts:
         cc = blend.COST["soybean"] * x + blend.COST["corn"] * y
         best = abs(cc - cost) < 1e-6
         s += (f'<circle cx="{px(x):.1f}" cy="{py(y):.1f}" r="{4.5 if best else 3}" '
               f'fill="{c("--signal") if best else c("--paper")}" '
-              f'stroke="{c("--d4")}" stroke-width="1"/>\n')
-        if not best:
-            # offset in pixel space, straight out from the centroid
+              f'stroke="{c("--d4")}" stroke-width="1.5"/>\n')
+        if not best and abs(cc - runner_up) < 1e-6:
+            # the second-cheapest corner, and only that one: it is what makes
+            # "the cheapest corner" a comparison rather than an assertion
             ux, uy = px(x) - px(cx), py(y) - py(cy)
             n = math.hypot(ux, uy) or 1
-            if y < 1e-6:          # on the x axis: label above, not under the ticks
-                lx, ly = px(x) + (22 if ux > 0 else -22), py(y) - 11
-            else:
-                lx = min(max(px(x) + 28 * ux / n, PAD["l"] + 18), W - 22)
-                ly = py(y) + 26 * uy / n + 3
-            s += (f'<text class="lbl" x="{lx:.1f}" y="{ly:.1f}" '
-                  f'text-anchor="middle">${cc:.2f}</text>\n')
-    s += (f'<text x="{px(ox)+11:.1f}" y="{py(oy)+4:.1f}" '
-          f'fill="{c("--signal")}" style="font-size:11px">'
-          f'{ox:.0f} lb soybean, {oy:.0f} lb corn &#8212; ${cost:.2f}</text>\n')
+            s += (f'<text class="lbl" x="{px(x) + 32 * ux / n:.1f}" '
+                  f'y="{py(y) + 28 * uy / n + 4:.1f}" text-anchor="middle">'
+                  f'next best, ${cc:.2f}</text>\n')
+    s += (f'<text x="{px(ox)+13:.1f}" y="{py(oy)-10:.1f}" '
+          f'fill="{c("--signal")}" style="font-size:13px">'
+          f'{ox:.0f} soybean + {oy:.0f} corn = ${cost:.2f}</text>\n')
 
     # axes
     s += (f'<line x1="{PAD["l"]}" y1="{py(0):.1f}" x2="{W-PAD["r"]}" '
-          f'y2="{py(0):.1f}" stroke="{c("--d4")}" stroke-width="1"/>\n'
+          f'y2="{py(0):.1f}" stroke="{c("--d4")}" stroke-width="1.5"/>\n'
           f'<line x1="{PAD["l"]}" y1="{PAD["t"]}" x2="{PAD["l"]}" '
-          f'y2="{py(0):.1f}" stroke="{c("--d4")}" stroke-width="1"/>\n')
+          f'y2="{py(0):.1f}" stroke="{c("--d4")}" stroke-width="1.5"/>\n')
     s += (f'<text class="lbl" x="{(PAD["l"]+W-PAD["r"])/2:.0f}" y="{H-4}" '
           f'text-anchor="middle">soybean meal, lb</text>\n'
           f'<text class="lbl" x="14" y="{(PAD["t"]+py(0))/2:.0f}" '
@@ -167,7 +170,7 @@ def fig_certificate(out=OUT / "fig2-what-the-diet-pays-for.svg"):
     of the daily cost into what each nutritional requirement is responsible
     for. Shadow price times requirement, summed over the nine constraints,
     equals the cost of the diet exactly. That identity is the proof."""
-    W, H = 760, 172
+    W, H = 748, 200
     PAD = dict(l=20, r=52, t=46, b=56)
 
     allowances = dict(calories_kcal_thousands=3.0, protein_g=70.0,
@@ -200,12 +203,17 @@ def fig_certificate(out=OUT / "fig2-what-the-diet-pays-for.svg"):
     y0, bh = PAD["t"], H - PAD["t"] - PAD["b"]
     fills = [c("--d4"), c("--d3"), c("--d2"), c("--d1"), c("--rule")]
     x = PAD["l"]
+    below = [-1e9]          # right edge of the last label placed under the bar
     for i, (name, v) in enumerate(share):
         w = v / total * bw
         s += (f'<rect x="{x:.1f}" y="{y0}" width="{w:.1f}" height="{bh}" '
               f'fill="{fills[i % len(fills)]}" stroke="{c("--paper")}" '
               f'stroke-width="1"/>\n')
-        if w > 46:
+        # does the label actually fit inside its slice? Plex Mono at 13px is
+        # about 7.8px per character, so measure instead of guessing a threshold
+        # (the old fixed 46 was calibrated for 11px type and clipped "vitamin C"
+        # the moment the figures were enlarged)
+        if w > len(name) * 7.8 + 12:
             s += (f'<text x="{x + w/2:.1f}" y="{y0 + bh/2 + 4:.0f}" '
                   f'text-anchor="middle" '
                   f'fill="{c("--paper") if i < 2 else c("--ink")}">'
@@ -213,9 +221,19 @@ def fig_certificate(out=OUT / "fig2-what-the-diet-pays-for.svg"):
             s += (f'<text class="lbl" x="{x + w/2:.1f}" y="{y0 - 8:.0f}" '
                   f'text-anchor="middle">{v*100:.2f}&#162;</text>\n')
         else:
-            s += (f'<text class="lbl" x="{x + w/2:.1f}" y="{y0 + bh + 14:.0f}" '
+            # too narrow: label goes under the bar, with a hairline pointing at
+            # its slice. Two of these sit side by side, so drop to a second row
+            # when the previous one would be overlapped.
+            half = len(name) * 3.9 + 4
+            cx_lbl = x + w / 2
+            row = 1 if cx_lbl - half > below[0] else 2
+            below[0] = max(below[0], cx_lbl + half) if row == 1 else below[0]
+            ly = y0 + bh + (16 if row == 1 else 31)
+            s += (f'<line x1="{cx_lbl:.1f}" y1="{y0 + bh}" x2="{cx_lbl:.1f}" '
+                  f'y2="{ly - 9:.0f}" stroke="{c("--rule")}" stroke-width="1"/>\n'
+                  f'<text class="lbl" x="{cx_lbl:.1f}" y="{ly:.0f}" '
                   f'text-anchor="middle">{name}</text>\n'
-                  f'<text class="lbl" x="{x + w/2:.1f}" y="{y0 - 8:.0f}" '
+                  f'<text class="lbl" x="{cx_lbl:.1f}" y="{y0 - 8:.0f}" '
                   f'text-anchor="middle">{v*100:.2f}&#162;</text>\n')
         x += w
 
@@ -234,7 +252,7 @@ def fig_saddle(out=OUT / "fig3-saddle.svg"):
     point is a minimum along one direction and a maximum along another, and
     the gradient is zero either way. A first-order condition cannot tell the
     two panels apart."""
-    W, H = 760, 250
+    W, H = 748, 262
     s = head(W, H,
              "A saddle point, in two slices",
              "Two small plots of the surface z = x squared minus y squared "
@@ -276,7 +294,7 @@ def fig_saddle(out=OUT / "fig3-saddle.svg"):
 # ------------------------------------------------------------------ figure 4
 def fig_two_tracks(out=OUT / "fig4-two-tracks.svg"):
     """Two origin stories on parallel rails, with no rung between them."""
-    W, H = 760, 236
+    W, H = 748, 248
     L, R = 96, W - 26
     Y1, Y2 = 76, 168
 
