@@ -1,0 +1,365 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Post 02 visualisations</title><link rel="stylesheet" href="visuals.css"></head>
+<body class="viz-demo-page"><main><h1>Rows, Columns, and What They Cost — figures</h1>
+<figure><div class="viz-shell viz-netlib" data-viz="netlib" aria-labelledby="netlib-viz-heading">
+  <header class="viz-heading">
+    <div class="viz-kicker">Netlib · 98 linear programs</div>
+    <h3 id="netlib-viz-heading">Stigler looks extreme by percentage—not by relationships per choice</h3>
+    <p>Switch the denominator and watch the same models tell a different story. The objective row is included on both sides.</p>
+  </header>
+  <div class="viz-fallback"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 748 510" width="100%" role="img" aria-labelledby="fig1-static-title fig1-static-desc">
+<title id="fig1-static-title">Stigler looks extreme by percentage, not by relationships per choice</title>
+<desc id="fig1-static-desc">Two direct comparisons with 98 Netlib linear programs. Stigler is 84.0 percent dense versus a Netlib median of 0.97 percent. It has 8.4 nonzeros per column versus a Netlib median of 4.8; 21 Netlib models have more.</desc>
+<style>
+text{font-family:"Plex Mono",ui-monospace,monospace;fill:#0a0a0a;font-size:12px}
+.headline{font-family:"Archivo",Helvetica,Arial,sans-serif;font-size:24px;font-weight:700;letter-spacing:-.5px}
+.subtitle,.source{fill:#6b6b6b;font-size:11px}
+.section{font-family:"Archivo",Helvetica,Arial,sans-serif;font-size:16px;font-weight:700}
+.value{font-size:18px;font-weight:500}
+.signal{fill:#d6001c}
+.muted{fill:#6b6b6b}
+.paper{fill:#fff}
+.panel{fill:#f2f2f0}
+.rule{stroke:#dcdcda}
+</style>
+<rect class="paper" width="748" height="510"/>
+<text class="headline" x="24" y="36">Stigler looks extreme by percentage—</text>
+<text class="headline" x="24" y="64">not by relationships per choice</text>
+<text class="subtitle" x="24" y="87">Compared with 98 Netlib LPs · objective row included on both sides</text>
+<text class="section" x="24" y="132">Percentage of the matrix filled</text>
+<line class="rule" x1="54" y1="171" x2="708" y2="171" stroke-width="2"/>
+<line class="rule" x1="54.0" y1="164" x2="54.0" y2="178"/>
+<text class="subtitle" x="54.0" y="195" text-anchor="middle">0%</text>
+<line class="rule" x1="217.5" y1="164" x2="217.5" y2="178"/>
+<text class="subtitle" x="217.5" y="195" text-anchor="middle">25%</text>
+<line class="rule" x1="381.0" y1="164" x2="381.0" y2="178"/>
+<text class="subtitle" x="381.0" y="195" text-anchor="middle">50%</text>
+<line class="rule" x1="544.5" y1="164" x2="544.5" y2="178"/>
+<text class="subtitle" x="544.5" y="195" text-anchor="middle">75%</text>
+<line class="rule" x1="708.0" y1="164" x2="708.0" y2="178"/>
+<text class="subtitle" x="708.0" y="195" text-anchor="middle">100%</text>
+<circle cx="60.4" cy="171" r="7" fill="#5c5c56"/>
+<text class="muted" x="60.4" y="151">Netlib median · 0.97%</text>
+<circle cx="603.5" cy="171" r="8" fill="#d6001c"/>
+<text class="signal value" x="603.5" y="151" text-anchor="middle">Stigler · 84.0%</text>
+<text class="section" x="24" y="252">Rows touched by one decision column</text>
+<text class="subtitle" x="24" y="273">Each dot is one Netlib model</text>
+<line class="rule" x1="54.0" y1="306" x2="54.0" y2="370"/>
+<text class="subtitle" x="54.0" y="389" text-anchor="middle">0</text>
+<line class="rule" x1="163.0" y1="306" x2="163.0" y2="370"/>
+<text class="subtitle" x="163.0" y="389" text-anchor="middle">5</text>
+<line class="rule" x1="272.0" y1="306" x2="272.0" y2="370"/>
+<text class="subtitle" x="272.0" y="389" text-anchor="middle">10</text>
+<line class="rule" x1="490.0" y1="306" x2="490.0" y2="370"/>
+<text class="subtitle" x="490.0" y="389" text-anchor="middle">20</text>
+<line class="rule" x1="708.0" y1="306" x2="708.0" y2="370"/>
+<text class="subtitle" x="708.0" y="389" text-anchor="middle">30</text>
+<rect x="141.9" y="310" width="74.4" height="60" fill="#b4b4ae" opacity=".45"/>
+<circle cx="208.4" cy="326" r="2.4" fill="#5c5c56" opacity=".65"><title>25FV47 · 7.1 rows per decision</title></circle>
+<circle cx="118.7" cy="343" r="2.4" fill="#5c5c56" opacity=".65"><title>80BAU3B · 3.0 rows per decision</title></circle>
+<circle cx="158.5" cy="360" r="2.4" fill="#5c5c56" opacity=".65"><title>ADLITTLE · 4.8 rows per decision</title></circle>
+<circle cx="114.0" cy="340" r="2.4" fill="#5c5c56" opacity=".65"><title>AFIRO · 2.8 rows per decision</title></circle>
+<circle cx="393.8" cy="357" r="2.4" fill="#5c5c56" opacity=".65"><title>AGG · 15.6 rows per decision</title></circle>
+<circle cx="379.9" cy="337" r="2.4" fill="#5c5c56" opacity=".65"><title>AGG2 · 15.0 rows per decision</title></circle>
+<circle cx="381.1" cy="354" r="2.4" fill="#5c5c56" opacity=".65"><title>AGG3 · 15.0 rows per decision</title></circle>
+<circle cx="176.8" cy="334" r="2.4" fill="#5c5c56" opacity=".65"><title>BANDM · 5.6 rows per decision</title></circle>
+<circle cx="343.2" cy="351" r="2.4" fill="#5c5c56" opacity=".65"><title>BEACONFD · 13.3 rows per decision</title></circle>
+<circle cx="190.8" cy="331" r="2.4" fill="#5c5c56" opacity=".65"><title>BLEND · 6.3 rows per decision</title></circle>
+<circle cx="167.7" cy="348" r="2.4" fill="#5c5c56" opacity=".65"><title>BNL1 · 5.2 rows per decision</title></circle>
+<circle cx="154.7" cy="328" r="2.4" fill="#5c5c56" opacity=".65"><title>BNL2 · 4.6 rows per decision</title></circle>
+<circle cx="273.4" cy="345" r="2.4" fill="#5c5c56" opacity=".65"><title>BOEING1 · 10.1 rows per decision</title></circle>
+<circle cx="258.1" cy="362" r="2.4" fill="#5c5c56" opacity=".65"><title>BOEING2 · 9.4 rows per decision</title></circle>
+<circle cx="159.5" cy="342" r="2.4" fill="#5c5c56" opacity=".65"><title>BORE3D · 4.8 rows per decision</title></circle>
+<circle cx="242.2" cy="359" r="2.4" fill="#5c5c56" opacity=".65"><title>BRANDY · 8.6 rows per decision</title></circle>
+<circle cx="164.3" cy="339" r="2.4" fill="#5c5c56" opacity=".65"><title>CAPRI · 5.1 rows per decision</title></circle>
+<circle cx="216.7" cy="356" r="2.4" fill="#5c5c56" opacity=".65"><title>CYCLE · 7.5 rows per decision</title></circle>
+<circle cx="141.7" cy="336" r="2.4" fill="#5c5c56" opacity=".65"><title>CZPROB · 4.0 rows per decision</title></circle>
+<circle cx="204.5" cy="353" r="2.4" fill="#5c5c56" opacity=".65"><title>D2Q06C · 6.9 rows per decision</title></circle>
+<circle cx="208.7" cy="333" r="2.4" fill="#5c5c56" opacity=".65"><title>D6CUBE · 7.1 rows per decision</title></circle>
+<circle cx="235.6" cy="350" r="2.4" fill="#5c5c56" opacity=".65"><title>DEGEN2 · 8.3 rows per decision</title></circle>
+<circle cx="368.5" cy="330" r="2.4" fill="#5c5c56" opacity=".65"><title>DEGEN3 · 14.4 rows per decision</title></circle>
+<circle cx="128.6" cy="347" r="2.4" fill="#5c5c56" opacity=".65"><title>DFL001 · 3.4 rows per decision</title></circle>
+<circle cx="267.9" cy="327" r="2.4" fill="#5c5c56" opacity=".65"><title>E226 · 9.8 rows per decision</title></circle>
+<circle cx="132.9" cy="344" r="2.4" fill="#5c5c56" opacity=".65"><title>ETAMACRO · 3.6 rows per decision</title></circle>
+<circle cx="213.2" cy="361" r="2.4" fill="#5c5c56" opacity=".65"><title>FFFFF800 · 7.3 rows per decision</title></circle>
+<circle cx="150.4" cy="341" r="2.4" fill="#5c5c56" opacity=".65"><title>FINNIS · 4.4 rows per decision</title></circle>
+<circle cx="360.6" cy="358" r="2.4" fill="#5c5c56" opacity=".65"><title>FIT1D · 14.1 rows per decision</title></circle>
+<circle cx="195.6" cy="338" r="2.4" fill="#5c5c56" opacity=".65"><title>FIT1P · 6.5 rows per decision</title></circle>
+<circle cx="340.6" cy="355" r="2.4" fill="#5c5c56" opacity=".65"><title>FIT2D · 13.1 rows per decision</title></circle>
+<circle cx="152.0" cy="335" r="2.4" fill="#5c5c56" opacity=".65"><title>FIT2P · 4.5 rows per decision</title></circle>
+<circle cx="308.6" cy="352" r="2.4" fill="#5c5c56" opacity=".65"><title>FORPLAN · 11.7 rows per decision</title></circle>
+<circle cx="145.1" cy="332" r="2.4" fill="#5c5c56" opacity=".65"><title>GANGES · 4.2 rows per decision</title></circle>
+<circle cx="123.2" cy="349" r="2.4" fill="#5c5c56" opacity=".65"><title>GFRD-PNC · 3.2 rows per decision</title></circle>
+<circle cx="181.0" cy="329" r="2.4" fill="#5c5c56" opacity=".65"><title>GREENBEA · 5.8 rows per decision</title></circle>
+<circle cx="181.0" cy="346" r="2.4" fill="#5c5c56" opacity=".65"><title>GREENBEB · 5.8 rows per decision</title></circle>
+<circle cx="245.5" cy="326" r="2.4" fill="#5c5c56" opacity=".65"><title>GROW15 · 8.8 rows per decision</title></circle>
+<circle cx="245.7" cy="343" r="2.4" fill="#5c5c56" opacity=".65"><title>GROW22 · 8.8 rows per decision</title></circle>
+<circle cx="244.7" cy="360" r="2.4" fill="#5c5c56" opacity=".65"><title>GROW7 · 8.7 rows per decision</title></circle>
+<circle cx="416.0" cy="340" r="2.4" fill="#5c5c56" opacity=".65"><title>ISRAEL · 16.6 rows per decision</title></circle>
+<circle cx="208.7" cy="357" r="2.4" fill="#5c5c56" opacity=".65"><title>KB2 · 7.1 rows per decision</title></circle>
+<circle cx="130.9" cy="337" r="2.4" fill="#5c5c56" opacity=".65"><title>LOTFI · 3.5 rows per decision</title></circle>
+<circle cx="205.2" cy="354" r="2.4" fill="#5c5c56" opacity=".65"><title>MAROS · 6.9 rows per decision</title></circle>
+<circle cx="404.2" cy="334" r="2.4" fill="#5c5c56" opacity=".65"><title>MAROS-R7 · 16.1 rows per decision</title></circle>
+<circle cx="110.0" cy="351" r="2.4" fill="#5c5c56" opacity=".65"><title>MODSZK1 · 2.6 rows per decision</title></circle>
+<circle cx="158.3" cy="331" r="2.4" fill="#5c5c56" opacity=".65"><title>NESM · 4.8 rows per decision</title></circle>
+<circle cx="149.5" cy="348" r="2.4" fill="#5c5c56" opacity=".65"><title>PEROLD · 4.4 rows per decision</title></circle>
+<circle cx="312.0" cy="328" r="2.4" fill="#5c5c56" opacity=".65"><title>PILOT · 11.8 rows per decision</title></circle>
+<circle cx="215.3" cy="345" r="2.4" fill="#5c5c56" opacity=".65"><title>PILOT.JA · 7.4 rows per decision</title></circle>
+<circle cx="126.1" cy="362" r="2.4" fill="#5c5c56" opacity=".65"><title>PILOT.WE · 3.3 rows per decision</title></circle>
+<circle cx="166.2" cy="342" r="2.4" fill="#5c5c56" opacity=".65"><title>PILOT4 · 5.1 rows per decision</title></circle>
+<circle cx="383.5" cy="359" r="2.4" fill="#5c5c56" opacity=".65"><title>PILOT87 · 15.1 rows per decision</title></circle>
+<circle cx="185.8" cy="339" r="2.4" fill="#5c5c56" opacity=".65"><title>PILOTNOV · 6.0 rows per decision</title></circle>
+<circle cx="164.9" cy="356" r="2.4" fill="#5c5c56" opacity=".65"><title>QAP8 · 5.1 rows per decision</title></circle>
+<circle cx="162.9" cy="336" r="2.4" fill="#5c5c56" opacity=".65"><title>QAP12 · 5.0 rows per decision</title></circle>
+<circle cx="162.3" cy="353" r="2.4" fill="#5c5c56" opacity=".65"><title>QAP15 · 5.0 rows per decision</title></circle>
+<circle cx="145.1" cy="333" r="2.4" fill="#5c5c56" opacity=".65"><title>RECIPE · 4.2 rows per decision</title></circle>
+<circle cx="113.5" cy="350" r="2.4" fill="#5c5c56" opacity=".65"><title>SC105 · 2.7 rows per decision</title></circle>
+<circle cx="113.3" cy="330" r="2.4" fill="#5c5c56" opacity=".65"><title>SC205 · 2.7 rows per decision</title></circle>
+<circle cx="113.5" cy="347" r="2.4" fill="#5c5c56" opacity=".65"><title>SC50A · 2.7 rows per decision</title></circle>
+<circle cx="108.0" cy="327" r="2.4" fill="#5c5c56" opacity=".65"><title>SC50B · 2.5 rows per decision</title></circle>
+<circle cx="142.5" cy="344" r="2.4" fill="#5c5c56" opacity=".65"><title>SCAGR25 · 4.1 rows per decision</title></circle>
+<circle cx="140.1" cy="361" r="2.4" fill="#5c5c56" opacity=".65"><title>SCAGR7 · 4.0 rows per decision</title></circle>
+<circle cx="178.6" cy="341" r="2.4" fill="#5c5c56" opacity=".65"><title>SCFXM1 · 5.7 rows per decision</title></circle>
+<circle cx="178.7" cy="358" r="2.4" fill="#5c5c56" opacity=".65"><title>SCFXM2 · 5.7 rows per decision</title></circle>
+<circle cx="178.8" cy="338" r="2.4" fill="#5c5c56" opacity=".65"><title>SCFXM3 · 5.7 rows per decision</title></circle>
+<circle cx="158.0" cy="355" r="2.4" fill="#5c5c56" opacity=".65"><title>SCORPION · 4.8 rows per decision</title></circle>
+<circle cx="129.1" cy="335" r="2.4" fill="#5c5c56" opacity=".65"><title>SCRS8 · 3.4 rows per decision</title></circle>
+<circle cx="144.3" cy="352" r="2.4" fill="#5c5c56" opacity=".65"><title>SCSD1 · 4.1 rows per decision</title></circle>
+<circle cx="145.5" cy="332" r="2.4" fill="#5c5c56" opacity=".65"><title>SCSD6 · 4.2 rows per decision</title></circle>
+<circle cx="143.8" cy="349" r="2.4" fill="#5c5c56" opacity=".65"><title>SCSD8 · 4.1 rows per decision</title></circle>
+<circle cx="147.2" cy="329" r="2.4" fill="#5c5c56" opacity=".65"><title>SCTAP1 · 4.3 rows per decision</title></circle>
+<circle cx="148.2" cy="346" r="2.4" fill="#5c5c56" opacity=".65"><title>SCTAP2 · 4.3 rows per decision</title></circle>
+<circle cx="148.4" cy="326" r="2.4" fill="#5c5c56" opacity=".65"><title>SCTAP3 · 4.3 rows per decision</title></circle>
+<circle cx="157.4" cy="343" r="2.4" fill="#5c5c56" opacity=".65"><title>SEBA · 4.7 rows per decision</title></circle>
+<circle cx="168.5" cy="360" r="2.4" fill="#5c5c56" opacity=".65"><title>SHARE1B · 5.3 rows per decision</title></circle>
+<circle cx="255.4" cy="340" r="2.4" fill="#5c5c56" opacity=".65"><title>SHARE2B · 9.2 rows per decision</title></circle>
+<circle cx="114.2" cy="357" r="2.4" fill="#5c5c56" opacity=".65"><title>SHELL · 2.8 rows per decision</title></circle>
+<circle cx="141.0" cy="337" r="2.4" fill="#5c5c56" opacity=".65"><title>SHIP04L · 4.0 rows per decision</title></circle>
+<circle cx="140.9" cy="354" r="2.4" fill="#5c5c56" opacity=".65"><title>SHIP04S · 4.0 rows per decision</title></circle>
+<circle cx="141.0" cy="334" r="2.4" fill="#5c5c56" opacity=".65"><title>SHIP08L · 4.0 rows per decision</title></circle>
+<circle cx="140.8" cy="351" r="2.4" fill="#5c5c56" opacity=".65"><title>SHIP08S · 4.0 rows per decision</title></circle>
+<circle cx="140.8" cy="331" r="2.4" fill="#5c5c56" opacity=".65"><title>SHIP12L · 4.0 rows per decision</title></circle>
+<circle cx="140.3" cy="348" r="2.4" fill="#5c5c56" opacity=".65"><title>SHIP12S · 4.0 rows per decision</title></circle>
+<circle cx="153.1" cy="328" r="2.4" fill="#5c5c56" opacity=".65"><title>SIERRA · 4.5 rows per decision</title></circle>
+<circle cx="234.0" cy="345" r="2.4" fill="#5c5c56" opacity=".65"><title>STAIR · 8.3 rows per decision</title></circle>
+<circle cx="115.6" cy="362" r="2.4" fill="#5c5c56" opacity=".65"><title>STANDATA · 2.8 rows per decision</title></circle>
+<circle cx="111.9" cy="342" r="2.4" fill="#5c5c56" opacity=".65"><title>STANDGUB · 2.7 rows per decision</title></circle>
+<circle cx="128.7" cy="359" r="2.4" fill="#5c5c56" opacity=".65"><title>STANDMPS · 3.4 rows per decision</title></circle>
+<circle cx="147.1" cy="339" r="2.4" fill="#5c5c56" opacity=".65"><title>STOCFOR1 · 4.3 rows per decision</title></circle>
+<circle cx="155.9" cy="356" r="2.4" fill="#5c5c56" opacity=".65"><title>STOCFOR2 · 4.7 rows per decision</title></circle>
+<circle cx="156.8" cy="336" r="2.4" fill="#5c5c56" opacity=".65"><title>STOCFOR3 · 4.7 rows per decision</title></circle>
+<circle cx="144.7" cy="353" r="2.4" fill="#5c5c56" opacity=".65"><title>TRUSS · 4.2 rows per decision</title></circle>
+<circle cx="222.0" cy="333" r="2.4" fill="#5c5c56" opacity=".65"><title>TUFF · 7.7 rows per decision</title></circle>
+<circle cx="152.2" cy="350" r="2.4" fill="#5c5c56" opacity=".65"><title>VTP.BASE · 4.5 rows per decision</title></circle>
+<circle cx="644.1" cy="330" r="2.4" fill="#5c5c56" opacity=".65"><title>WOOD1P · 27.1 rows per decision</title></circle>
+<circle cx="151.2" cy="347" r="2.4" fill="#5c5c56" opacity=".65"><title>WOODW · 4.5 rows per decision</title></circle>
+<line x1="159.0" y1="300" x2="159.0" y2="376" stroke="#0a0a0a" stroke-width="1.5"/>
+<text x="159.0" y="294" text-anchor="middle">median · 4.8</text>
+<circle cx="237.2" cy="346" r="8" fill="#d6001c" stroke="#fff" stroke-width="2"/>
+<text class="signal value" x="249.2" y="350">Stigler · 8.4</text>
+<text class="subtitle" x="24" y="429">Netlib middle half: 4.0–7.4 · 21 of 98 models touch more rows per decision than Stigler</text>
+<text class="source" x="24" y="468">Source: Netlib LP/DATA summary snapshot · 11 Aug 2026</text>
+<text class="source" x="24" y="488">Code and data: github.com/Denis-Joly/what-optimal-means · post-02 folder</text>
+</svg>
+</div>
+  <div class="viz-enhanced" hidden>
+    <div class="viz-toolbar">
+      <fieldset class="viz-segment" aria-label="Measure shown on the vertical axis">
+        <legend>Measure</legend>
+        <label><input type="radio" name="netlib-metric" value="density"> Density (%)</label>
+        <label><input type="radio" name="netlib-metric" value="coupling" checked> Rows touched per decision</label>
+      </fieldset>
+      <label class="viz-select">Inspect a model
+        <select data-viz-model><option value="STIGLER" selected>Stigler</option>
+<option value="25FV47">25Fv47</option>
+<option value="80BAU3B">80Bau3B</option>
+<option value="ADLITTLE">Adlittle</option>
+<option value="AFIRO">Afiro</option>
+<option value="AGG">Agg</option>
+<option value="AGG2">Agg2</option>
+<option value="AGG3">Agg3</option>
+<option value="BANDM">Bandm</option>
+<option value="BEACONFD">Beaconfd</option>
+<option value="BLEND">Blend</option>
+<option value="BNL1">Bnl1</option>
+<option value="BNL2">Bnl2</option>
+<option value="BOEING1">Boeing1</option>
+<option value="BOEING2">Boeing2</option>
+<option value="BORE3D">Bore3D</option>
+<option value="BRANDY">Brandy</option>
+<option value="CAPRI">Capri</option>
+<option value="CYCLE">Cycle</option>
+<option value="CZPROB">Czprob</option>
+<option value="D2Q06C">D2Q06C</option>
+<option value="D6CUBE">D6Cube</option>
+<option value="DEGEN2">Degen2</option>
+<option value="DEGEN3">Degen3</option>
+<option value="DFL001">Dfl001</option>
+<option value="E226">E226</option>
+<option value="ETAMACRO">Etamacro</option>
+<option value="FFFFF800">Fffff800</option>
+<option value="FINNIS">Finnis</option>
+<option value="FIT1D">Fit1D</option>
+<option value="FIT1P">Fit1P</option>
+<option value="FIT2D">Fit2D</option>
+<option value="FIT2P">Fit2P</option>
+<option value="FORPLAN">Forplan</option>
+<option value="GANGES">Ganges</option>
+<option value="GFRD-PNC">Gfrd-Pnc</option>
+<option value="GREENBEA">Greenbea</option>
+<option value="GREENBEB">Greenbeb</option>
+<option value="GROW15">Grow15</option>
+<option value="GROW22">Grow22</option>
+<option value="GROW7">Grow7</option>
+<option value="ISRAEL">Israel</option>
+<option value="KB2">Kb2</option>
+<option value="LOTFI">Lotfi</option>
+<option value="MAROS">Maros</option>
+<option value="MAROS-R7">Maros-R7</option>
+<option value="MODSZK1">Modszk1</option>
+<option value="NESM">Nesm</option>
+<option value="PEROLD">Perold</option>
+<option value="PILOT">Pilot</option>
+<option value="PILOT.JA">Pilot.Ja</option>
+<option value="PILOT.WE">Pilot.We</option>
+<option value="PILOT4">Pilot4</option>
+<option value="PILOT87">Pilot87</option>
+<option value="PILOTNOV">Pilotnov</option>
+<option value="QAP12">Qap12</option>
+<option value="QAP15">Qap15</option>
+<option value="QAP8">Qap8</option>
+<option value="RECIPE">Recipe</option>
+<option value="SC105">Sc105</option>
+<option value="SC205">Sc205</option>
+<option value="SC50A">Sc50A</option>
+<option value="SC50B">Sc50B</option>
+<option value="SCAGR25">Scagr25</option>
+<option value="SCAGR7">Scagr7</option>
+<option value="SCFXM1">Scfxm1</option>
+<option value="SCFXM2">Scfxm2</option>
+<option value="SCFXM3">Scfxm3</option>
+<option value="SCORPION">Scorpion</option>
+<option value="SCRS8">Scrs8</option>
+<option value="SCSD1">Scsd1</option>
+<option value="SCSD6">Scsd6</option>
+<option value="SCSD8">Scsd8</option>
+<option value="SCTAP1">Sctap1</option>
+<option value="SCTAP2">Sctap2</option>
+<option value="SCTAP3">Sctap3</option>
+<option value="SEBA">Seba</option>
+<option value="SHARE1B">Share1B</option>
+<option value="SHARE2B">Share2B</option>
+<option value="SHELL">Shell</option>
+<option value="SHIP04L">Ship04L</option>
+<option value="SHIP04S">Ship04S</option>
+<option value="SHIP08L">Ship08L</option>
+<option value="SHIP08S">Ship08S</option>
+<option value="SHIP12L">Ship12L</option>
+<option value="SHIP12S">Ship12S</option>
+<option value="SIERRA">Sierra</option>
+<option value="STAIR">Stair</option>
+<option value="STANDATA">Standata</option>
+<option value="STANDGUB">Standgub</option>
+<option value="STANDMPS">Standmps</option>
+<option value="STOCFOR1">Stocfor1</option>
+<option value="STOCFOR2">Stocfor2</option>
+<option value="STOCFOR3">Stocfor3</option>
+<option value="TRUSS">Truss</option>
+<option value="TUFF">Tuff</option>
+<option value="VTP.BASE">Vtp.Base</option>
+<option value="WOOD1P">Wood1P</option>
+<option value="WOODW">Woodw</option></select>
+      </label>
+    </div>
+    <p class="viz-annotation" data-viz-annotation>Stigler touches 8.4 rows per choice; 21 of 98 Netlib models touch more.</p>
+    <div class="viz-chart-wrap">
+      <svg class="viz-chart" data-viz-canvas role="img" aria-labelledby="netlib-live-title netlib-live-desc">
+        <title id="netlib-live-title">Netlib benchmark comparison</title>
+        <desc id="netlib-live-desc">Interactive plot. Choose density or rows touched per decision, then choose a model for exact values.</desc>
+      </svg>
+    </div>
+    <output class="viz-readout" data-viz-readout aria-live="polite">Stigler · 10 rows × 77 columns · 647 non-zero cells · 84.0% dense · 8.4 rows touched per decision.</output>
+  </div>
+  <script type="application/json" class="viz-data">{"models":[{"name":"25FV47","rows":822,"cols":1571,"nonzeros":11127,"cells":1291362,"density":0.8616483991320792,"coupling":7.082749840865691,"benchmark":"Netlib"},{"name":"80BAU3B","rows":2263,"cols":9799,"nonzeros":29063,"cells":22175137,"density":0.13106119705145453,"coupling":2.9659148892744156,"benchmark":"Netlib"},{"name":"ADLITTLE","rows":57,"cols":97,"nonzeros":465,"cells":5529,"density":8.410200759631037,"coupling":4.793814432989691,"benchmark":"Netlib"},{"name":"AFIRO","rows":28,"cols":32,"nonzeros":88,"cells":896,"density":9.821428571428571,"coupling":2.75,"benchmark":"Netlib"},{"name":"AGG","rows":489,"cols":163,"nonzeros":2541,"cells":79707,"density":3.18792577816252,"coupling":15.588957055214724,"benchmark":"Netlib"},{"name":"AGG2","rows":517,"cols":302,"nonzeros":4515,"cells":156134,"density":2.891746832848707,"coupling":14.950331125827814,"benchmark":"Netlib"},{"name":"AGG3","rows":517,"cols":302,"nonzeros":4531,"cells":156134,"density":2.9019944406727554,"coupling":15.003311258278146,"benchmark":"Netlib"},{"name":"BANDM","rows":306,"cols":472,"nonzeros":2659,"cells":144432,"density":1.841004763487316,"coupling":5.633474576271187,"benchmark":"Netlib"},{"name":"BEACONFD","rows":174,"cols":262,"nonzeros":3476,"cells":45588,"density":7.624813547424761,"coupling":13.267175572519085,"benchmark":"Netlib"},{"name":"BLEND","rows":75,"cols":83,"nonzeros":521,"cells":6225,"density":8.369477911646586,"coupling":6.27710843373494,"benchmark":"Netlib"},{"name":"BNL1","rows":644,"cols":1175,"nonzeros":6129,"cells":756700,"density":0.8099643187524779,"coupling":5.216170212765958,"benchmark":"Netlib"},{"name":"BNL2","rows":2325,"cols":3489,"nonzeros":16124,"cells":8111925,"density":0.19876909611467067,"coupling":4.621381484666093,"benchmark":"Netlib"},{"name":"BOEING1","rows":351,"cols":384,"nonzeros":3865,"cells":134784,"density":2.8675510446343777,"coupling":10.065104166666666,"benchmark":"Netlib"},{"name":"BOEING2","rows":167,"cols":143,"nonzeros":1339,"cells":23881,"density":5.606967882416984,"coupling":9.363636363636363,"benchmark":"Netlib"},{"name":"BORE3D","rows":234,"cols":315,"nonzeros":1525,"cells":73710,"density":2.068918735585402,"coupling":4.841269841269841,"benchmark":"Netlib"},{"name":"BRANDY","rows":221,"cols":249,"nonzeros":2150,"cells":55029,"density":3.9070308382852676,"coupling":8.634538152610443,"benchmark":"Netlib"},{"name":"CAPRI","rows":272,"cols":353,"nonzeros":1786,"cells":96016,"density":1.8601066488918512,"coupling":5.0594900849858355,"benchmark":"Netlib"},{"name":"CYCLE","rows":1904,"cols":2857,"nonzeros":21322,"cells":5439728,"density":0.39196812781815565,"coupling":7.463073153657683,"benchmark":"Netlib"},{"name":"CZPROB","rows":930,"cols":3523,"nonzeros":14173,"cells":3276390,"density":0.43257976004077664,"coupling":4.022991768379223,"benchmark":"Netlib"},{"name":"D2Q06C","rows":2172,"cols":5167,"nonzeros":35674,"cells":11222724,"density":0.31787291570210585,"coupling":6.904199729049739,"benchmark":"Netlib"},{"name":"D6CUBE","rows":416,"cols":6184,"nonzeros":43888,"cells":2572544,"density":1.7060155239327295,"coupling":7.097024579560156,"benchmark":"Netlib"},{"name":"DEGEN2","rows":445,"cols":534,"nonzeros":4449,"cells":237630,"density":1.8722383537432143,"coupling":8.331460674157304,"benchmark":"Netlib"},{"name":"DEGEN3","rows":1504,"cols":1818,"nonzeros":26230,"cells":2734272,"density":0.9593047070664513,"coupling":14.427942794279428,"benchmark":"Netlib"},{"name":"DFL001","rows":6072,"cols":12230,"nonzeros":41873,"cells":74260560,"density":0.05638659336800046,"coupling":3.423793949304988,"benchmark":"Netlib"},{"name":"E226","rows":224,"cols":282,"nonzeros":2767,"cells":63168,"density":4.380382472137791,"coupling":9.812056737588652,"benchmark":"Netlib"},{"name":"ETAMACRO","rows":401,"cols":688,"nonzeros":2489,"cells":275888,"density":0.9021776952966422,"coupling":3.6177325581395348,"benchmark":"Netlib"},{"name":"FFFFF800","rows":525,"cols":854,"nonzeros":6235,"cells":448350,"density":1.3906546225047396,"coupling":7.3009367681498825,"benchmark":"Netlib"},{"name":"FINNIS","rows":498,"cols":614,"nonzeros":2714,"cells":305772,"density":0.887589445730806,"coupling":4.420195439739413,"benchmark":"Netlib"},{"name":"FIT1D","rows":25,"cols":1026,"nonzeros":14430,"cells":25650,"density":56.257309941520475,"coupling":14.064327485380117,"benchmark":"Netlib"},{"name":"FIT1P","rows":628,"cols":1677,"nonzeros":10894,"cells":1053156,"density":1.034414654619069,"coupling":6.496124031007752,"benchmark":"Netlib"},{"name":"FIT2D","rows":26,"cols":10500,"nonzeros":138018,"cells":273000,"density":50.556043956043965,"coupling":13.144571428571428,"benchmark":"Netlib"},{"name":"FIT2P","rows":3001,"cols":13525,"nonzeros":60784,"cells":40588525,"density":0.14975661224447057,"coupling":4.494195933456562,"benchmark":"Netlib"},{"name":"FORPLAN","rows":162,"cols":421,"nonzeros":4916,"cells":68202,"density":7.207999765402774,"coupling":11.676959619952495,"benchmark":"Netlib"},{"name":"GANGES","rows":1310,"cols":1681,"nonzeros":7021,"cells":2202110,"density":0.31883057612925786,"coupling":4.1766805472932775,"benchmark":"Netlib"},{"name":"GFRD-PNC","rows":617,"cols":1092,"nonzeros":3467,"cells":673764,"density":0.5145718678943962,"coupling":3.1749084249084247,"benchmark":"Netlib"},{"name":"GREENBEA","rows":2393,"cols":5405,"nonzeros":31499,"cells":12934165,"density":0.24353330887614313,"coupling":5.827752081406105,"benchmark":"Netlib"},{"name":"GREENBEB","rows":2393,"cols":5405,"nonzeros":31499,"cells":12934165,"density":0.24353330887614313,"coupling":5.827752081406105,"benchmark":"Netlib"},{"name":"GROW15","rows":301,"cols":645,"nonzeros":5665,"cells":194145,"density":2.9179221715727937,"coupling":8.782945736434108,"benchmark":"Netlib"},{"name":"GROW22","rows":441,"cols":946,"nonzeros":8318,"cells":417186,"density":1.9938348842003326,"coupling":8.792811839323468,"benchmark":"Netlib"},{"name":"GROW7","rows":141,"cols":301,"nonzeros":2633,"cells":42441,"density":6.203906599750242,"coupling":8.747508305647841,"benchmark":"Netlib"},{"name":"ISRAEL","rows":175,"cols":142,"nonzeros":2358,"cells":24850,"density":9.488933601609657,"coupling":16.6056338028169,"benchmark":"Netlib"},{"name":"KB2","rows":44,"cols":41,"nonzeros":291,"cells":1804,"density":16.130820399113084,"coupling":7.097560975609756,"benchmark":"Netlib"},{"name":"LOTFI","rows":154,"cols":308,"nonzeros":1086,"cells":47432,"density":2.2895935233597573,"coupling":3.5259740259740258,"benchmark":"Netlib"},{"name":"MAROS","rows":847,"cols":1443,"nonzeros":10006,"cells":1222221,"density":0.8186735459462733,"coupling":6.934164934164934,"benchmark":"Netlib"},{"name":"MAROS-R7","rows":3137,"cols":9408,"nonzeros":151120,"cells":29512896,"density":0.5120473436425893,"coupling":16.062925170068027,"benchmark":"Netlib"},{"name":"MODSZK1","rows":688,"cols":1620,"nonzeros":4158,"cells":1114560,"density":0.37306201550387597,"coupling":2.566666666666667,"benchmark":"Netlib"},{"name":"NESM","rows":663,"cols":2923,"nonzeros":13988,"cells":1937949,"density":0.7217940203792772,"coupling":4.785494355114608,"benchmark":"Netlib"},{"name":"PEROLD","rows":626,"cols":1376,"nonzeros":6026,"cells":861376,"density":0.6995783490601085,"coupling":4.379360465116279,"benchmark":"Netlib"},{"name":"PILOT","rows":1442,"cols":3652,"nonzeros":43220,"cells":5266184,"density":0.8207081256560728,"coupling":11.834611171960569,"benchmark":"Netlib"},{"name":"PILOT.JA","rows":941,"cols":1988,"nonzeros":14706,"cells":1870708,"density":0.7861194798974507,"coupling":7.39738430583501,"benchmark":"Netlib"},{"name":"PILOT.WE","rows":723,"cols":2789,"nonzeros":9218,"cells":2016447,"density":0.4571407034253814,"coupling":3.3051272857655074,"benchmark":"Netlib"},{"name":"PILOT4","rows":411,"cols":1000,"nonzeros":5145,"cells":411000,"density":1.2518248175182483,"coupling":5.145,"benchmark":"Netlib"},{"name":"PILOT87","rows":2031,"cols":4883,"nonzeros":73804,"cells":9917373,"density":0.7441890105373671,"coupling":15.114478804013926,"benchmark":"Netlib"},{"name":"PILOTNOV","rows":976,"cols":2172,"nonzeros":13129,"cells":2119872,"density":0.6193298463303445,"coupling":6.044659300184162,"benchmark":"Netlib"},{"name":"QAP8","rows":913,"cols":1632,"nonzeros":8304,"cells":1490016,"density":0.5573094517105857,"coupling":5.088235294117647,"benchmark":"Netlib"},{"name":"QAP12","rows":3193,"cols":8856,"nonzeros":44244,"cells":28277208,"density":0.1564652351816346,"coupling":4.995934959349594,"benchmark":"Netlib"},{"name":"QAP15","rows":6331,"cols":22275,"nonzeros":110700,"cells":141023025,"density":0.0784978197709204,"coupling":4.96969696969697,"benchmark":"Netlib"},{"name":"RECIPE","rows":92,"cols":180,"nonzeros":752,"cells":16560,"density":4.541062801932367,"coupling":4.177777777777778,"benchmark":"Netlib"},{"name":"SC105","rows":106,"cols":103,"nonzeros":281,"cells":10918,"density":2.5737314526470048,"coupling":2.7281553398058254,"benchmark":"Netlib"},{"name":"SC205","rows":206,"cols":203,"nonzeros":552,"cells":41818,"density":1.3200057391553877,"coupling":2.7192118226600983,"benchmark":"Netlib"},{"name":"SC50A","rows":51,"cols":48,"nonzeros":131,"cells":2448,"density":5.351307189542483,"coupling":2.7291666666666665,"benchmark":"Netlib"},{"name":"SC50B","rows":51,"cols":48,"nonzeros":119,"cells":2448,"density":4.861111111111112,"coupling":2.4791666666666665,"benchmark":"Netlib"},{"name":"SCAGR25","rows":472,"cols":500,"nonzeros":2029,"cells":236000,"density":0.8597457627118644,"coupling":4.058,"benchmark":"Netlib"},{"name":"SCAGR7","rows":130,"cols":140,"nonzeros":553,"cells":18200,"density":3.0384615384615383,"coupling":3.95,"benchmark":"Netlib"},{"name":"SCFXM1","rows":331,"cols":457,"nonzeros":2612,"cells":151267,"density":1.726748067985747,"coupling":5.715536105032823,"benchmark":"Netlib"},{"name":"SCFXM2","rows":661,"cols":914,"nonzeros":5229,"cells":604154,"density":0.8655078009911381,"coupling":5.7210065645514225,"benchmark":"Netlib"},{"name":"SCFXM3","rows":991,"cols":1371,"nonzeros":7846,"cells":1358661,"density":0.5774803280582868,"coupling":5.722830051057622,"benchmark":"Netlib"},{"name":"SCORPION","rows":389,"cols":358,"nonzeros":1708,"cells":139262,"density":1.2264652238227227,"coupling":4.770949720670391,"benchmark":"Netlib"},{"name":"SCRS8","rows":491,"cols":1169,"nonzeros":4029,"cells":573979,"density":0.7019420571135877,"coupling":3.446535500427716,"benchmark":"Netlib"},{"name":"SCSD1","rows":78,"cols":760,"nonzeros":3148,"cells":59280,"density":5.310391363022942,"coupling":4.1421052631578945,"benchmark":"Netlib"},{"name":"SCSD6","rows":148,"cols":1350,"nonzeros":5666,"cells":199800,"density":2.8358358358358355,"coupling":4.197037037037037,"benchmark":"Netlib"},{"name":"SCSD8","rows":398,"cols":2750,"nonzeros":11334,"cells":1094500,"density":1.0355413430790317,"coupling":4.1214545454545455,"benchmark":"Netlib"},{"name":"SCTAP1","rows":301,"cols":480,"nonzeros":2052,"cells":144480,"density":1.420265780730897,"coupling":4.275,"benchmark":"Netlib"},{"name":"SCTAP2","rows":1091,"cols":1880,"nonzeros":8124,"cells":2051080,"density":0.3960840142754061,"coupling":4.321276595744681,"benchmark":"Netlib"},{"name":"SCTAP3","rows":1481,"cols":2480,"nonzeros":10734,"cells":3672880,"density":0.29225022325804273,"coupling":4.328225806451613,"benchmark":"Netlib"},{"name":"SEBA","rows":516,"cols":1028,"nonzeros":4874,"cells":530448,"density":0.9188459566253431,"coupling":4.7412451361867705,"benchmark":"Netlib"},{"name":"SHARE1B","rows":118,"cols":225,"nonzeros":1182,"cells":26550,"density":4.451977401129943,"coupling":5.253333333333333,"benchmark":"Netlib"},{"name":"SHARE2B","rows":97,"cols":79,"nonzeros":730,"cells":7663,"density":9.526295184653529,"coupling":9.240506329113924,"benchmark":"Netlib"},{"name":"SHELL","rows":537,"cols":1775,"nonzeros":4900,"cells":953175,"density":0.5140713929761062,"coupling":2.76056338028169,"benchmark":"Netlib"},{"name":"SHIP04L","rows":403,"cols":2118,"nonzeros":8450,"cells":853554,"density":0.9899783727801639,"coupling":3.9896128423040604,"benchmark":"Netlib"},{"name":"SHIP04S","rows":403,"cols":1458,"nonzeros":5810,"cells":587574,"density":0.988811622025481,"coupling":3.9849108367626886,"benchmark":"Netlib"},{"name":"SHIP08L","rows":779,"cols":4283,"nonzeros":17085,"cells":3336457,"density":0.512070139072675,"coupling":3.9890263833761384,"benchmark":"Netlib"},{"name":"SHIP08S","rows":779,"cols":2387,"nonzeros":9501,"cells":1859473,"density":0.5109512211255555,"coupling":3.980310012568077,"benchmark":"Netlib"},{"name":"SHIP12L","rows":1152,"cols":5427,"nonzeros":21597,"cells":6251904,"density":0.3454467630980898,"coupling":3.9795467108899945,"benchmark":"Netlib"},{"name":"SHIP12S","rows":1152,"cols":2763,"nonzeros":10941,"cells":3182976,"density":0.34373491977319337,"coupling":3.959826275787188,"benchmark":"Netlib"},{"name":"SIERRA","rows":1228,"cols":2036,"nonzeros":9252,"cells":2500208,"density":0.37004921190556944,"coupling":4.544204322200393,"benchmark":"Netlib"},{"name":"STAIR","rows":357,"cols":467,"nonzeros":3857,"cells":166719,"density":2.31347356929924,"coupling":8.259100642398288,"benchmark":"Netlib"},{"name":"STANDATA","rows":360,"cols":1075,"nonzeros":3038,"cells":387000,"density":0.7850129198966408,"coupling":2.826046511627907,"benchmark":"Netlib"},{"name":"STANDGUB","rows":362,"cols":1184,"nonzeros":3147,"cells":428608,"density":0.7342373450798866,"coupling":2.657939189189189,"benchmark":"Netlib"},{"name":"STANDMPS","rows":468,"cols":1075,"nonzeros":3686,"cells":503100,"density":0.7326575233551977,"coupling":3.4288372093023254,"benchmark":"Netlib"},{"name":"STOCFOR1","rows":118,"cols":111,"nonzeros":474,"cells":13098,"density":3.618873110398534,"coupling":4.27027027027027,"benchmark":"Netlib"},{"name":"STOCFOR2","rows":2158,"cols":2031,"nonzeros":9492,"cells":4382898,"density":0.2165690371986754,"coupling":4.673559822747415,"benchmark":"Netlib"},{"name":"STOCFOR3","rows":16676,"cols":15695,"nonzeros":74004,"cells":261729820,"density":0.02827495926906609,"coupling":4.715132207709462,"benchmark":"Netlib"},{"name":"TRUSS","rows":1001,"cols":8806,"nonzeros":36642,"cells":8814806,"density":0.41568697030881907,"coupling":4.161026572791279,"benchmark":"Netlib"},{"name":"TUFF","rows":334,"cols":587,"nonzeros":4523,"cells":196058,"density":2.306970386314254,"coupling":7.705281090289608,"benchmark":"Netlib"},{"name":"VTP.BASE","rows":199,"cols":203,"nonzeros":914,"cells":40397,"density":2.2625442483352725,"coupling":4.502463054187192,"benchmark":"Netlib"},{"name":"WOOD1P","rows":245,"cols":2594,"nonzeros":70216,"cells":635530,"density":11.048416282472896,"coupling":27.068619892058596,"benchmark":"Netlib"},{"name":"WOODW","rows":1099,"cols":8405,"nonzeros":37478,"cells":9237095,"density":0.4057336207974477,"coupling":4.45901249256395,"benchmark":"Netlib"},{"name":"STIGLER","rows":10,"cols":77,"nonzeros":647,"cells":770,"density":84.02597402597402,"coupling":8.402597402597403,"benchmark":"Stigler"}],"summary":{"couplingQ1":4.031743826284417,"couplingMedian":4.817542137129766,"couplingQ3":7.446650941702015,"densityMedian":0.9740581645459662,"aboveStigler":21}}</script>
+  <p class="viz-source">Source: Netlib LP/DATA summary snapshot, 11 August 2026. Select a model for exact values.</p>
+</div></figure><figure><div class="viz-shell basis-figure" aria-labelledby="basis-viz-heading">
+  <header class="viz-heading">
+    <div class="viz-kicker">Read the basis in three steps</div>
+    <h3 id="basis-viz-heading">Four loose nutrient floors leave room for five foods</h3>
+    <p>The diagram separates available columns, candidate selections and the basis found at this optimum.</p>
+  </header>
+  <div class="viz-segment basis-controls" aria-label="Basis diagram step">
+    <label><input type="radio" name="basis-step" id="basis-step-1"><span>1</span> Available</label>
+    <label><input type="radio" name="basis-step" id="basis-step-2"><span>2</span> Select nine</label>
+    <label><input type="radio" name="basis-step" id="basis-step-3" checked><span>3</span> Solved basis</label>
+  </div>
+  <div class="basis-story">
+    <section class="basis-pool" aria-label="The 86 available columns">
+      <div class="basis-step-label">1 · Candidate pool</div>
+      <div class="basis-pool-bar" role="img" aria-label="77 food columns and 9 surplus columns, shown in proportion">
+        <div class="basis-food-pool"><strong>77</strong><span>food columns</span></div>
+        <div class="basis-surplus-pool"><strong>9</strong><span>surplus</span></div>
+      </div>
+    </section>
+    <section class="basis-count">
+      <div class="basis-step-label">2 · Choose nine columns</div>
+      <strong>459,856,441,980</strong>
+      <p>candidate selections—not bases or vertices. Many are singular or infeasible.</p>
+    </section>
+    <section class="basis-solution">
+      <div class="basis-step-label">3 · This solved basis</div>
+      <div class="basis-slots"><div class="basis-slot basis-slot-surplus">
+          <span class="basis-slot-position">position 1</span>
+          <span class="basis-slot-final">protein</span>
+          <small>surplus</small>
+        </div>
+<div class="basis-slot basis-slot-surplus">
+          <span class="basis-slot-position">position 2</span>
+          <span class="basis-slot-final">iron</span>
+          <small>surplus</small>
+        </div>
+<div class="basis-slot basis-slot-surplus">
+          <span class="basis-slot-position">position 3</span>
+          <span class="basis-slot-final">B1</span>
+          <small>surplus</small>
+        </div>
+<div class="basis-slot basis-slot-surplus">
+          <span class="basis-slot-position">position 4</span>
+          <span class="basis-slot-final">niacin</span>
+          <small>surplus</small>
+        </div>
+<div class="basis-slot basis-slot-food">
+          <span class="basis-slot-position">position 5</span>
+          <span class="basis-slot-final">flour</span>
+          <small>food</small>
+        </div>
+<div class="basis-slot basis-slot-food">
+          <span class="basis-slot-position">position 6</span>
+          <span class="basis-slot-final">cabbage</span>
+          <small>food</small>
+        </div>
+<div class="basis-slot basis-slot-food">
+          <span class="basis-slot-position">position 7</span>
+          <span class="basis-slot-final">spinach</span>
+          <small>food</small>
+        </div>
+<div class="basis-slot basis-slot-food">
+          <span class="basis-slot-position">position 8</span>
+          <span class="basis-slot-final">beans</span>
+          <small>food</small>
+        </div>
+<div class="basis-slot basis-slot-food">
+          <span class="basis-slot-position">position 9</span>
+          <span class="basis-slot-final">liver</span>
+          <small>food</small>
+        </div></div>
+      <div class="basis-explanation">
+        <span><strong>4</strong> exceeded floors → positive surpluses</span>
+        <span><strong>5</strong> positions remain for foods</span>
+      </div>
+    </section>
+  </div>
+  <p class="viz-source">A sparse optimal basic solution exists; this does not mean every optimum is sparse.</p>
+</div></figure>
+</main><script defer src="article-viz.js"></script></body></html>

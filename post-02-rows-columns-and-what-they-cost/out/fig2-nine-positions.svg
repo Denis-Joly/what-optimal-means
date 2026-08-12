@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 748 500" width="100%" role="img" aria-labelledby="fig2-static-title fig2-static-desc">
+<title id="fig2-static-title">Four loose nutrient floors leave room for only five foods</title>
+<desc id="fig2-static-desc">Stigler&#x27;s standard-form model has 77 food columns and 9 surplus columns. A basis uses 9 columns. In the reported optimum four positive surpluses occupy four positions, leaving five food positions.</desc>
+<style>
+text{font-family:"Plex Mono",ui-monospace,monospace;fill:#0a0a0a;font-size:12px}
+.headline{font-family:"Archivo",Helvetica,Arial,sans-serif;font-size:24px;font-weight:700;letter-spacing:-.5px}
+.subtitle,.source{fill:#6b6b6b;font-size:11px}
+.section{font-family:"Archivo",Helvetica,Arial,sans-serif;font-size:16px;font-weight:700}
+.value{font-size:18px;font-weight:500}
+.signal{fill:#d6001c}
+.muted{fill:#6b6b6b}
+.paper{fill:#fff}
+.panel{fill:#f2f2f0}
+.rule{stroke:#dcdcda}
+</style>
+<rect class="paper" width="748" height="500"/>
+<text class="headline" x="24" y="38">Four loose nutrient floors leave room for five foods</text>
+<text class="subtitle" x="24" y="63">From 86 available columns to the nine positions in one solved basis</text>
+<text class="section" x="24" y="108">1 · Candidate pool</text>
+<rect x="24" y="126" width="609" height="42" fill="#b4b4ae"/>
+<rect x="633" y="126" width="71" height="42" fill="#5c5c56"/>
+<text x="328" y="152" text-anchor="middle">77 food columns</text>
+<text x="669" y="152" text-anchor="middle" style="fill:#fff">9</text>
+<text class="subtitle" x="704" y="184" text-anchor="end">9 surplus columns</text>
+<text class="section" x="24" y="226">2 · A basis uses nine columns</text>
+<text class="signal" x="24" y="260" style="font-size:29px;font-weight:500">459,856,441,980</text>
+<text class="subtitle" x="24" y="281">candidate nine-column selections · many are singular or infeasible</text>
+<text class="section" x="24" y="329">3 · This solved basis</text>
+<rect x="24.0" y="350.0" width="70.0" height="65" fill="#8a8a83"/>
+<text x="59.0" y="378.0" text-anchor="middle" style="fill:#fff">protein</text>
+<text x="59.0" y="398.0" text-anchor="middle" style="fill:#fff;font-size:10px">surplus</text>
+<rect x="99.0" y="350.0" width="70.0" height="65" fill="#8a8a83"/>
+<text x="134.0" y="378.0" text-anchor="middle" style="fill:#fff">iron</text>
+<text x="134.0" y="398.0" text-anchor="middle" style="fill:#fff;font-size:10px">surplus</text>
+<rect x="174.0" y="350.0" width="70.0" height="65" fill="#8a8a83"/>
+<text x="209.0" y="378.0" text-anchor="middle" style="fill:#fff">B1</text>
+<text x="209.0" y="398.0" text-anchor="middle" style="fill:#fff;font-size:10px">surplus</text>
+<rect x="249.0" y="350.0" width="70.0" height="65" fill="#8a8a83"/>
+<text x="284.0" y="378.0" text-anchor="middle" style="fill:#fff">niacin</text>
+<text x="284.0" y="398.0" text-anchor="middle" style="fill:#fff;font-size:10px">surplus</text>
+<rect x="324.0" y="350.0" width="70.0" height="65" fill="#d6001c"/>
+<text x="359.0" y="378.0" text-anchor="middle" style="fill:#fff">flour</text>
+<text x="359.0" y="398.0" text-anchor="middle" style="fill:#fff;font-size:10px">food</text>
+<rect x="399.0" y="350.0" width="70.0" height="65" fill="#d6001c"/>
+<text x="434.0" y="378.0" text-anchor="middle" style="fill:#fff">cabbage</text>
+<text x="434.0" y="398.0" text-anchor="middle" style="fill:#fff;font-size:10px">food</text>
+<rect x="474.0" y="350.0" width="70.0" height="65" fill="#d6001c"/>
+<text x="509.0" y="378.0" text-anchor="middle" style="fill:#fff">spinach</text>
+<text x="509.0" y="398.0" text-anchor="middle" style="fill:#fff;font-size:10px">food</text>
+<rect x="549.0" y="350.0" width="70.0" height="65" fill="#d6001c"/>
+<text x="584.0" y="378.0" text-anchor="middle" style="fill:#fff">beans</text>
+<text x="584.0" y="398.0" text-anchor="middle" style="fill:#fff;font-size:10px">food</text>
+<rect x="624.0" y="350.0" width="70.0" height="65" fill="#d6001c"/>
+<text x="659.0" y="378.0" text-anchor="middle" style="fill:#fff">liver</text>
+<text x="659.0" y="398.0" text-anchor="middle" style="fill:#fff;font-size:10px">food</text>
+<text class="subtitle" x="164" y="442" text-anchor="middle">4 positive surpluses · floors exceeded</text>
+<text class="signal" x="516" y="442" text-anchor="middle">5 foods · all remaining positions</text>
+<text class="source" x="24" y="480">A sparse optimal basic solution exists; this does not mean every optimum is sparse.</text>
+</svg>

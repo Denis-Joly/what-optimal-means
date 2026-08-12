@@ -4,13 +4,14 @@
 SHELL := /bin/bash
 .SHELLFLAGS := -eo pipefail -c
 
-.PHONY: all venv deps check post01 clean
+.PHONY: all venv deps check post01 post02 clean
 
 # Override if your interpreter is named something else: make PY=python3.12
 PY ?= python3
 POST01 = post-01-the-last-place-optimal-means-anything
+POST02 = post-02-rows-columns-and-what-they-cost
 
-all: check post01
+all: check post01 post02
 
 # Installs into the SAME interpreter that will run the scripts. Calling `pip`
 # on its own is the usual way to end up with the packages in one Python and
@@ -57,6 +58,10 @@ post01:
 	$(PY) $(POST01)/stigler.py | tee $(POST01)/out/stigler.txt
 	$(PY) $(POST01)/blend.py   | tee $(POST01)/out/blend.txt
 	$(PY) $(POST01)/make_figures.py
+
+post02:
+	$(PY) $(POST02)/analyze_structure.py | tee $(POST02)/out/structure.txt
+	$(PY) $(POST02)/make_figures.py
 
 clean:
 	rm -rf */out/*.txt */__pycache__

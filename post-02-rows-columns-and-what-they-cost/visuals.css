@@ -1,0 +1,134 @@
+/* Progressive visualisations for “Rows, Columns, and What They Cost”. */
+.viz-shell{
+  --viz-paper:var(--paper,#fff);--viz-panel:var(--panel,#f2f2f0);
+  --viz-ink:var(--ink,#0a0a0a);--viz-body:var(--body,#1a1a1a);
+  --viz-muted:var(--muted,#6b6b6b);--viz-rule:var(--rule,#dcdcda);
+  --viz-signal:var(--signal,#d6001c);--viz-on-signal:var(--on-signal,#fff);
+  --viz-d1:var(--d1,#b4b4ae);--viz-d2:var(--d2,#8a8a83);--viz-d3:var(--d3,#5c5c56);
+  color:var(--viz-body);background:var(--viz-paper);border-top:2px solid var(--viz-ink);
+  border-bottom:1px solid var(--viz-rule);padding:20px 0 14px
+}
+.viz-heading{display:grid;grid-template-columns:minmax(0,1fr);gap:5px;margin:0 0 18px}
+.post article .viz-heading h3,.viz-heading h3{
+  color:var(--viz-ink);font-family:var(--sans,"Archivo",Helvetica,Arial,sans-serif);
+  font-size:clamp(21px,3.3vw,29px);font-weight:700;letter-spacing:-.03em;
+  line-height:1.08;margin:0;max-width:25ch
+}
+.viz-heading p{color:var(--viz-muted);font-size:14px;line-height:1.45;margin:0;max-width:55rem}
+.viz-kicker,.basis-step-label{
+  color:var(--viz-signal);font-family:var(--mono,"Plex Mono",ui-monospace,monospace);
+  font-size:10.5px;letter-spacing:.1em;text-transform:uppercase
+}
+.viz-fallback[hidden],.viz-enhanced[hidden]{display:none}
+.viz-fallback svg{display:block;width:100%;height:auto}
+.viz-toolbar{display:flex;align-items:flex-end;justify-content:space-between;gap:12px;flex-wrap:wrap;margin:0 0 13px}
+.viz-segment{border:0;padding:0;margin:0;display:flex;gap:1px;background:var(--viz-rule)}
+fieldset.viz-segment legend,.viz-select{
+  color:var(--viz-muted);font-family:var(--mono,"Plex Mono",ui-monospace,monospace);
+  font-size:10px;letter-spacing:.06em;text-transform:uppercase
+}
+fieldset.viz-segment legend{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)}
+.viz-segment label{
+  min-height:44px;background:var(--viz-panel);color:var(--viz-body);cursor:pointer;
+  display:flex;align-items:center;gap:7px;padding:9px 12px;font-family:var(--mono,"Plex Mono",ui-monospace,monospace);
+  font-size:11.5px;line-height:1.2;text-transform:none;letter-spacing:0
+}
+.viz-segment label:has(input:checked){background:var(--viz-ink);color:var(--viz-paper)}
+.viz-segment input{accent-color:var(--viz-signal)}
+.viz-select{display:grid;gap:4px}
+.viz-select select{
+  min-height:44px;min-width:180px;border:1px solid var(--viz-rule);border-radius:0;
+  background:var(--viz-paper);color:var(--viz-ink);font:12px var(--mono,"Plex Mono",ui-monospace,monospace);
+  padding:8px 34px 8px 10px
+}
+.viz-segment label:focus-within,.viz-select select:focus-visible,.basis-controls label:focus-visible{
+  outline:2px solid var(--viz-signal);outline-offset:2px
+}
+.viz-annotation{
+  color:var(--viz-ink);font-family:var(--sans,"Archivo",Helvetica,Arial,sans-serif);
+  font-size:17px;font-weight:600;line-height:1.35;margin:0 0 4px;max-width:55ch
+}
+.viz-chart-wrap{width:100%;min-width:0}
+.viz-chart{display:block;width:100%;height:auto;overflow:visible}
+.viz-chart text{font-family:var(--mono,"Plex Mono",ui-monospace,monospace);fill:var(--viz-muted)}
+.viz-gridline{stroke:var(--viz-rule);stroke-width:1}
+.viz-axis,.viz-tick{stroke:var(--viz-ink);stroke-width:1.2}
+.viz-axis-label{font-size:11px}
+.viz-axis-title{fill:var(--viz-ink)!important;font-size:11.5px;font-weight:500}
+.viz-iqr{fill:var(--viz-d1);opacity:.25}
+.viz-median{stroke:var(--viz-ink);stroke-width:1;stroke-dasharray:3 4}
+.viz-median-label{fill:var(--viz-ink)!important;font-size:10.5px}
+.viz-point{fill:var(--viz-d3);opacity:.66}
+.viz-point-stigler{fill:var(--viz-signal);opacity:1;stroke:var(--viz-paper);stroke-width:2}
+.viz-hit{fill:transparent;cursor:pointer;pointer-events:all}
+.viz-selected-ring{fill:none;stroke:var(--viz-ink);stroke-width:1.6;pointer-events:none}
+.viz-direct-label{fill:var(--viz-muted)!important;font-size:10.5px}
+.viz-direct-label-stigler{fill:var(--viz-signal)!important;font-weight:500}
+.viz-readout{
+  display:block;background:var(--viz-panel);border-left:2px solid var(--viz-signal);
+  color:var(--viz-body);font:11.5px/1.55 var(--mono,"Plex Mono",ui-monospace,monospace);
+  min-height:44px;padding:10px 12px
+}
+.viz-source{
+  color:var(--viz-muted);font:10.5px/1.5 var(--mono,"Plex Mono",ui-monospace,monospace);
+  letter-spacing:.02em;margin:10px 0 0
+}
+
+/* The second figure remains fully functional without JavaScript. */
+.basis-controls{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));margin-bottom:20px}
+.basis-controls label{justify-content:center;text-align:center}
+.basis-controls label span{color:var(--viz-signal);font-weight:500}
+.basis-controls label:has(input:checked){background:var(--viz-ink);color:var(--viz-paper)}
+.basis-controls label:has(input:focus-visible){outline:2px solid var(--viz-signal);outline-offset:2px}
+.basis-story{display:grid;gap:22px}
+.basis-story section{transition:opacity .18s ease}
+.basis-pool-bar{display:grid;grid-template-columns:77fr 9fr;height:64px;margin-top:8px;min-width:0}
+.basis-food-pool,.basis-surplus-pool{display:flex;align-items:center;justify-content:center;gap:9px;min-width:0}
+.basis-food-pool{background:var(--viz-d1);color:var(--viz-ink)}
+.basis-surplus-pool{background:var(--viz-d3);color:var(--viz-paper)}
+.basis-pool-bar strong{font:500 20px var(--mono,"Plex Mono",ui-monospace,monospace)}
+.basis-pool-bar span{font:11px var(--mono,"Plex Mono",ui-monospace,monospace)}
+.basis-count>strong{
+  display:block;color:var(--viz-signal);font:500 clamp(25px,5vw,38px)/1.1 var(--mono,"Plex Mono",ui-monospace,monospace);
+  letter-spacing:-.045em;margin-top:7px
+}
+.basis-count p{color:var(--viz-muted);font-size:13px;line-height:1.45;margin:5px 0 0}
+.basis-slots{display:grid;grid-template-columns:repeat(9,minmax(0,1fr));gap:4px;margin-top:8px}
+.basis-slot{
+  min-height:82px;padding:8px 4px;display:flex;flex-direction:column;align-items:center;
+  justify-content:center;text-align:center;color:var(--viz-paper);min-width:0
+}
+.basis-slot-surplus{background:var(--viz-d2)}
+.basis-slot-food{background:var(--viz-signal);color:var(--viz-on-signal)}
+.basis-slot-final{font:11px/1.2 var(--mono,"Plex Mono",ui-monospace,monospace);overflow-wrap:anywhere}
+.basis-slot-position{display:none;color:var(--viz-muted);font:10px/1.2 var(--mono,"Plex Mono",ui-monospace,monospace)}
+.basis-slot small{font:9px/1.2 var(--mono,"Plex Mono",ui-monospace,monospace);opacity:.82;margin-top:8px}
+.basis-explanation{display:grid;grid-template-columns:4fr 5fr;gap:4px;margin-top:5px}
+.basis-explanation span{border-top:2px solid var(--viz-rule);font-size:12px;line-height:1.35;padding:8px 5px 0;text-align:center}
+.basis-explanation span:last-child{border-color:var(--viz-signal);color:var(--viz-signal)}
+.basis-figure:has(#basis-step-1:checked) .basis-count,.basis-figure:has(#basis-step-1:checked) .basis-solution{opacity:.2}
+.basis-figure:has(#basis-step-2:checked) .basis-pool{opacity:.35}
+.basis-figure:has(#basis-step-2:checked) .basis-slot{background:var(--viz-panel);border:1px solid var(--viz-rule);color:var(--viz-muted)}
+.basis-figure:has(#basis-step-2:checked) .basis-slot-final,.basis-figure:has(#basis-step-2:checked) .basis-slot small{display:none}
+.basis-figure:has(#basis-step-2:checked) .basis-slot-position{display:block}
+.basis-figure:has(#basis-step-2:checked) .basis-explanation{opacity:.2}
+.basis-figure:has(#basis-step-3:checked) .basis-pool,.basis-figure:has(#basis-step-3:checked) .basis-count{opacity:.42}
+
+@media(max-width:560px){
+  .viz-shell{padding-top:16px}.viz-heading{margin-bottom:15px}
+  .viz-toolbar{align-items:stretch}.viz-segment,.viz-select{width:100%}
+  fieldset.viz-segment label{flex:1;justify-content:center;padding:8px 7px}
+  .viz-select select{width:100%}.viz-annotation{font-size:15.5px}
+  .basis-controls label{font-size:10.5px;padding:8px 5px}.basis-controls label span{display:none}
+  .basis-surplus-pool span{display:none}.basis-pool-bar{height:58px}
+  .basis-count>strong{font-size:clamp(22px,7.6vw,30px)}
+  .basis-slots{grid-template-columns:repeat(3,minmax(0,1fr));gap:5px}
+  .basis-slot{min-height:72px}.basis-slot-final{font-size:12px}.basis-slot small{font-size:9.5px}
+  .basis-explanation{grid-template-columns:1fr}.basis-explanation span{text-align:left;padding-left:0}
+}
+@media(prefers-reduced-motion:reduce){.basis-story section{transition:none}}
+
+/* Minimal frame for the repository's standalone demo only. */
+.viz-demo-page{margin:0;background:#fff;color:#1a1a1a;font:17px/1.55 "Archivo",Helvetica,Arial,sans-serif}
+.viz-demo-page main{max-width:860px;margin:0 auto;padding:36px 22px 80px}
+.viz-demo-page h1{font-size:30px;line-height:1.05;margin:0 0 50px}.viz-demo-page figure{margin:0 0 70px}

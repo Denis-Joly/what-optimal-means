@@ -1,6 +1,6 @@
 # what-optimal-means
 
-Code for the Spatium Novum series **What Optimal Means**, four short posts on
+Code for the Spatium Novum series **What Optimal Means**, five posts on
 mathematical optimisation and the guarantee it does and does not give you.
 
 [spatium-novum.com](https://spatium-novum.com)
@@ -11,10 +11,11 @@ in this repository rather than typed in by hand.
 
 | | Post | Folder | What the code does |
 | --- | --- | --- | --- |
-| 1 | The Last Place "Optimal" Means Anything | [`post-01-the-last-place-optimal-means-anything`](post-01-the-last-place-optimal-means-anything) | Reruns Stigler's 1945 diet problem on all 77 commodities, the computation that took nine clerks 120 man-days in 1947. Prints the dual solution, which is the actual subject of the post. |
-| 2 | When the Answer Is Yes or No | `post-02-…` | *not written yet* |
-| 3 | Optimising Against a Guess | `post-03-…` | *not written yet* |
-| 4 | Where the Proof Runs Out | `post-04-…` | *not written yet* |
+| 1 | [The Last Place "Optimal" Means Anything](https://spatium-novum.com/posts/the-last-place-optimal-means-anything) | [`post-01-the-last-place-optimal-means-anything`](post-01-the-last-place-optimal-means-anything) | Reruns Stigler's 1945 diet problem on all 77 commodities, the computation that took nine clerks 120 man-days in 1947. Prints the dual solution, which is the actual subject of the post. |
+| 2 | [Rows, Columns, and What They Cost](https://spatium-novum.com/posts/rows-columns-and-what-they-cost) | [`post-02-rows-columns-and-what-they-cost`](post-02-rows-columns-and-what-they-cost) | Recomputes the Stigler and Netlib matrix statistics, counts standard-form candidate column sets, and generates the article's static and interactive figures. |
+| 3 | When the Answer Is Yes or No | `post-03-…` | *not written yet* |
+| 4 | Optimising Against a Guess | `post-04-…` | *not written yet* |
+| 5 | Where the Proof Runs Out | `post-05-…` | *not written yet* |
 
 ## Run it
 

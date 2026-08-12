@@ -45,6 +45,12 @@ which the script also computes.
 The residual three cents against Dantzig's $39.69 is rounding in the nutrient
 table and the 365-day convention. It is not a different answer.
 
+The constraint matrix has nine nutrient rows and 77 food columns. Of its 693
+entries, 570 are non-zero: 82.3 per cent. That percentage is descriptive, but
+it is not a measure of solve difficulty; it depends mechanically on the small
+number of rows. [Post 2](https://spatium-novum.com/posts/rows-columns-and-what-they-cost)
+compares the same matrix with Netlib using one explicit counting convention.
+
 ## 2. The certificate
 
 The part the post is actually about. The solver does not only return a diet;

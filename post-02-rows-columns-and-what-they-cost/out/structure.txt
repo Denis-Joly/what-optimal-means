@@ -1,0 +1,30 @@
+Stigler, counted with Netlib's convention
+------------------------------------------
+rows (9 constraints + objective)  10
+food columns                      77
+nonzeros                          647
+density                           84.0%
+nonzeros per column               8.4
+
+Standard-form selection count
+-----------------------------
+food columns                      77
+surplus columns                   9
+columns total                     86
+columns in one basis              9
+candidate column sets C(86, 9)    459,856,441,980
+at one microsecond per candidate  5.32 days
+
+Netlib LP/DATA summary
+----------------------
+problems parsed                    98
+median density                     0.974%
+nonzeros/column Q1                 4.03
+nonzeros/column median             4.82
+nonzeros/column Q3                 7.45
+under 100,000 cells                n=27, median=5.06
+over 10,000,000 cells              n=10, median=4.98
+
+The combinations are candidate column sets, not bases or vertices.
+Singular selections, infeasible basic solutions, and multiple bases for
+one degenerate vertex all separate this count from the vertex count.

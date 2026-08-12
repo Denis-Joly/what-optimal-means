@@ -1,0 +1,154 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 748 510" width="100%" role="img" aria-labelledby="fig1-static-title fig1-static-desc">
+<title id="fig1-static-title">Stigler looks extreme by percentage, not by relationships per choice</title>
+<desc id="fig1-static-desc">Two direct comparisons with 98 Netlib linear programs. Stigler is 84.0 percent dense versus a Netlib median of 0.97 percent. It has 8.4 nonzeros per column versus a Netlib median of 4.8; 21 Netlib models have more.</desc>
+<style>
+text{font-family:"Plex Mono",ui-monospace,monospace;fill:#0a0a0a;font-size:12px}
+.headline{font-family:"Archivo",Helvetica,Arial,sans-serif;font-size:24px;font-weight:700;letter-spacing:-.5px}
+.subtitle,.source{fill:#6b6b6b;font-size:11px}
+.section{font-family:"Archivo",Helvetica,Arial,sans-serif;font-size:16px;font-weight:700}
+.value{font-size:18px;font-weight:500}
+.signal{fill:#d6001c}
+.muted{fill:#6b6b6b}
+.paper{fill:#fff}
+.panel{fill:#f2f2f0}
+.rule{stroke:#dcdcda}
+</style>
+<rect class="paper" width="748" height="510"/>
+<text class="headline" x="24" y="36">Stigler looks extreme by percentage—</text>
+<text class="headline" x="24" y="64">not by relationships per choice</text>
+<text class="subtitle" x="24" y="87">Compared with 98 Netlib LPs · objective row included on both sides</text>
+<text class="section" x="24" y="132">Percentage of the matrix filled</text>
+<line class="rule" x1="54" y1="171" x2="708" y2="171" stroke-width="2"/>
+<line class="rule" x1="54.0" y1="164" x2="54.0" y2="178"/>
+<text class="subtitle" x="54.0" y="195" text-anchor="middle">0%</text>
+<line class="rule" x1="217.5" y1="164" x2="217.5" y2="178"/>
+<text class="subtitle" x="217.5" y="195" text-anchor="middle">25%</text>
+<line class="rule" x1="381.0" y1="164" x2="381.0" y2="178"/>
+<text class="subtitle" x="381.0" y="195" text-anchor="middle">50%</text>
+<line class="rule" x1="544.5" y1="164" x2="544.5" y2="178"/>
+<text class="subtitle" x="544.5" y="195" text-anchor="middle">75%</text>
+<line class="rule" x1="708.0" y1="164" x2="708.0" y2="178"/>
+<text class="subtitle" x="708.0" y="195" text-anchor="middle">100%</text>
+<circle cx="60.4" cy="171" r="7" fill="#5c5c56"/>
+<text class="muted" x="60.4" y="151">Netlib median · 0.97%</text>
+<circle cx="603.5" cy="171" r="8" fill="#d6001c"/>
+<text class="signal value" x="603.5" y="151" text-anchor="middle">Stigler · 84.0%</text>
+<text class="section" x="24" y="252">Rows touched by one decision column</text>
+<text class="subtitle" x="24" y="273">Each dot is one Netlib model</text>
+<line class="rule" x1="54.0" y1="306" x2="54.0" y2="370"/>
+<text class="subtitle" x="54.0" y="389" text-anchor="middle">0</text>
+<line class="rule" x1="163.0" y1="306" x2="163.0" y2="370"/>
+<text class="subtitle" x="163.0" y="389" text-anchor="middle">5</text>
+<line class="rule" x1="272.0" y1="306" x2="272.0" y2="370"/>
+<text class="subtitle" x="272.0" y="389" text-anchor="middle">10</text>
+<line class="rule" x1="490.0" y1="306" x2="490.0" y2="370"/>
+<text class="subtitle" x="490.0" y="389" text-anchor="middle">20</text>
+<line class="rule" x1="708.0" y1="306" x2="708.0" y2="370"/>
+<text class="subtitle" x="708.0" y="389" text-anchor="middle">30</text>
+<rect x="141.9" y="310" width="74.4" height="60" fill="#b4b4ae" opacity=".45"/>
+<circle cx="208.4" cy="326" r="2.4" fill="#5c5c56" opacity=".65"><title>25FV47 · 7.1 rows per decision</title></circle>
+<circle cx="118.7" cy="343" r="2.4" fill="#5c5c56" opacity=".65"><title>80BAU3B · 3.0 rows per decision</title></circle>
+<circle cx="158.5" cy="360" r="2.4" fill="#5c5c56" opacity=".65"><title>ADLITTLE · 4.8 rows per decision</title></circle>
+<circle cx="114.0" cy="340" r="2.4" fill="#5c5c56" opacity=".65"><title>AFIRO · 2.8 rows per decision</title></circle>
+<circle cx="393.8" cy="357" r="2.4" fill="#5c5c56" opacity=".65"><title>AGG · 15.6 rows per decision</title></circle>
+<circle cx="379.9" cy="337" r="2.4" fill="#5c5c56" opacity=".65"><title>AGG2 · 15.0 rows per decision</title></circle>
+<circle cx="381.1" cy="354" r="2.4" fill="#5c5c56" opacity=".65"><title>AGG3 · 15.0 rows per decision</title></circle>
+<circle cx="176.8" cy="334" r="2.4" fill="#5c5c56" opacity=".65"><title>BANDM · 5.6 rows per decision</title></circle>
+<circle cx="343.2" cy="351" r="2.4" fill="#5c5c56" opacity=".65"><title>BEACONFD · 13.3 rows per decision</title></circle>
+<circle cx="190.8" cy="331" r="2.4" fill="#5c5c56" opacity=".65"><title>BLEND · 6.3 rows per decision</title></circle>
+<circle cx="167.7" cy="348" r="2.4" fill="#5c5c56" opacity=".65"><title>BNL1 · 5.2 rows per decision</title></circle>
+<circle cx="154.7" cy="328" r="2.4" fill="#5c5c56" opacity=".65"><title>BNL2 · 4.6 rows per decision</title></circle>
+<circle cx="273.4" cy="345" r="2.4" fill="#5c5c56" opacity=".65"><title>BOEING1 · 10.1 rows per decision</title></circle>
+<circle cx="258.1" cy="362" r="2.4" fill="#5c5c56" opacity=".65"><title>BOEING2 · 9.4 rows per decision</title></circle>
+<circle cx="159.5" cy="342" r="2.4" fill="#5c5c56" opacity=".65"><title>BORE3D · 4.8 rows per decision</title></circle>
+<circle cx="242.2" cy="359" r="2.4" fill="#5c5c56" opacity=".65"><title>BRANDY · 8.6 rows per decision</title></circle>
+<circle cx="164.3" cy="339" r="2.4" fill="#5c5c56" opacity=".65"><title>CAPRI · 5.1 rows per decision</title></circle>
+<circle cx="216.7" cy="356" r="2.4" fill="#5c5c56" opacity=".65"><title>CYCLE · 7.5 rows per decision</title></circle>
+<circle cx="141.7" cy="336" r="2.4" fill="#5c5c56" opacity=".65"><title>CZPROB · 4.0 rows per decision</title></circle>
+<circle cx="204.5" cy="353" r="2.4" fill="#5c5c56" opacity=".65"><title>D2Q06C · 6.9 rows per decision</title></circle>
+<circle cx="208.7" cy="333" r="2.4" fill="#5c5c56" opacity=".65"><title>D6CUBE · 7.1 rows per decision</title></circle>
+<circle cx="235.6" cy="350" r="2.4" fill="#5c5c56" opacity=".65"><title>DEGEN2 · 8.3 rows per decision</title></circle>
+<circle cx="368.5" cy="330" r="2.4" fill="#5c5c56" opacity=".65"><title>DEGEN3 · 14.4 rows per decision</title></circle>
+<circle cx="128.6" cy="347" r="2.4" fill="#5c5c56" opacity=".65"><title>DFL001 · 3.4 rows per decision</title></circle>
+<circle cx="267.9" cy="327" r="2.4" fill="#5c5c56" opacity=".65"><title>E226 · 9.8 rows per decision</title></circle>
+<circle cx="132.9" cy="344" r="2.4" fill="#5c5c56" opacity=".65"><title>ETAMACRO · 3.6 rows per decision</title></circle>
+<circle cx="213.2" cy="361" r="2.4" fill="#5c5c56" opacity=".65"><title>FFFFF800 · 7.3 rows per decision</title></circle>
+<circle cx="150.4" cy="341" r="2.4" fill="#5c5c56" opacity=".65"><title>FINNIS · 4.4 rows per decision</title></circle>
+<circle cx="360.6" cy="358" r="2.4" fill="#5c5c56" opacity=".65"><title>FIT1D · 14.1 rows per decision</title></circle>
+<circle cx="195.6" cy="338" r="2.4" fill="#5c5c56" opacity=".65"><title>FIT1P · 6.5 rows per decision</title></circle>
+<circle cx="340.6" cy="355" r="2.4" fill="#5c5c56" opacity=".65"><title>FIT2D · 13.1 rows per decision</title></circle>
+<circle cx="152.0" cy="335" r="2.4" fill="#5c5c56" opacity=".65"><title>FIT2P · 4.5 rows per decision</title></circle>
+<circle cx="308.6" cy="352" r="2.4" fill="#5c5c56" opacity=".65"><title>FORPLAN · 11.7 rows per decision</title></circle>
+<circle cx="145.1" cy="332" r="2.4" fill="#5c5c56" opacity=".65"><title>GANGES · 4.2 rows per decision</title></circle>
+<circle cx="123.2" cy="349" r="2.4" fill="#5c5c56" opacity=".65"><title>GFRD-PNC · 3.2 rows per decision</title></circle>
+<circle cx="181.0" cy="329" r="2.4" fill="#5c5c56" opacity=".65"><title>GREENBEA · 5.8 rows per decision</title></circle>
+<circle cx="181.0" cy="346" r="2.4" fill="#5c5c56" opacity=".65"><title>GREENBEB · 5.8 rows per decision</title></circle>
+<circle cx="245.5" cy="326" r="2.4" fill="#5c5c56" opacity=".65"><title>GROW15 · 8.8 rows per decision</title></circle>
+<circle cx="245.7" cy="343" r="2.4" fill="#5c5c56" opacity=".65"><title>GROW22 · 8.8 rows per decision</title></circle>
+<circle cx="244.7" cy="360" r="2.4" fill="#5c5c56" opacity=".65"><title>GROW7 · 8.7 rows per decision</title></circle>
+<circle cx="416.0" cy="340" r="2.4" fill="#5c5c56" opacity=".65"><title>ISRAEL · 16.6 rows per decision</title></circle>
+<circle cx="208.7" cy="357" r="2.4" fill="#5c5c56" opacity=".65"><title>KB2 · 7.1 rows per decision</title></circle>
+<circle cx="130.9" cy="337" r="2.4" fill="#5c5c56" opacity=".65"><title>LOTFI · 3.5 rows per decision</title></circle>
+<circle cx="205.2" cy="354" r="2.4" fill="#5c5c56" opacity=".65"><title>MAROS · 6.9 rows per decision</title></circle>
+<circle cx="404.2" cy="334" r="2.4" fill="#5c5c56" opacity=".65"><title>MAROS-R7 · 16.1 rows per decision</title></circle>
+<circle cx="110.0" cy="351" r="2.4" fill="#5c5c56" opacity=".65"><title>MODSZK1 · 2.6 rows per decision</title></circle>
+<circle cx="158.3" cy="331" r="2.4" fill="#5c5c56" opacity=".65"><title>NESM · 4.8 rows per decision</title></circle>
+<circle cx="149.5" cy="348" r="2.4" fill="#5c5c56" opacity=".65"><title>PEROLD · 4.4 rows per decision</title></circle>
+<circle cx="312.0" cy="328" r="2.4" fill="#5c5c56" opacity=".65"><title>PILOT · 11.8 rows per decision</title></circle>
+<circle cx="215.3" cy="345" r="2.4" fill="#5c5c56" opacity=".65"><title>PILOT.JA · 7.4 rows per decision</title></circle>
+<circle cx="126.1" cy="362" r="2.4" fill="#5c5c56" opacity=".65"><title>PILOT.WE · 3.3 rows per decision</title></circle>
+<circle cx="166.2" cy="342" r="2.4" fill="#5c5c56" opacity=".65"><title>PILOT4 · 5.1 rows per decision</title></circle>
+<circle cx="383.5" cy="359" r="2.4" fill="#5c5c56" opacity=".65"><title>PILOT87 · 15.1 rows per decision</title></circle>
+<circle cx="185.8" cy="339" r="2.4" fill="#5c5c56" opacity=".65"><title>PILOTNOV · 6.0 rows per decision</title></circle>
+<circle cx="164.9" cy="356" r="2.4" fill="#5c5c56" opacity=".65"><title>QAP8 · 5.1 rows per decision</title></circle>
+<circle cx="162.9" cy="336" r="2.4" fill="#5c5c56" opacity=".65"><title>QAP12 · 5.0 rows per decision</title></circle>
+<circle cx="162.3" cy="353" r="2.4" fill="#5c5c56" opacity=".65"><title>QAP15 · 5.0 rows per decision</title></circle>
+<circle cx="145.1" cy="333" r="2.4" fill="#5c5c56" opacity=".65"><title>RECIPE · 4.2 rows per decision</title></circle>
+<circle cx="113.5" cy="350" r="2.4" fill="#5c5c56" opacity=".65"><title>SC105 · 2.7 rows per decision</title></circle>
+<circle cx="113.3" cy="330" r="2.4" fill="#5c5c56" opacity=".65"><title>SC205 · 2.7 rows per decision</title></circle>
+<circle cx="113.5" cy="347" r="2.4" fill="#5c5c56" opacity=".65"><title>SC50A · 2.7 rows per decision</title></circle>
+<circle cx="108.0" cy="327" r="2.4" fill="#5c5c56" opacity=".65"><title>SC50B · 2.5 rows per decision</title></circle>
+<circle cx="142.5" cy="344" r="2.4" fill="#5c5c56" opacity=".65"><title>SCAGR25 · 4.1 rows per decision</title></circle>
+<circle cx="140.1" cy="361" r="2.4" fill="#5c5c56" opacity=".65"><title>SCAGR7 · 4.0 rows per decision</title></circle>
+<circle cx="178.6" cy="341" r="2.4" fill="#5c5c56" opacity=".65"><title>SCFXM1 · 5.7 rows per decision</title></circle>
+<circle cx="178.7" cy="358" r="2.4" fill="#5c5c56" opacity=".65"><title>SCFXM2 · 5.7 rows per decision</title></circle>
+<circle cx="178.8" cy="338" r="2.4" fill="#5c5c56" opacity=".65"><title>SCFXM3 · 5.7 rows per decision</title></circle>
+<circle cx="158.0" cy="355" r="2.4" fill="#5c5c56" opacity=".65"><title>SCORPION · 4.8 rows per decision</title></circle>
+<circle cx="129.1" cy="335" r="2.4" fill="#5c5c56" opacity=".65"><title>SCRS8 · 3.4 rows per decision</title></circle>
+<circle cx="144.3" cy="352" r="2.4" fill="#5c5c56" opacity=".65"><title>SCSD1 · 4.1 rows per decision</title></circle>
+<circle cx="145.5" cy="332" r="2.4" fill="#5c5c56" opacity=".65"><title>SCSD6 · 4.2 rows per decision</title></circle>
+<circle cx="143.8" cy="349" r="2.4" fill="#5c5c56" opacity=".65"><title>SCSD8 · 4.1 rows per decision</title></circle>
+<circle cx="147.2" cy="329" r="2.4" fill="#5c5c56" opacity=".65"><title>SCTAP1 · 4.3 rows per decision</title></circle>
+<circle cx="148.2" cy="346" r="2.4" fill="#5c5c56" opacity=".65"><title>SCTAP2 · 4.3 rows per decision</title></circle>
+<circle cx="148.4" cy="326" r="2.4" fill="#5c5c56" opacity=".65"><title>SCTAP3 · 4.3 rows per decision</title></circle>
+<circle cx="157.4" cy="343" r="2.4" fill="#5c5c56" opacity=".65"><title>SEBA · 4.7 rows per decision</title></circle>
+<circle cx="168.5" cy="360" r="2.4" fill="#5c5c56" opacity=".65"><title>SHARE1B · 5.3 rows per decision</title></circle>
+<circle cx="255.4" cy="340" r="2.4" fill="#5c5c56" opacity=".65"><title>SHARE2B · 9.2 rows per decision</title></circle>
+<circle cx="114.2" cy="357" r="2.4" fill="#5c5c56" opacity=".65"><title>SHELL · 2.8 rows per decision</title></circle>
+<circle cx="141.0" cy="337" r="2.4" fill="#5c5c56" opacity=".65"><title>SHIP04L · 4.0 rows per decision</title></circle>
+<circle cx="140.9" cy="354" r="2.4" fill="#5c5c56" opacity=".65"><title>SHIP04S · 4.0 rows per decision</title></circle>
+<circle cx="141.0" cy="334" r="2.4" fill="#5c5c56" opacity=".65"><title>SHIP08L · 4.0 rows per decision</title></circle>
+<circle cx="140.8" cy="351" r="2.4" fill="#5c5c56" opacity=".65"><title>SHIP08S · 4.0 rows per decision</title></circle>
+<circle cx="140.8" cy="331" r="2.4" fill="#5c5c56" opacity=".65"><title>SHIP12L · 4.0 rows per decision</title></circle>
+<circle cx="140.3" cy="348" r="2.4" fill="#5c5c56" opacity=".65"><title>SHIP12S · 4.0 rows per decision</title></circle>
+<circle cx="153.1" cy="328" r="2.4" fill="#5c5c56" opacity=".65"><title>SIERRA · 4.5 rows per decision</title></circle>
+<circle cx="234.0" cy="345" r="2.4" fill="#5c5c56" opacity=".65"><title>STAIR · 8.3 rows per decision</title></circle>
+<circle cx="115.6" cy="362" r="2.4" fill="#5c5c56" opacity=".65"><title>STANDATA · 2.8 rows per decision</title></circle>
+<circle cx="111.9" cy="342" r="2.4" fill="#5c5c56" opacity=".65"><title>STANDGUB · 2.7 rows per decision</title></circle>
+<circle cx="128.7" cy="359" r="2.4" fill="#5c5c56" opacity=".65"><title>STANDMPS · 3.4 rows per decision</title></circle>
+<circle cx="147.1" cy="339" r="2.4" fill="#5c5c56" opacity=".65"><title>STOCFOR1 · 4.3 rows per decision</title></circle>
+<circle cx="155.9" cy="356" r="2.4" fill="#5c5c56" opacity=".65"><title>STOCFOR2 · 4.7 rows per decision</title></circle>
+<circle cx="156.8" cy="336" r="2.4" fill="#5c5c56" opacity=".65"><title>STOCFOR3 · 4.7 rows per decision</title></circle>
+<circle cx="144.7" cy="353" r="2.4" fill="#5c5c56" opacity=".65"><title>TRUSS · 4.2 rows per decision</title></circle>
+<circle cx="222.0" cy="333" r="2.4" fill="#5c5c56" opacity=".65"><title>TUFF · 7.7 rows per decision</title></circle>
+<circle cx="152.2" cy="350" r="2.4" fill="#5c5c56" opacity=".65"><title>VTP.BASE · 4.5 rows per decision</title></circle>
+<circle cx="644.1" cy="330" r="2.4" fill="#5c5c56" opacity=".65"><title>WOOD1P · 27.1 rows per decision</title></circle>
+<circle cx="151.2" cy="347" r="2.4" fill="#5c5c56" opacity=".65"><title>WOODW · 4.5 rows per decision</title></circle>
+<line x1="159.0" y1="300" x2="159.0" y2="376" stroke="#0a0a0a" stroke-width="1.5"/>
+<text x="159.0" y="294" text-anchor="middle">median · 4.8</text>
+<circle cx="237.2" cy="346" r="8" fill="#d6001c" stroke="#fff" stroke-width="2"/>
+<text class="signal value" x="249.2" y="350">Stigler · 8.4</text>
+<text class="subtitle" x="24" y="429">Netlib middle half: 4.0–7.4 · 21 of 98 models touch more rows per decision than Stigler</text>
+<text class="source" x="24" y="468">Source: Netlib LP/DATA summary snapshot · 11 Aug 2026</text>
+<text class="source" x="24" y="488">Code and data: github.com/Denis-Joly/what-optimal-means · post-02 folder</text>
+</svg>
