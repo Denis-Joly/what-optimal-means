@@ -39,9 +39,9 @@ are more coupled by the latter measure.
 
 The second figure keeps three ideas separate: 86 available columns, almost
 half a trillion candidate nine-column selections, and the nine positions in
-the solved basis. The available-column bar is proportional (77 foods to nine
-surpluses), and the final four-plus-five layout reflows to a three-by-three grid
-on narrow screens.
+the solved basis computed by the Post 1 solver. The available-column bar is
+proportional (77 foods to nine surpluses), and the final four-plus-five layout
+reflows to a three-by-three grid on narrow screens.
 
 ![Stigler compared with Netlib on density and relationships per choice](out/fig1-structure-not-size.svg)
 
