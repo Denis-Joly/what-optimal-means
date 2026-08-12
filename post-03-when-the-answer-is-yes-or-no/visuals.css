@@ -1,0 +1,218 @@
+/* Post 3 visualisations. Every selector is scoped to avoid affecting the site
+   or other articles when this file is appended to the shared visual CSS. */
+
+.viz-integrality,
+.viz-bnb {
+  --p3-ink: #0a0a0a;
+  --p3-muted: #676762;
+  --p3-paper: #fff;
+  --p3-panel: #f2f2f0;
+  --p3-rule: #dcdcda;
+  --p3-signal: #d6001c;
+  --p3-good: #087f5b;
+  --p3-good-soft: #dff3eb;
+  --p3-region: #d8d8d3;
+  background: var(--p3-paper);
+  border: 1px solid var(--p3-rule);
+  color: var(--p3-ink);
+  font-family: "Plex Mono", ui-monospace, monospace;
+  padding: clamp(1rem, 3vw, 1.5rem);
+}
+
+.viz-integrality *,
+.viz-bnb * { box-sizing: border-box; }
+
+.integrality-heading h3,
+.bnb-heading h3 {
+  font-family: "Archivo", Helvetica, Arial, sans-serif;
+  font-size: clamp(1.35rem, 3.4vw, 1.9rem);
+  line-height: 1.05;
+  letter-spacing: -.035em;
+  margin: .35rem 0 .7rem;
+}
+
+.integrality-heading p,
+.bnb-heading p,
+.integrality-readout p,
+.bnb-certificate p { line-height: 1.55; }
+
+.integrality-kicker,
+.bnb-kicker,
+.integrality-source,
+.bnb-source {
+  color: var(--p3-muted);
+  font-size: .72rem;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+}
+
+.integrality-fallback svg,
+.bnb-fallback svg,
+.integrality-chart { display: block; height: auto; max-width: 100%; }
+
+.integrality-fallback svg,
+.bnb-fallback svg {
+  --viz-good: var(--p3-good);
+  --viz-good-soft: var(--p3-good-soft);
+  --viz-ink: var(--p3-ink);
+  --viz-muted: var(--p3-muted);
+  --viz-panel: var(--p3-panel);
+  --viz-paper: var(--p3-paper);
+  --viz-region: var(--p3-region);
+  --viz-rule: var(--p3-rule);
+  --viz-signal: var(--p3-signal);
+}
+
+.bnb-fallback { overflow-x: auto; }
+
+.integrality-enhanced,
+.bnb-enhanced { margin-top: 1.25rem; }
+
+.integrality-steps,
+.bnb-steps {
+  display: grid;
+  gap: .4rem;
+}
+
+.integrality-steps { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+
+.integrality-steps button,
+.bnb-steps button {
+  align-items: center;
+  background: var(--p3-panel);
+  border: 1px solid var(--p3-rule);
+  color: var(--p3-ink);
+  cursor: pointer;
+  display: flex;
+  font: inherit;
+  gap: .5rem;
+  min-height: 46px;
+  padding: .55rem .65rem;
+  text-align: left;
+}
+
+.integrality-steps button span,
+.bnb-steps button span {
+  align-items: center;
+  border: 1px solid var(--p3-muted);
+  border-radius: 50%;
+  display: inline-flex;
+  flex: 0 0 1.45rem;
+  height: 1.45rem;
+  justify-content: center;
+}
+
+.integrality-steps button[aria-pressed="true"],
+.bnb-steps button[aria-pressed="true"] {
+  background: var(--p3-ink);
+  border-color: var(--p3-ink);
+  color: var(--p3-paper);
+}
+
+.integrality-steps button:focus-visible,
+.bnb-steps button:focus-visible { outline: 3px solid #f3a6b0; outline-offset: 2px; }
+
+.integrality-layout {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: minmax(0, 1.55fr) minmax(12rem, .8fr);
+  margin-top: 1rem;
+}
+
+.integrality-panel { fill: var(--p3-panel); }
+.integrality-region { fill: #d8d8d3; stroke: var(--p3-muted); stroke-width: 1.5; }
+.integrality-lattice-dot { fill: var(--p3-muted); }
+.integrality-special { opacity: .2; transition: opacity .18s ease; }
+.integrality-special circle { fill: var(--p3-paper); stroke: var(--p3-muted); stroke-width: 2.5; }
+.integrality-special text { fill: var(--p3-ink); font: 12px "Plex Mono", ui-monospace, monospace; }
+.integrality-special-round circle { stroke: var(--p3-signal); stroke-width: 3; }
+.integrality-special-round text { fill: var(--p3-signal); }
+.integrality-special-integer circle { fill: var(--p3-good); stroke: var(--p3-paper); }
+.integrality-special-integer text { fill: var(--p3-good); }
+.integrality-special.is-current { opacity: 1; }
+.integrality-axis-label { fill: var(--p3-muted); font: 11px "Plex Mono", ui-monospace, monospace; }
+
+.integrality-readout,
+.bnb-certificate {
+  align-self: stretch;
+  background: var(--p3-panel);
+  border-top: 4px solid var(--p3-ink);
+  padding: 1rem;
+}
+
+.integrality-readout small,
+.integrality-readout strong,
+.integrality-readout b,
+.bnb-certificate small,
+.bnb-certificate strong,
+.bnb-certificate span { display: block; }
+
+.integrality-readout strong,
+.bnb-certificate strong {
+  font-family: "Archivo", Helvetica, Arial, sans-serif;
+  font-size: clamp(1.4rem, 4vw, 2.2rem);
+  line-height: 1.05;
+  margin: .65rem 0 .35rem;
+}
+
+.integrality-readout[data-tone="bad"] { border-color: var(--p3-signal); }
+.integrality-readout[data-tone="bad"] b { color: var(--p3-signal); }
+.integrality-readout[data-tone="good"] { border-color: var(--p3-good); }
+.integrality-readout[data-tone="good"] b { color: var(--p3-good); }
+
+.integrality-source,
+.bnb-source { line-height: 1.45; margin: 1rem 0 0; text-transform: none; }
+
+.bnb-layout {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: minmax(0, 1.15fr) minmax(15rem, .85fr);
+}
+
+.bnb-live-heading {
+  font-family: "Archivo", Helvetica, Arial, sans-serif;
+  font-size: 1rem;
+  margin: 1.25rem 0 .65rem;
+}
+
+.bnb-steps button { font-size: .75rem; }
+.bnb-certificate { min-height: 260px; }
+.bnb-interval { background: var(--p3-rule); height: 14px; margin: 1.25rem 0; position: relative; }
+.bnb-interval i {
+  background: var(--p3-good);
+  height: 100%;
+  left: var(--bnb-left, 0%);
+  position: absolute;
+  transition: left .18s ease, width .18s ease;
+  width: var(--bnb-width, 100%);
+}
+
+@media (max-width: 680px) {
+  .integrality-steps { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .integrality-layout,
+  .bnb-layout { grid-template-columns: 1fr; }
+  .viz-integrality,
+  .viz-bnb { padding: .85rem; }
+  .bnb-fallback svg { max-width: none; min-width: 640px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .integrality-special,
+  .bnb-interval i { transition: none; }
+}
+
+@media (prefers-color-scheme: dark) {
+  .viz-integrality,
+  .viz-bnb {
+    --p3-ink: #f5f5f0;
+    --p3-muted: #aaa9a2;
+    --p3-paper: #111;
+    --p3-panel: #20201e;
+    --p3-rule: #3b3b38;
+    --p3-signal: #ff5c70;
+    --p3-good: #54c99e;
+    --p3-good-soft: #17382d;
+    --p3-region: #353531;
+  }
+  .integrality-region { fill: #353531; }
+}

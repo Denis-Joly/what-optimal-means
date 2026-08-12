@@ -13,7 +13,7 @@ in this repository rather than typed in by hand.
 | --- | --- | --- | --- |
 | 1 | [The Last Place "Optimal" Means Anything](https://spatium-novum.com/posts/the-last-place-optimal-means-anything) | [`post-01-the-last-place-optimal-means-anything`](post-01-the-last-place-optimal-means-anything) | Reruns Stigler's 1945 diet problem on all 77 commodities, the computation that took nine clerks 120 man-days in 1947. Prints the dual solution, which is the actual subject of the post. |
 | 2 | [Rows, Columns, and What They Cost](https://spatium-novum.com/posts/rows-columns-and-what-they-cost) | [`post-02-rows-columns-and-what-they-cost`](post-02-rows-columns-and-what-they-cost) | Recomputes the Stigler and Netlib matrix statistics, counts standard-form candidate column sets, and generates the article's static and interactive figures. |
-| 3 | When the Answer Is Yes or No | `post-03-…` | *not written yet* |
+| 3 | When the Answer Is Yes or No | [`post-03-when-the-answer-is-yes-or-no`](post-03-when-the-answer-is-yes-or-no) | Solves and independently cross-checks the integer example, enumerates all lattice points, verifies a valid cut, records an exact branch-and-bound certificate trace, and generates the static and interactive figures. |
 | 4 | Optimising Against a Guess | `post-04-…` | *not written yet* |
 | 5 | Where the Proof Runs Out | `post-05-…` | *not written yet* |
 
@@ -189,8 +189,8 @@ in the sentence next to it: regenerating the figures and recomputing the
 numbers is one command, not a checklist I might skip.
 
 **Windows has no `make`.** Either install it, or ignore it and run the four
-`python3` lines from step 5 by hand, which is exactly what the `Makefile`
-does — open it and see, it is nine lines.
+`python3` lines from each post's README by hand, which is exactly what the
+`Makefile` automates.
 
 ### When it does not work
 

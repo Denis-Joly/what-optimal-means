@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 748 620" width="100%" role="img" aria-labelledby="fig1-rounding-title fig1-rounding-desc">
+<title id="fig1-rounding-title">Rounding the linear-programming relaxation fails</title>
+<desc id="fig1-rounding-desc">The LP relaxation allows fractional decisions and reaches 2.25, 3.75. Rounding to 2, 4 violates the second constraint. The nearest feasible integer is 2, 3, while the integer optimum is elsewhere at 0, 5.</desc>
+<style>
+text{font-family:"Plex Mono",ui-monospace,monospace;fill:var(--viz-ink,#0a0a0a);font-size:12px}
+.headline{font-family:"Archivo",Helvetica,Arial,sans-serif;font-size:24px;font-weight:700;letter-spacing:-.5px}
+.section{font-family:"Archivo",Helvetica,Arial,sans-serif;font-size:16px;font-weight:700}
+.small,.source{fill:var(--viz-muted,#676762);font-size:10.5px}
+.value{font-family:"Archivo",Helvetica,Arial,sans-serif;font-size:18px;font-weight:700}
+.signal{fill:var(--viz-signal,#d6001c)}.good{fill:var(--viz-good,#087f5b)}.muted{fill:var(--viz-muted,#676762)}
+.paper{fill:var(--viz-paper,#fff)}.panel{fill:var(--viz-panel,#f2f2f0)}.grid{stroke:var(--viz-rule,#dcdcda)}.axis{stroke:var(--viz-ink,#0a0a0a)}
+</style>
+<rect class="paper" width="748" height="620"/>
+<text class="headline" x="24" y="38">The nearest integer is illegal. The best integer is elsewhere.</text>
+<text class="small" x="24" y="63">LP relaxation = the same model after temporarily allowing fractional x₁ and x₂</text>
+<rect class="panel" x="24" y="88" width="470" height="438" rx="3"/>
+<line class="grid" x1="48.0" y1="116" x2="48.0" y2="494"/>
+<text class="small" x="48.0" y="513" text-anchor="middle">0</text>
+<line class="grid" x1="112.9" y1="116" x2="112.9" y2="494"/>
+<text class="small" x="112.9" y="513" text-anchor="middle">1</text>
+<line class="grid" x1="177.8" y1="116" x2="177.8" y2="494"/>
+<text class="small" x="177.8" y="513" text-anchor="middle">2</text>
+<line class="grid" x1="242.8" y1="116" x2="242.8" y2="494"/>
+<text class="small" x="242.8" y="513" text-anchor="middle">3</text>
+<line class="grid" x1="307.7" y1="116" x2="307.7" y2="494"/>
+<text class="small" x="307.7" y="513" text-anchor="middle">4</text>
+<line class="grid" x1="372.6" y1="116" x2="372.6" y2="494"/>
+<text class="small" x="372.6" y="513" text-anchor="middle">5</text>
+<line class="grid" x1="437.5" y1="116" x2="437.5" y2="494"/>
+<text class="small" x="437.5" y="513" text-anchor="middle">6</text>
+<line class="grid" x1="48" y1="494.0" x2="470" y2="494.0"/>
+<text class="small" x="37" y="498.0" text-anchor="end">0</text>
+<line class="grid" x1="48" y1="431.0" x2="470" y2="431.0"/>
+<text class="small" x="37" y="435.0" text-anchor="end">1</text>
+<line class="grid" x1="48" y1="368.0" x2="470" y2="368.0"/>
+<text class="small" x="37" y="372.0" text-anchor="end">2</text>
+<line class="grid" x1="48" y1="305.0" x2="470" y2="305.0"/>
+<text class="small" x="37" y="309.0" text-anchor="end">3</text>
+<line class="grid" x1="48" y1="242.0" x2="470" y2="242.0"/>
+<text class="small" x="37" y="246.0" text-anchor="end">4</text>
+<line class="grid" x1="48" y1="179.0" x2="470" y2="179.0"/>
+<text class="small" x="37" y="183.0" text-anchor="end">5</text>
+<line class="grid" x1="48" y1="116.0" x2="470" y2="116.0"/>
+<text class="small" x="37" y="120.0" text-anchor="end">6</text>
+<path d="M 48.0 494.0 L 48.0 179.0 L 194.1 257.8 L 437.5 494.0 Z" fill="var(--viz-region,#d8d8d3)" stroke="var(--viz-muted,#5c5c56)" stroke-width="1.5"/>
+<text class="small" x="70" y="476">LP-feasible region</text>
+<text x="466" y="518" text-anchor="end">x₁</text>
+<text x="31" y="108">x₂</text>
+<circle cx="48.0" cy="494.0" r="3" fill="var(--viz-muted,#5c5c56)"/>
+<circle cx="48.0" cy="431.0" r="3" fill="var(--viz-muted,#5c5c56)"/>
+<circle cx="48.0" cy="368.0" r="3" fill="var(--viz-muted,#5c5c56)"/>
+<circle cx="48.0" cy="305.0" r="3" fill="var(--viz-muted,#5c5c56)"/>
+<circle cx="48.0" cy="242.0" r="3" fill="var(--viz-muted,#5c5c56)"/>
+<circle cx="48.0" cy="179.0" r="3" fill="var(--viz-muted,#5c5c56)"/>
+<circle cx="112.9" cy="494.0" r="3" fill="var(--viz-muted,#5c5c56)"/>
+<circle cx="112.9" cy="431.0" r="3" fill="var(--viz-muted,#5c5c56)"/>
+<circle cx="112.9" cy="368.0" r="3" fill="var(--viz-muted,#5c5c56)"/>
+<circle cx="112.9" cy="305.0" r="3" fill="var(--viz-muted,#5c5c56)"/>
+<circle cx="112.9" cy="242.0" r="3" fill="var(--viz-muted,#5c5c56)"/>
+<circle cx="177.8" cy="494.0" r="3" fill="var(--viz-muted,#5c5c56)"/>
+<circle cx="177.8" cy="431.0" r="3" fill="var(--viz-muted,#5c5c56)"/>
+<circle cx="177.8" cy="368.0" r="3" fill="var(--viz-muted,#5c5c56)"/>
+<circle cx="177.8" cy="305.0" r="3" fill="var(--viz-muted,#5c5c56)"/>
+<circle cx="242.8" cy="494.0" r="3" fill="var(--viz-muted,#5c5c56)"/>
+<circle cx="242.8" cy="431.0" r="3" fill="var(--viz-muted,#5c5c56)"/>
+<circle cx="242.8" cy="368.0" r="3" fill="var(--viz-muted,#5c5c56)"/>
+<circle cx="242.8" cy="305.0" r="3" fill="var(--viz-muted,#5c5c56)"/>
+<circle cx="307.7" cy="494.0" r="3" fill="var(--viz-muted,#5c5c56)"/>
+<circle cx="307.7" cy="431.0" r="3" fill="var(--viz-muted,#5c5c56)"/>
+<circle cx="307.7" cy="368.0" r="3" fill="var(--viz-muted,#5c5c56)"/>
+<circle cx="372.6" cy="494.0" r="3" fill="var(--viz-muted,#5c5c56)"/>
+<circle cx="372.6" cy="431.0" r="3" fill="var(--viz-muted,#5c5c56)"/>
+<circle cx="437.5" cy="494.0" r="3" fill="var(--viz-muted,#5c5c56)"/>
+<defs><marker id="rounding-arrow" markerWidth="7" markerHeight="7" refX="5" refY="3.5" orient="auto"><path d="M0,0 L0,7 L7,3.5 Z" fill="var(--viz-signal,#d6001c)"/></marker></defs>
+<line x1="194.1" y1="257.8" x2="177.8" y2="242.0" stroke="var(--viz-signal,#d6001c)" stroke-width="1.5" stroke-dasharray="4 3" marker-end="url(#rounding-arrow)"/>
+<circle cx="194.1" cy="257.8" r="8" fill="var(--viz-paper,#fff)" stroke="var(--viz-ink,#0a0a0a)" stroke-width="2.5"/>
+<text x="205.1" y="279.8">LP · (2.25, 3.75)</text>
+<circle cx="177.8" cy="242.0" r="9" fill="var(--viz-paper,#fff)" stroke="var(--viz-signal,#d6001c)" stroke-width="3"/>
+<path d="M 173.8 238.0 L 181.8 246.0 M 181.8 238.0 L 173.8 246.0" stroke="var(--viz-signal,#d6001c)" stroke-width="2"/>
+<text class="signal" x="189.8" y="234.0">rounded · (2, 4)</text>
+<text class="signal" x="189.8" y="250.0">46 &gt; 45 · infeasible</text>
+<circle cx="177.8" cy="305.0" r="7" fill="var(--viz-paper,#fff)" stroke="var(--viz-muted,#676762)" stroke-width="2"/>
+<text class="muted" x="187.8" y="321.0">nearest feasible · (2, 3), z = 34</text>
+<circle cx="48.0" cy="179.0" r="9" fill="var(--viz-good,#087f5b)" stroke="var(--viz-paper,#fff)" stroke-width="2"/>
+<text class="good" x="60.0" y="183.0">integer optimum · (0, 5), z = 40</text>
+<text class="section" x="518" y="114">Four different answers</text>
+<text class="small" x="518" y="144">1 · LP RELAXATION</text>
+<text class="value" x="518" y="169">z = 41.25</text>
+<text class="small" x="518" y="187">Fractions are temporarily legal.</text>
+<line class="grid" x1="518" y1="205" x2="724" y2="205"/>
+<text class="small signal" x="518" y="232">2 · NEAREST ROUNDING</text>
+<text class="value signal" x="518" y="257">(2, 4) is illegal</text>
+<text class="small signal" x="518" y="275">The second row is exceeded by 1.</text>
+<line class="grid" x1="518" y1="293" x2="724" y2="293"/>
+<text class="small" x="518" y="320">3 · NEAREST FEASIBLE</text>
+<text class="value" x="518" y="345">(2, 3) · z = 34</text>
+<text class="small" x="518" y="363">Legal does not mean best.</text>
+<line class="grid" x1="518" y1="381" x2="724" y2="381"/>
+<text class="small good" x="518" y="408">4 · INTEGER OPTIMUM</text>
+<text class="value good" x="518" y="433">(0, 5) · z = 40</text>
+<text class="small" x="518" y="451">The best legal lattice point.</text>
+<text class="section" x="24" y="562">Rounding is not approximation here. It first breaks feasibility, then misses the optimum.</text>
+<text class="source" x="24" y="594">Source: Bradley, Hax &amp; Magnanti (1977), ch. 9 · Exact values regenerated by the companion code.</text>
+</svg>

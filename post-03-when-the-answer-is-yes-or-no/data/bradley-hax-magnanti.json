@@ -1,0 +1,19 @@
+{
+  "name": "Bradley-Hax-Magnanti integer-programming example",
+  "sense": "maximize",
+  "variables": ["x1", "x2"],
+  "objective": [5, 8],
+  "constraints": [
+    {"coefficients": [1, 1], "sense": "<=", "rhs": 6},
+    {"coefficients": [5, 9], "sense": "<=", "rhs": 45}
+  ],
+  "bounds": {"lower": [0, 0]},
+  "integer_variables": ["x1", "x2"],
+  "source": {
+    "authors": ["Stephen P. Bradley", "Arnoldo C. Hax", "Thomas L. Magnanti"],
+    "title": "Applied Mathematical Programming",
+    "year": 1977,
+    "chapter": "9, section 9.5",
+    "url": "https://web.mit.edu/15.053/www/AMP-Chapter-09.pdf"
+  }
+}

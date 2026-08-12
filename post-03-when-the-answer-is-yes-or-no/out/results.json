@@ -1,0 +1,41 @@
+{
+  "lp_relaxation": {
+    "point": {
+      "x1": "9/4",
+      "x2": "15/4"
+    },
+    "objective": "165/4"
+  },
+  "nearest_rounding": {
+    "point": {
+      "x1": "2",
+      "x2": "4"
+    },
+    "feasible": false,
+    "second_constraint_lhs": "46"
+  },
+  "nearest_feasible_integer": {
+    "point": {
+      "x1": "2",
+      "x2": "3"
+    },
+    "objective": "34",
+    "squared_distance": "5/8"
+  },
+  "integer_optimum": {
+    "point": {
+      "x1": "0",
+      "x2": "5"
+    },
+    "objective": "40"
+  },
+  "root_integrality_gap_absolute": "5/4",
+  "feasible_integer_points": 25,
+  "valid_integer_cut": {
+    "inequality": "2*x1 + 3*x2 <= 15",
+    "lp_root_lhs": "63/4",
+    "cuts_off_lp_root": true,
+    "integer_points_checked": 25,
+    "holds_for_all_feasible_integer_points": true
+  }
+}

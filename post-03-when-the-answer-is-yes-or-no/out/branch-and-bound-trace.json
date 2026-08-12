@@ -1,0 +1,178 @@
+{
+  "note": "Exact trace on the textbook branch tree with an explicit deterministic tight-bound schedule; both root children are solved first. Not a solver log.",
+  "nodes": [
+    {
+      "name": "L0",
+      "parent": null,
+      "added_bound": null,
+      "solution": {
+        "x1": "9/4",
+        "x2": "15/4"
+      },
+      "lp_bound": "165/4",
+      "disposition": "fractional"
+    },
+    {
+      "name": "L1",
+      "parent": "L0",
+      "added_bound": [
+        "x2",
+        ">=",
+        4
+      ],
+      "solution": {
+        "x1": "9/5",
+        "x2": "4"
+      },
+      "lp_bound": "41",
+      "disposition": "fractional"
+    },
+    {
+      "name": "L2",
+      "parent": "L0",
+      "added_bound": [
+        "x2",
+        "<=",
+        3
+      ],
+      "solution": {
+        "x1": "3",
+        "x2": "3"
+      },
+      "lp_bound": "39",
+      "disposition": "integer"
+    },
+    {
+      "name": "L3",
+      "parent": "L1",
+      "added_bound": [
+        "x1",
+        ">=",
+        2
+      ],
+      "solution": null,
+      "lp_bound": null,
+      "disposition": "infeasible"
+    },
+    {
+      "name": "L4",
+      "parent": "L1",
+      "added_bound": [
+        "x1",
+        "<=",
+        1
+      ],
+      "solution": {
+        "x1": "1",
+        "x2": "40/9"
+      },
+      "lp_bound": "365/9",
+      "disposition": "fractional"
+    },
+    {
+      "name": "L5",
+      "parent": "L4",
+      "added_bound": [
+        "x2",
+        "<=",
+        4
+      ],
+      "solution": {
+        "x1": "1",
+        "x2": "4"
+      },
+      "lp_bound": "37",
+      "disposition": "integer"
+    },
+    {
+      "name": "L6",
+      "parent": "L4",
+      "added_bound": [
+        "x2",
+        ">=",
+        5
+      ],
+      "solution": {
+        "x1": "0",
+        "x2": "5"
+      },
+      "lp_bound": "40",
+      "disposition": "integer"
+    }
+  ],
+  "snapshots": [
+    {
+      "step": 0,
+      "event": "Solve root relaxation L0",
+      "lower": null,
+      "upper": "165/4",
+      "incumbent": null,
+      "open_nodes": [
+        "L0"
+      ],
+      "open_bounds": {
+        "L0": "165/4"
+      }
+    },
+    {
+      "step": 1,
+      "event": "Solve both root children: L2 gives the first incumbent",
+      "lower": "39",
+      "upper": "41",
+      "incumbent": {
+        "x1": "3",
+        "x2": "3"
+      },
+      "open_nodes": [
+        "L1"
+      ],
+      "open_bounds": {
+        "L1": "41"
+      }
+    },
+    {
+      "step": 2,
+      "event": "L3 is infeasible; L4 tightens the global upper bound",
+      "lower": "39",
+      "upper": "365/9",
+      "incumbent": {
+        "x1": "3",
+        "x2": "3"
+      },
+      "open_nodes": [
+        "L4"
+      ],
+      "open_bounds": {
+        "L4": "365/9"
+      }
+    },
+    {
+      "step": 3,
+      "event": "L5 is integer but cannot improve the incumbent; L6 remains open",
+      "lower": "39",
+      "upper": "365/9",
+      "incumbent": {
+        "x1": "3",
+        "x2": "3"
+      },
+      "open_nodes": [
+        "L6"
+      ],
+      "open_bounds": {
+        "L6": "365/9"
+      }
+    },
+    {
+      "step": 4,
+      "event": "L6 improves the incumbent and closes the certificate",
+      "lower": "40",
+      "upper": "40",
+      "incumbent": {
+        "x1": "0",
+        "x2": "5"
+      },
+      "open_nodes": [],
+      "open_bounds": {}
+    }
+  ]
+}

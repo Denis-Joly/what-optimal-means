@@ -1,0 +1,25 @@
+Bradley-Hax-Magnanti example
+-----------------------------
+LP relaxation optimum       (2.25, 3.75), z = 41.25
+nearest rounding            (2, 4), infeasible: 5x1 + 9x2 = 46 > 45
+nearest feasible integer    (2, 3), z = 34
+integer optimum             (0, 5), z = 40
+feasible integer points     25
+root integrality gap        1.25 objective units
+
+Valid integer cut
+-----------------
+2x1 + 3x2 <= 15 holds for all 25 feasible integer points.
+At the LP root its left side is 63/4 > 15, so the cut removes the fractional optimum.
+
+Branch-and-bound certificate (maximization; both root children solved first)
+-------------------------------------------
+At every snapshot with an incumbent: L <= z* <= U.
+step 0: no incumbent — Solve root relaxation L0
+step 1: 39 <= z* <= 41 — Solve both root children: L2 gives the first incumbent
+step 2: 39 <= z* <= 365/9 — L3 is infeasible; L4 tightens the global upper bound
+step 3: 39 <= z* <= 365/9 — L5 is integer but cannot improve the incumbent; L6 remains open
+step 4: 40 <= z* <= 40 — L6 improves the incumbent and closes the certificate
+
+The root integrality gap compares the integer optimum with one LP relaxation.
+The live optimality gap is the certified interval U - L during the search.
