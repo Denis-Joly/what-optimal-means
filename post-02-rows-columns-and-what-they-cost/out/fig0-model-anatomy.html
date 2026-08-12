@@ -1,0 +1,36 @@
+<div class="viz-shell model-anatomy" aria-labelledby="model-anatomy-heading">
+  <header class="viz-heading">
+    <div class="viz-kicker">The linear program, unpacked</div>
+    <h3 id="model-anatomy-heading">Four objects make one model</h3>
+    <p>The notation is compact because each symbol has one job.</p>
+  </header>
+  <div class="model-lines" role="group" aria-label="Minimise c transpose x, subject to A x greater than or equal to b and x non-negative">
+    <div class="model-line model-line-objective">
+      <span class="model-verb">minimise</span>
+      <span class="model-symbol model-c"><i>c</i><sup>T</sup></span>
+      <span class="model-symbol model-x"><i>x</i></span>
+      <span class="model-purpose">one total cost</span>
+    </div>
+    <div class="model-line model-line-constraints">
+      <span class="model-verb">subject to</span>
+      <span class="model-symbol model-a"><i>A</i></span>
+      <span class="model-symbol model-x"><i>x</i></span>
+      <span class="model-relation">≥</span>
+      <span class="model-symbol model-b"><i>b</i></span>
+      <span class="model-purpose">nine promises</span>
+    </div>
+    <div class="model-line model-line-domain">
+      <span class="model-verb">with</span>
+      <span class="model-symbol model-x"><i>x</i></span>
+      <span class="model-relation">≥</span>
+      <span class="model-symbol model-zero">0</span>
+      <span class="model-purpose">no negative purchases</span>
+    </div>
+  </div>
+  <dl class="model-key">
+    <div class="model-key-x"><dt><i>x</i></dt><dd><strong>77 choices</strong><span>daily food expenditures</span></dd></div>
+    <div class="model-key-c"><dt><i>c</i></dt><dd><strong>77 weights</strong><span>all equal to one</span></dd></div>
+    <div class="model-key-a"><dt><i>A</i></dt><dd><strong>9 × 77 coefficients</strong><span>how each food affects each nutrient</span></dd></div>
+    <div class="model-key-b"><dt><i>b</i></dt><dd><strong>9 floors</strong><span>minimum daily allowances</span></dd></div>
+  </dl>
+</div>

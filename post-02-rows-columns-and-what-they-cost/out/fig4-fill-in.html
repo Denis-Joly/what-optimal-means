@@ -1,0 +1,27 @@
+<div class="viz-shell fill-figure" aria-labelledby="fill-heading">
+  <header class="viz-heading">
+    <div class="viz-kicker">Sparse elimination</div>
+    <h3 id="fill-heading">Eliminate the hub first and ten new links appear</h3>
+    <p>The starting graph never changes. Only the order does.</p>
+  </header>
+  <fieldset class="viz-segment fill-controls" aria-label="Elimination order">
+    <legend>Elimination order</legend>
+    <label><input type="radio" name="fill-step" id="fill-original" checked> Original star</label>
+    <label><input type="radio" name="fill-step" id="fill-hub"> Hub first</label>
+    <label><input type="radio" name="fill-step" id="fill-leaves"> Leaves first</label>
+  </fieldset>
+  <div class="fill-stage">
+    <svg viewBox="0 0 520 285" role="img" aria-labelledby="fill-svg-title fill-svg-desc">
+      <title id="fill-svg-title">Fill-in created by eliminating a star graph</title>
+      <desc id="fill-svg-desc">The original graph has one hub and five leaves. Eliminating the hub first connects every pair of leaves, creating ten fill edges. Eliminating leaves first creates none.</desc>
+      <g class="fill-state fill-state-original"><line class="fill-original-edge" x1="260.0" y1="146.0" x2="260.0" y2="35.0"/><line class="fill-original-edge" x1="260.0" y1="146.0" x2="385.0" y2="112.0"/><line class="fill-original-edge" x1="260.0" y1="146.0" x2="337.0" y2="250.0"/><line class="fill-original-edge" x1="260.0" y1="146.0" x2="183.0" y2="250.0"/><line class="fill-original-edge" x1="260.0" y1="146.0" x2="135.0" y2="112.0"/><circle class="fill-hub" cx="260.0" cy="146.0" r="21"/><circle class="fill-leaf" cx="260.0" cy="35.0" r="17"/><circle class="fill-leaf" cx="385.0" cy="112.0" r="17"/><circle class="fill-leaf" cx="337.0" cy="250.0" r="17"/><circle class="fill-leaf" cx="183.0" cy="250.0" r="17"/><circle class="fill-leaf" cx="135.0" cy="112.0" r="17"/></g>
+      <g class="fill-state fill-state-hub"><line class="fill-new-edge" x1="260.0" y1="35.0" x2="385.0" y2="112.0"/><line class="fill-new-edge" x1="260.0" y1="35.0" x2="337.0" y2="250.0"/><line class="fill-new-edge" x1="260.0" y1="35.0" x2="183.0" y2="250.0"/><line class="fill-new-edge" x1="260.0" y1="35.0" x2="135.0" y2="112.0"/><line class="fill-new-edge" x1="385.0" y1="112.0" x2="337.0" y2="250.0"/><line class="fill-new-edge" x1="385.0" y1="112.0" x2="183.0" y2="250.0"/><line class="fill-new-edge" x1="385.0" y1="112.0" x2="135.0" y2="112.0"/><line class="fill-new-edge" x1="337.0" y1="250.0" x2="183.0" y2="250.0"/><line class="fill-new-edge" x1="337.0" y1="250.0" x2="135.0" y2="112.0"/><line class="fill-new-edge" x1="183.0" y1="250.0" x2="135.0" y2="112.0"/><circle class="fill-ghost" cx="260.0" cy="146.0" r="21"/><circle class="fill-leaf" cx="260.0" cy="35.0" r="17"/><circle class="fill-leaf" cx="385.0" cy="112.0" r="17"/><circle class="fill-leaf" cx="337.0" cy="250.0" r="17"/><circle class="fill-leaf" cx="183.0" cy="250.0" r="17"/><circle class="fill-leaf" cx="135.0" cy="112.0" r="17"/></g>
+      <g class="fill-state fill-state-leaves"><circle class="fill-hub" cx="260.0" cy="146.0" r="21"/><g class="fill-eliminated"><circle class="fill-leaf" cx="260.0" cy="35.0" r="17"/><circle class="fill-leaf" cx="385.0" cy="112.0" r="17"/><circle class="fill-leaf" cx="337.0" cy="250.0" r="17"/><circle class="fill-leaf" cx="183.0" cy="250.0" r="17"/><circle class="fill-leaf" cx="135.0" cy="112.0" r="17"/></g></g>
+    </svg>
+  </div>
+  <div class="fill-messages" aria-live="polite">
+    <p class="fill-message fill-message-original"><strong>5 original edges</strong><span>No fill has been created.</span></p>
+    <p class="fill-message fill-message-hub"><strong>C(5, 2) = 10 fill edges</strong><span>The five surviving neighbours become a clique.</span></p>
+    <p class="fill-message fill-message-leaves"><strong>0 fill edges</strong><span>A leaf has only one surviving neighbour, so there is no pair to connect.</span></p>
+  </div>
+</div>

@@ -1,0 +1,19 @@
+<div class="viz-shell progress-figure" aria-labelledby="progress-heading">
+  <header class="viz-heading">
+    <div class="viz-kicker">LP solver progress · roughly 2001 to 2020</div>
+    <h3 id="progress-heading">Two levers produced about 180 times more speed</h3>
+    <p>The factors come from different experiments and should be read as estimates, not physical constants.</p>
+  </header>
+  <div class="progress-flow" role="img" aria-label="Old LP code gained about twenty times from modern hardware; newer solver software added about nine times; combined estimate about one hundred eighty times">
+    <div class="progress-stage"><small>Starting point</small><strong>1×</strong><span>old LP code<br>old hardware</span></div>
+    <div class="progress-arrow"><strong>≈20×</strong><span>hardware</span></div>
+    <div class="progress-stage"><small>Controlled rerun</small><strong>20×</strong><span>old LP code<br>modern hardware</span></div>
+    <div class="progress-arrow"><strong>≈9×</strong><span>software</span></div>
+    <div class="progress-stage progress-stage-final"><small>Combined estimate</small><strong>≈180×</strong><span>2020-era virtual-best<br>modern hardware</span></div>
+  </div>
+  <div class="progress-evidence">
+    <span><strong>56 shared LPs</strong>solved by old and new portfolios within 24 hours</span>
+    <span><strong>Slowest old-day case → &lt;3 min</strong>for the newer portfolio</span>
+  </div>
+  <p class="viz-source">Koch, Berthold, Pedersen &amp; Vanaret (2022), §§2.1, 3.2 and 4.1. Candidates taking under 10 seconds on old software or under one second on new software were excluded; remaining sub-second timings were clipped to one second.</p>
+</div>

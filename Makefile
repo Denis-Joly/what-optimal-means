@@ -61,6 +61,7 @@ post01:
 
 post02:
 	$(PY) $(POST02)/analyze_structure.py | tee $(POST02)/out/structure.txt
+	$(PY) $(POST02)/verify_klee_minty.py
 	$(PY) $(POST02)/make_figures.py
 
 clean:

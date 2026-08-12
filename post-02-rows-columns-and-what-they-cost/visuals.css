@@ -73,8 +73,6 @@ fieldset.viz-segment legend{position:absolute;width:1px;height:1px;overflow:hidd
   color:var(--viz-muted);font:10.5px/1.5 var(--mono,"Plex Mono",ui-monospace,monospace);
   letter-spacing:.02em;margin:10px 0 0
 }
-
-/* The second figure remains fully functional without JavaScript. */
 .basis-controls{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));margin-bottom:20px}
 .basis-controls label{justify-content:center;text-align:center}
 .basis-controls label span{color:var(--viz-signal);font-weight:500}
@@ -113,7 +111,102 @@ fieldset.viz-segment legend{position:absolute;width:1px;height:1px;overflow:hidd
 .basis-figure:has(#basis-step-2:checked) .basis-slot-position{display:block}
 .basis-figure:has(#basis-step-2:checked) .basis-explanation{opacity:.2}
 .basis-figure:has(#basis-step-3:checked) .basis-pool,.basis-figure:has(#basis-step-3:checked) .basis-count{opacity:.42}
+.fig-illustration img{display:block;width:100%;background:#f8f1e2}
 
+/* The original LP: semantic equation plus a literal key for x, c, A and b. */
+.model-lines{border-top:1px solid var(--viz-rule);border-bottom:1px solid var(--viz-rule)}
+.model-line{display:grid;align-items:center;gap:7px;min-height:68px}
+.model-line-objective{grid-template-columns:105px auto auto minmax(150px,1fr)}
+.model-line-constraints{grid-template-columns:105px auto auto auto auto minmax(150px,1fr)}
+.model-line-domain{grid-template-columns:105px auto auto auto minmax(150px,1fr)}
+.model-line+ .model-line{border-top:1px solid var(--viz-rule)}
+.model-verb,.model-purpose{font:11px/1.35 var(--mono,"Plex Mono",ui-monospace,monospace);color:var(--viz-muted)}
+.model-verb{text-transform:uppercase;letter-spacing:.07em}
+.model-purpose{text-align:right}
+.model-symbol,.model-relation{display:inline-flex;align-items:center;justify-content:center;min-width:48px;min-height:42px;font-size:21px;color:var(--viz-ink)}
+.model-symbol{border:1px solid var(--viz-rule);background:var(--viz-panel)}
+.model-x{border-color:var(--viz-signal);color:var(--viz-signal)}
+.model-a{background:var(--viz-ink);color:var(--viz-paper);border-color:var(--viz-ink)}
+.model-key{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;margin:16px 0 0;background:var(--viz-rule)}
+.model-key>div{display:grid;grid-template-columns:38px 1fr;gap:9px;align-items:start;background:var(--viz-paper);padding:12px 10px;min-width:0}
+.model-key dt{color:var(--viz-signal);font:600 20px/1 var(--sans,"Archivo",Helvetica,Arial,sans-serif)}
+.model-key dd{margin:0;display:grid;gap:3px;min-width:0}
+.model-key strong{font:600 12px/1.25 var(--mono,"Plex Mono",ui-monospace,monospace)}
+.model-key span{color:var(--viz-muted);font-size:11.5px;line-height:1.35}
+
+/* Simplex and interior-point routes. */
+.routes-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}
+.route-panel{min-width:0}
+.post article .route-panel h4,.route-panel h4{font:700 17px/1.2 var(--sans,"Archivo",Helvetica,Arial,sans-serif);margin:0 0 8px;color:var(--viz-ink)}
+.route-panel svg{display:block;width:100%;height:auto;background:var(--viz-panel)}
+.route-panel p{color:var(--viz-muted);font-size:13px;line-height:1.45;margin:8px 0 0}
+.route-region{fill:var(--viz-paper);stroke:var(--viz-d2);stroke-width:2}
+.route-path{fill:none;stroke:var(--viz-signal);stroke-width:4;stroke-linecap:round;stroke-linejoin:round}
+.route-nodes circle,.route-start{fill:var(--viz-paper);stroke:var(--viz-signal);stroke-width:3}
+.route-limit{fill:none;stroke:var(--viz-signal);stroke-width:2;stroke-dasharray:5 5}
+.route-iterate{fill:var(--viz-paper);stroke:var(--viz-signal);stroke-width:3}
+.route-nodes circle:last-child,.route-end{fill:var(--viz-signal);stroke:var(--viz-paper);stroke-width:2}
+
+/* Fill-in: three native-radio states, no script required. */
+.fill-controls{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));margin:0 0 12px}
+.fill-controls label{justify-content:center;text-align:center}
+.fill-stage{background:var(--viz-panel);min-height:285px}
+.fill-stage svg{display:block;width:100%;height:auto;max-height:330px}
+.fill-original-edge{stroke:var(--viz-d2);stroke-width:4;stroke-linecap:round}
+.fill-new-edge{stroke:var(--viz-signal);stroke-width:3;stroke-dasharray:7 6;stroke-linecap:round}
+.fill-hub{fill:var(--viz-ink);stroke:var(--viz-paper);stroke-width:3}
+.fill-leaf{fill:var(--viz-paper);stroke:var(--viz-ink);stroke-width:3}
+.fill-ghost{fill:none;stroke:var(--viz-d1);stroke-width:3;stroke-dasharray:5 5}
+.fill-eliminated{opacity:.16}
+.fill-state-hub,.fill-state-leaves{display:none}
+.fill-figure:has(#fill-hub:checked) .fill-state-original,.fill-figure:has(#fill-leaves:checked) .fill-state-original{display:none}
+.fill-figure:has(#fill-hub:checked) .fill-state-hub,.fill-figure:has(#fill-leaves:checked) .fill-state-leaves{display:block}
+.fill-messages{border-left:2px solid var(--viz-signal);background:var(--viz-paper);min-height:55px;padding:10px 12px}
+.fill-message{display:none;margin:0!important;grid-template-columns:minmax(170px,.7fr) minmax(0,1fr);gap:12px;align-items:baseline}
+.fill-message-original{display:grid}
+.fill-message strong{font:600 13px/1.35 var(--mono,"Plex Mono",ui-monospace,monospace)}
+.fill-message span{color:var(--viz-muted);font-size:13px;line-height:1.4}
+.fill-figure:has(#fill-hub:checked) .fill-message-original,.fill-figure:has(#fill-leaves:checked) .fill-message-original{display:none}
+.fill-figure:has(#fill-hub:checked) .fill-message-hub,.fill-figure:has(#fill-leaves:checked) .fill-message-leaves{display:grid}
+
+/* Exact 3D Klee-Minty instance, projected into a responsive 2D figure. */
+.km-layout{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(260px,.75fr);gap:22px;align-items:center}
+.km-layout>svg{display:block;width:100%;height:auto;background:var(--viz-panel)}
+.km-edge{stroke:var(--viz-d2);stroke-width:2.2}
+.km-path{fill:none;stroke:var(--viz-signal);stroke-width:5;stroke-linecap:round;stroke-linejoin:round}
+.km-node{fill:var(--viz-paper);stroke:var(--viz-signal);stroke-width:3}
+.km-figure svg text{font:600 14px var(--mono,"Plex Mono",ui-monospace,monospace);fill:var(--viz-ink)}
+.km-equations{display:grid;gap:7px;font-family:var(--mono,"Plex Mono",ui-monospace,monospace);font-size:11.5px;line-height:1.45}
+.km-equations>div{display:grid;grid-template-columns:74px minmax(0,1fr);gap:8px}
+.km-equations span{color:var(--viz-muted);text-transform:uppercase;font-size:9.5px;letter-spacing:.06em}
+.km-equations strong{font-weight:500;overflow-wrap:anywhere}
+.km-counts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1px;background:var(--viz-rule);margin-top:14px}
+.km-counts>div{display:grid;gap:3px;background:var(--viz-paper);padding:11px 12px;color:var(--viz-muted);font:11.5px/1.35 var(--mono,"Plex Mono",ui-monospace,monospace)}
+.post article .km-counts strong,.km-counts strong{color:var(--viz-signal);font-weight:600}
+
+/* Solver-progress factor decomposition. */
+.progress-flow{display:grid;grid-template-columns:minmax(120px,1fr) 90px minmax(120px,1fr) 90px minmax(140px,1fr);align-items:stretch;gap:1px;background:var(--viz-rule)}
+.progress-stage{display:grid;gap:5px;align-content:center;min-height:150px;padding:15px;background:var(--viz-paper);text-align:center}
+.progress-stage small{color:var(--viz-muted);font:9.5px/1.3 var(--mono,"Plex Mono",ui-monospace,monospace);letter-spacing:.07em;text-transform:uppercase}
+.progress-stage strong{font:600 30px/1 var(--mono,"Plex Mono",ui-monospace,monospace);color:var(--viz-ink)}
+.progress-stage span{color:var(--viz-muted);font-size:12px;line-height:1.35}
+.progress-stage-final{background:var(--viz-ink)}
+.post article .progress-stage-final strong,.progress-stage-final strong{color:var(--viz-signal)}
+.progress-stage-final small,.progress-stage-final span{color:var(--viz-paper)}
+.progress-arrow{display:grid;gap:3px;place-content:center;text-align:center;background:var(--viz-panel);position:relative}
+.progress-arrow::after{content:"→";font-size:20px;color:var(--viz-signal)}
+.progress-arrow strong{font:600 17px/1 var(--mono,"Plex Mono",ui-monospace,monospace)}
+.progress-arrow span{color:var(--viz-muted);font:9.5px/1.2 var(--mono,"Plex Mono",ui-monospace,monospace);text-transform:uppercase;letter-spacing:.06em}
+.progress-evidence{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1px;background:var(--viz-rule);margin-top:1px}
+.progress-evidence span{display:grid;gap:4px;background:var(--viz-paper);padding:12px;color:var(--viz-muted);font-size:12px;line-height:1.4}
+.progress-evidence strong{color:var(--viz-signal);font:600 14px/1.25 var(--mono,"Plex Mono",ui-monospace,monospace)}
+@media(max-width:720px){
+  .km-layout{grid-template-columns:1fr;gap:14px}.km-figure svg text{font-size:22px}
+  .progress-flow{grid-template-columns:1fr}.progress-stage{min-height:106px}
+  .progress-arrow{min-height:74px}.progress-arrow::after{content:"↓"}
+  .progress-evidence{grid-template-columns:1fr}
+}
+@media(max-width:640px){.basis-surplus-pool span{display:none}}
 @media(max-width:560px){
   .viz-shell{padding-top:16px}.viz-heading{margin-bottom:15px}
   .viz-toolbar{align-items:stretch}.viz-segment,.viz-select{width:100%}
@@ -125,10 +218,23 @@ fieldset.viz-segment legend{position:absolute;width:1px;height:1px;overflow:hidd
   .basis-slots{grid-template-columns:repeat(3,minmax(0,1fr));gap:5px}
   .basis-slot{min-height:72px}.basis-slot-final{font-size:12px}.basis-slot small{font-size:9.5px}
   .basis-explanation{grid-template-columns:1fr}.basis-explanation span{text-align:left;padding-left:0}
+  .model-line{gap:4px;min-height:62px}.model-line-objective{grid-template-columns:76px auto auto 1fr}
+  .model-line-constraints{grid-template-columns:76px auto auto auto auto 1fr}
+  .model-line-domain{grid-template-columns:76px auto auto auto 1fr}
+  .model-purpose{font-size:9.5px}.model-symbol,.model-relation{min-width:39px;min-height:38px;font-size:18px}
+  .model-key{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .routes-grid{grid-template-columns:1fr;gap:24px}
+  .fill-controls{grid-template-columns:1fr}.fill-controls label{justify-content:flex-start}
+  .fill-stage{min-height:190px}.fill-message{grid-template-columns:1fr;gap:3px}
+  .km-equations{font-size:11px}.km-counts{grid-template-columns:1fr}
+}
+@media(max-width:380px){
+  .model-purpose{display:none}
+  .model-line-objective{grid-template-columns:70px auto auto}
+  .model-line-constraints{grid-template-columns:70px auto auto auto auto}
+  .model-line-domain{grid-template-columns:70px auto auto auto}
 }
 @media(prefers-reduced-motion:reduce){.basis-story section{transition:none}}
-
-/* Minimal frame for the repository's standalone demo only. */
 .viz-demo-page{margin:0;background:#fff;color:#1a1a1a;font:17px/1.55 "Archivo",Helvetica,Arial,sans-serif}
 .viz-demo-page main{max-width:860px;margin:0 auto;padding:36px 22px 80px}
 .viz-demo-page h1{font-size:30px;line-height:1.05;margin:0 0 50px}.viz-demo-page figure{margin:0 0 70px}

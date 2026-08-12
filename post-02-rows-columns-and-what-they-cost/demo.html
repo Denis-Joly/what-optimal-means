@@ -2,6 +2,42 @@
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Post 02 visualisations</title><link rel="stylesheet" href="visuals.css"></head>
 <body class="viz-demo-page"><main><h1>Rows, Columns, and What They Cost — figures</h1>
+<figure><div class="viz-shell model-anatomy" aria-labelledby="model-anatomy-heading">
+  <header class="viz-heading">
+    <div class="viz-kicker">The linear program, unpacked</div>
+    <h3 id="model-anatomy-heading">Four objects make one model</h3>
+    <p>The notation is compact because each symbol has one job.</p>
+  </header>
+  <div class="model-lines" role="group" aria-label="Minimise c transpose x, subject to A x greater than or equal to b and x non-negative">
+    <div class="model-line model-line-objective">
+      <span class="model-verb">minimise</span>
+      <span class="model-symbol model-c"><i>c</i><sup>T</sup></span>
+      <span class="model-symbol model-x"><i>x</i></span>
+      <span class="model-purpose">one total cost</span>
+    </div>
+    <div class="model-line model-line-constraints">
+      <span class="model-verb">subject to</span>
+      <span class="model-symbol model-a"><i>A</i></span>
+      <span class="model-symbol model-x"><i>x</i></span>
+      <span class="model-relation">≥</span>
+      <span class="model-symbol model-b"><i>b</i></span>
+      <span class="model-purpose">nine promises</span>
+    </div>
+    <div class="model-line model-line-domain">
+      <span class="model-verb">with</span>
+      <span class="model-symbol model-x"><i>x</i></span>
+      <span class="model-relation">≥</span>
+      <span class="model-symbol model-zero">0</span>
+      <span class="model-purpose">no negative purchases</span>
+    </div>
+  </div>
+  <dl class="model-key">
+    <div class="model-key-x"><dt><i>x</i></dt><dd><strong>77 choices</strong><span>daily food expenditures</span></dd></div>
+    <div class="model-key-c"><dt><i>c</i></dt><dd><strong>77 weights</strong><span>all equal to one</span></dd></div>
+    <div class="model-key-a"><dt><i>A</i></dt><dd><strong>9 × 77 coefficients</strong><span>how each food affects each nutrient</span></dd></div>
+    <div class="model-key-b"><dt><i>b</i></dt><dd><strong>9 floors</strong><span>minimum daily allowances</span></dd></div>
+  </dl>
+</div></figure>
 <figure><div class="viz-shell viz-netlib" data-viz="netlib" aria-labelledby="netlib-viz-heading">
   <header class="viz-heading">
     <div class="viz-kicker">Netlib · 98 linear programs</div>
@@ -283,7 +319,8 @@ text{font-family:"Plex Mono",ui-monospace,monospace;fill:#0a0a0a;font-size:12px}
   </div>
   <script type="application/json" class="viz-data">{"models":[{"name":"25FV47","rows":822,"cols":1571,"nonzeros":11127,"cells":1291362,"density":0.8616483991320792,"coupling":7.082749840865691,"benchmark":"Netlib"},{"name":"80BAU3B","rows":2263,"cols":9799,"nonzeros":29063,"cells":22175137,"density":0.13106119705145453,"coupling":2.9659148892744156,"benchmark":"Netlib"},{"name":"ADLITTLE","rows":57,"cols":97,"nonzeros":465,"cells":5529,"density":8.410200759631037,"coupling":4.793814432989691,"benchmark":"Netlib"},{"name":"AFIRO","rows":28,"cols":32,"nonzeros":88,"cells":896,"density":9.821428571428571,"coupling":2.75,"benchmark":"Netlib"},{"name":"AGG","rows":489,"cols":163,"nonzeros":2541,"cells":79707,"density":3.18792577816252,"coupling":15.588957055214724,"benchmark":"Netlib"},{"name":"AGG2","rows":517,"cols":302,"nonzeros":4515,"cells":156134,"density":2.891746832848707,"coupling":14.950331125827814,"benchmark":"Netlib"},{"name":"AGG3","rows":517,"cols":302,"nonzeros":4531,"cells":156134,"density":2.9019944406727554,"coupling":15.003311258278146,"benchmark":"Netlib"},{"name":"BANDM","rows":306,"cols":472,"nonzeros":2659,"cells":144432,"density":1.841004763487316,"coupling":5.633474576271187,"benchmark":"Netlib"},{"name":"BEACONFD","rows":174,"cols":262,"nonzeros":3476,"cells":45588,"density":7.624813547424761,"coupling":13.267175572519085,"benchmark":"Netlib"},{"name":"BLEND","rows":75,"cols":83,"nonzeros":521,"cells":6225,"density":8.369477911646586,"coupling":6.27710843373494,"benchmark":"Netlib"},{"name":"BNL1","rows":644,"cols":1175,"nonzeros":6129,"cells":756700,"density":0.8099643187524779,"coupling":5.216170212765958,"benchmark":"Netlib"},{"name":"BNL2","rows":2325,"cols":3489,"nonzeros":16124,"cells":8111925,"density":0.19876909611467067,"coupling":4.621381484666093,"benchmark":"Netlib"},{"name":"BOEING1","rows":351,"cols":384,"nonzeros":3865,"cells":134784,"density":2.8675510446343777,"coupling":10.065104166666666,"benchmark":"Netlib"},{"name":"BOEING2","rows":167,"cols":143,"nonzeros":1339,"cells":23881,"density":5.606967882416984,"coupling":9.363636363636363,"benchmark":"Netlib"},{"name":"BORE3D","rows":234,"cols":315,"nonzeros":1525,"cells":73710,"density":2.068918735585402,"coupling":4.841269841269841,"benchmark":"Netlib"},{"name":"BRANDY","rows":221,"cols":249,"nonzeros":2150,"cells":55029,"density":3.9070308382852676,"coupling":8.634538152610443,"benchmark":"Netlib"},{"name":"CAPRI","rows":272,"cols":353,"nonzeros":1786,"cells":96016,"density":1.8601066488918512,"coupling":5.0594900849858355,"benchmark":"Netlib"},{"name":"CYCLE","rows":1904,"cols":2857,"nonzeros":21322,"cells":5439728,"density":0.39196812781815565,"coupling":7.463073153657683,"benchmark":"Netlib"},{"name":"CZPROB","rows":930,"cols":3523,"nonzeros":14173,"cells":3276390,"density":0.43257976004077664,"coupling":4.022991768379223,"benchmark":"Netlib"},{"name":"D2Q06C","rows":2172,"cols":5167,"nonzeros":35674,"cells":11222724,"density":0.31787291570210585,"coupling":6.904199729049739,"benchmark":"Netlib"},{"name":"D6CUBE","rows":416,"cols":6184,"nonzeros":43888,"cells":2572544,"density":1.7060155239327295,"coupling":7.097024579560156,"benchmark":"Netlib"},{"name":"DEGEN2","rows":445,"cols":534,"nonzeros":4449,"cells":237630,"density":1.8722383537432143,"coupling":8.331460674157304,"benchmark":"Netlib"},{"name":"DEGEN3","rows":1504,"cols":1818,"nonzeros":26230,"cells":2734272,"density":0.9593047070664513,"coupling":14.427942794279428,"benchmark":"Netlib"},{"name":"DFL001","rows":6072,"cols":12230,"nonzeros":41873,"cells":74260560,"density":0.05638659336800046,"coupling":3.423793949304988,"benchmark":"Netlib"},{"name":"E226","rows":224,"cols":282,"nonzeros":2767,"cells":63168,"density":4.380382472137791,"coupling":9.812056737588652,"benchmark":"Netlib"},{"name":"ETAMACRO","rows":401,"cols":688,"nonzeros":2489,"cells":275888,"density":0.9021776952966422,"coupling":3.6177325581395348,"benchmark":"Netlib"},{"name":"FFFFF800","rows":525,"cols":854,"nonzeros":6235,"cells":448350,"density":1.3906546225047396,"coupling":7.3009367681498825,"benchmark":"Netlib"},{"name":"FINNIS","rows":498,"cols":614,"nonzeros":2714,"cells":305772,"density":0.887589445730806,"coupling":4.420195439739413,"benchmark":"Netlib"},{"name":"FIT1D","rows":25,"cols":1026,"nonzeros":14430,"cells":25650,"density":56.257309941520475,"coupling":14.064327485380117,"benchmark":"Netlib"},{"name":"FIT1P","rows":628,"cols":1677,"nonzeros":10894,"cells":1053156,"density":1.034414654619069,"coupling":6.496124031007752,"benchmark":"Netlib"},{"name":"FIT2D","rows":26,"cols":10500,"nonzeros":138018,"cells":273000,"density":50.556043956043965,"coupling":13.144571428571428,"benchmark":"Netlib"},{"name":"FIT2P","rows":3001,"cols":13525,"nonzeros":60784,"cells":40588525,"density":0.14975661224447057,"coupling":4.494195933456562,"benchmark":"Netlib"},{"name":"FORPLAN","rows":162,"cols":421,"nonzeros":4916,"cells":68202,"density":7.207999765402774,"coupling":11.676959619952495,"benchmark":"Netlib"},{"name":"GANGES","rows":1310,"cols":1681,"nonzeros":7021,"cells":2202110,"density":0.31883057612925786,"coupling":4.1766805472932775,"benchmark":"Netlib"},{"name":"GFRD-PNC","rows":617,"cols":1092,"nonzeros":3467,"cells":673764,"density":0.5145718678943962,"coupling":3.1749084249084247,"benchmark":"Netlib"},{"name":"GREENBEA","rows":2393,"cols":5405,"nonzeros":31499,"cells":12934165,"density":0.24353330887614313,"coupling":5.827752081406105,"benchmark":"Netlib"},{"name":"GREENBEB","rows":2393,"cols":5405,"nonzeros":31499,"cells":12934165,"density":0.24353330887614313,"coupling":5.827752081406105,"benchmark":"Netlib"},{"name":"GROW15","rows":301,"cols":645,"nonzeros":5665,"cells":194145,"density":2.9179221715727937,"coupling":8.782945736434108,"benchmark":"Netlib"},{"name":"GROW22","rows":441,"cols":946,"nonzeros":8318,"cells":417186,"density":1.9938348842003326,"coupling":8.792811839323468,"benchmark":"Netlib"},{"name":"GROW7","rows":141,"cols":301,"nonzeros":2633,"cells":42441,"density":6.203906599750242,"coupling":8.747508305647841,"benchmark":"Netlib"},{"name":"ISRAEL","rows":175,"cols":142,"nonzeros":2358,"cells":24850,"density":9.488933601609657,"coupling":16.6056338028169,"benchmark":"Netlib"},{"name":"KB2","rows":44,"cols":41,"nonzeros":291,"cells":1804,"density":16.130820399113084,"coupling":7.097560975609756,"benchmark":"Netlib"},{"name":"LOTFI","rows":154,"cols":308,"nonzeros":1086,"cells":47432,"density":2.2895935233597573,"coupling":3.5259740259740258,"benchmark":"Netlib"},{"name":"MAROS","rows":847,"cols":1443,"nonzeros":10006,"cells":1222221,"density":0.8186735459462733,"coupling":6.934164934164934,"benchmark":"Netlib"},{"name":"MAROS-R7","rows":3137,"cols":9408,"nonzeros":151120,"cells":29512896,"density":0.5120473436425893,"coupling":16.062925170068027,"benchmark":"Netlib"},{"name":"MODSZK1","rows":688,"cols":1620,"nonzeros":4158,"cells":1114560,"density":0.37306201550387597,"coupling":2.566666666666667,"benchmark":"Netlib"},{"name":"NESM","rows":663,"cols":2923,"nonzeros":13988,"cells":1937949,"density":0.7217940203792772,"coupling":4.785494355114608,"benchmark":"Netlib"},{"name":"PEROLD","rows":626,"cols":1376,"nonzeros":6026,"cells":861376,"density":0.6995783490601085,"coupling":4.379360465116279,"benchmark":"Netlib"},{"name":"PILOT","rows":1442,"cols":3652,"nonzeros":43220,"cells":5266184,"density":0.8207081256560728,"coupling":11.834611171960569,"benchmark":"Netlib"},{"name":"PILOT.JA","rows":941,"cols":1988,"nonzeros":14706,"cells":1870708,"density":0.7861194798974507,"coupling":7.39738430583501,"benchmark":"Netlib"},{"name":"PILOT.WE","rows":723,"cols":2789,"nonzeros":9218,"cells":2016447,"density":0.4571407034253814,"coupling":3.3051272857655074,"benchmark":"Netlib"},{"name":"PILOT4","rows":411,"cols":1000,"nonzeros":5145,"cells":411000,"density":1.2518248175182483,"coupling":5.145,"benchmark":"Netlib"},{"name":"PILOT87","rows":2031,"cols":4883,"nonzeros":73804,"cells":9917373,"density":0.7441890105373671,"coupling":15.114478804013926,"benchmark":"Netlib"},{"name":"PILOTNOV","rows":976,"cols":2172,"nonzeros":13129,"cells":2119872,"density":0.6193298463303445,"coupling":6.044659300184162,"benchmark":"Netlib"},{"name":"QAP8","rows":913,"cols":1632,"nonzeros":8304,"cells":1490016,"density":0.5573094517105857,"coupling":5.088235294117647,"benchmark":"Netlib"},{"name":"QAP12","rows":3193,"cols":8856,"nonzeros":44244,"cells":28277208,"density":0.1564652351816346,"coupling":4.995934959349594,"benchmark":"Netlib"},{"name":"QAP15","rows":6331,"cols":22275,"nonzeros":110700,"cells":141023025,"density":0.0784978197709204,"coupling":4.96969696969697,"benchmark":"Netlib"},{"name":"RECIPE","rows":92,"cols":180,"nonzeros":752,"cells":16560,"density":4.541062801932367,"coupling":4.177777777777778,"benchmark":"Netlib"},{"name":"SC105","rows":106,"cols":103,"nonzeros":281,"cells":10918,"density":2.5737314526470048,"coupling":2.7281553398058254,"benchmark":"Netlib"},{"name":"SC205","rows":206,"cols":203,"nonzeros":552,"cells":41818,"density":1.3200057391553877,"coupling":2.7192118226600983,"benchmark":"Netlib"},{"name":"SC50A","rows":51,"cols":48,"nonzeros":131,"cells":2448,"density":5.351307189542483,"coupling":2.7291666666666665,"benchmark":"Netlib"},{"name":"SC50B","rows":51,"cols":48,"nonzeros":119,"cells":2448,"density":4.861111111111112,"coupling":2.4791666666666665,"benchmark":"Netlib"},{"name":"SCAGR25","rows":472,"cols":500,"nonzeros":2029,"cells":236000,"density":0.8597457627118644,"coupling":4.058,"benchmark":"Netlib"},{"name":"SCAGR7","rows":130,"cols":140,"nonzeros":553,"cells":18200,"density":3.0384615384615383,"coupling":3.95,"benchmark":"Netlib"},{"name":"SCFXM1","rows":331,"cols":457,"nonzeros":2612,"cells":151267,"density":1.726748067985747,"coupling":5.715536105032823,"benchmark":"Netlib"},{"name":"SCFXM2","rows":661,"cols":914,"nonzeros":5229,"cells":604154,"density":0.8655078009911381,"coupling":5.7210065645514225,"benchmark":"Netlib"},{"name":"SCFXM3","rows":991,"cols":1371,"nonzeros":7846,"cells":1358661,"density":0.5774803280582868,"coupling":5.722830051057622,"benchmark":"Netlib"},{"name":"SCORPION","rows":389,"cols":358,"nonzeros":1708,"cells":139262,"density":1.2264652238227227,"coupling":4.770949720670391,"benchmark":"Netlib"},{"name":"SCRS8","rows":491,"cols":1169,"nonzeros":4029,"cells":573979,"density":0.7019420571135877,"coupling":3.446535500427716,"benchmark":"Netlib"},{"name":"SCSD1","rows":78,"cols":760,"nonzeros":3148,"cells":59280,"density":5.310391363022942,"coupling":4.1421052631578945,"benchmark":"Netlib"},{"name":"SCSD6","rows":148,"cols":1350,"nonzeros":5666,"cells":199800,"density":2.8358358358358355,"coupling":4.197037037037037,"benchmark":"Netlib"},{"name":"SCSD8","rows":398,"cols":2750,"nonzeros":11334,"cells":1094500,"density":1.0355413430790317,"coupling":4.1214545454545455,"benchmark":"Netlib"},{"name":"SCTAP1","rows":301,"cols":480,"nonzeros":2052,"cells":144480,"density":1.420265780730897,"coupling":4.275,"benchmark":"Netlib"},{"name":"SCTAP2","rows":1091,"cols":1880,"nonzeros":8124,"cells":2051080,"density":0.3960840142754061,"coupling":4.321276595744681,"benchmark":"Netlib"},{"name":"SCTAP3","rows":1481,"cols":2480,"nonzeros":10734,"cells":3672880,"density":0.29225022325804273,"coupling":4.328225806451613,"benchmark":"Netlib"},{"name":"SEBA","rows":516,"cols":1028,"nonzeros":4874,"cells":530448,"density":0.9188459566253431,"coupling":4.7412451361867705,"benchmark":"Netlib"},{"name":"SHARE1B","rows":118,"cols":225,"nonzeros":1182,"cells":26550,"density":4.451977401129943,"coupling":5.253333333333333,"benchmark":"Netlib"},{"name":"SHARE2B","rows":97,"cols":79,"nonzeros":730,"cells":7663,"density":9.526295184653529,"coupling":9.240506329113924,"benchmark":"Netlib"},{"name":"SHELL","rows":537,"cols":1775,"nonzeros":4900,"cells":953175,"density":0.5140713929761062,"coupling":2.76056338028169,"benchmark":"Netlib"},{"name":"SHIP04L","rows":403,"cols":2118,"nonzeros":8450,"cells":853554,"density":0.9899783727801639,"coupling":3.9896128423040604,"benchmark":"Netlib"},{"name":"SHIP04S","rows":403,"cols":1458,"nonzeros":5810,"cells":587574,"density":0.988811622025481,"coupling":3.9849108367626886,"benchmark":"Netlib"},{"name":"SHIP08L","rows":779,"cols":4283,"nonzeros":17085,"cells":3336457,"density":0.512070139072675,"coupling":3.9890263833761384,"benchmark":"Netlib"},{"name":"SHIP08S","rows":779,"cols":2387,"nonzeros":9501,"cells":1859473,"density":0.5109512211255555,"coupling":3.980310012568077,"benchmark":"Netlib"},{"name":"SHIP12L","rows":1152,"cols":5427,"nonzeros":21597,"cells":6251904,"density":0.3454467630980898,"coupling":3.9795467108899945,"benchmark":"Netlib"},{"name":"SHIP12S","rows":1152,"cols":2763,"nonzeros":10941,"cells":3182976,"density":0.34373491977319337,"coupling":3.959826275787188,"benchmark":"Netlib"},{"name":"SIERRA","rows":1228,"cols":2036,"nonzeros":9252,"cells":2500208,"density":0.37004921190556944,"coupling":4.544204322200393,"benchmark":"Netlib"},{"name":"STAIR","rows":357,"cols":467,"nonzeros":3857,"cells":166719,"density":2.31347356929924,"coupling":8.259100642398288,"benchmark":"Netlib"},{"name":"STANDATA","rows":360,"cols":1075,"nonzeros":3038,"cells":387000,"density":0.7850129198966408,"coupling":2.826046511627907,"benchmark":"Netlib"},{"name":"STANDGUB","rows":362,"cols":1184,"nonzeros":3147,"cells":428608,"density":0.7342373450798866,"coupling":2.657939189189189,"benchmark":"Netlib"},{"name":"STANDMPS","rows":468,"cols":1075,"nonzeros":3686,"cells":503100,"density":0.7326575233551977,"coupling":3.4288372093023254,"benchmark":"Netlib"},{"name":"STOCFOR1","rows":118,"cols":111,"nonzeros":474,"cells":13098,"density":3.618873110398534,"coupling":4.27027027027027,"benchmark":"Netlib"},{"name":"STOCFOR2","rows":2158,"cols":2031,"nonzeros":9492,"cells":4382898,"density":0.2165690371986754,"coupling":4.673559822747415,"benchmark":"Netlib"},{"name":"STOCFOR3","rows":16676,"cols":15695,"nonzeros":74004,"cells":261729820,"density":0.02827495926906609,"coupling":4.715132207709462,"benchmark":"Netlib"},{"name":"TRUSS","rows":1001,"cols":8806,"nonzeros":36642,"cells":8814806,"density":0.41568697030881907,"coupling":4.161026572791279,"benchmark":"Netlib"},{"name":"TUFF","rows":334,"cols":587,"nonzeros":4523,"cells":196058,"density":2.306970386314254,"coupling":7.705281090289608,"benchmark":"Netlib"},{"name":"VTP.BASE","rows":199,"cols":203,"nonzeros":914,"cells":40397,"density":2.2625442483352725,"coupling":4.502463054187192,"benchmark":"Netlib"},{"name":"WOOD1P","rows":245,"cols":2594,"nonzeros":70216,"cells":635530,"density":11.048416282472896,"coupling":27.068619892058596,"benchmark":"Netlib"},{"name":"WOODW","rows":1099,"cols":8405,"nonzeros":37478,"cells":9237095,"density":0.4057336207974477,"coupling":4.45901249256395,"benchmark":"Netlib"},{"name":"STIGLER","rows":10,"cols":77,"nonzeros":647,"cells":770,"density":84.02597402597402,"coupling":8.402597402597403,"benchmark":"Stigler"}],"summary":{"couplingQ1":4.031743826284417,"couplingMedian":4.817542137129766,"couplingQ3":7.446650941702015,"densityMedian":0.9740581645459662,"aboveStigler":21}}</script>
   <p class="viz-source">Source: Netlib LP/DATA summary snapshot, 11 August 2026. Select a model for exact values.</p>
-</div></figure><figure><div class="viz-shell basis-figure" aria-labelledby="basis-viz-heading">
+</div></figure>
+<figure><div class="viz-shell basis-figure" aria-labelledby="basis-viz-heading">
   <header class="viz-heading">
     <div class="viz-kicker">Read the basis in three steps</div>
     <h3 id="basis-viz-heading">Four loose nutrient floors leave room for five foods</h3>
@@ -361,5 +398,101 @@ text{font-family:"Plex Mono",ui-monospace,monospace;fill:#0a0a0a;font-size:12px}
     </section>
   </div>
   <p class="viz-source">A sparse optimal basic solution exists; this does not mean every optimum is sparse.</p>
+</div></figure>
+<figure><div class="viz-shell routes-figure" aria-labelledby="routes-heading">
+  <header class="viz-heading">
+    <div class="viz-kicker">Two algorithm families</div>
+    <h3 id="routes-heading">Same feasible region, different route</h3>
+    <p>The geometry is shared; the objects updated at each step are not.</p>
+  </header>
+  <div class="routes-grid">
+    <section class="route-panel">
+      <h4>Simplex</h4>
+      <svg viewBox="0 0 280 220" role="img" aria-label="A path following the boundary from vertex to vertex">
+        <polygon class="route-region" points="26,166 63,54 170,28 250,91 219,181 106,202"/>
+        <polyline class="route-path" points="26,166 106,202 219,181 250,91 170,28"/>
+        <g class="route-nodes"><circle cx="26" cy="166" r="5"/><circle cx="106" cy="202" r="5"/><circle cx="219" cy="181" r="5"/><circle cx="250" cy="91" r="5"/><circle cx="170" cy="28" r="6"/></g>
+      </svg>
+      <p>Walks along edges. Each pivot exchanges one column in the basis.</p>
+    </section>
+    <section class="route-panel">
+      <h4>Interior point</h4>
+      <svg viewBox="0 0 280 220" role="img" aria-label="A curved path starting inside the feasible region and approaching the optimum, followed by an optional dashed crossover to the vertex">
+        <polygon class="route-region" points="26,166 63,54 170,28 250,91 219,181 106,202"/>
+        <path class="route-path" d="M82 160 C101 135 116 118 139 102 C158 84 166 61 169 43"/>
+        <path class="route-limit" d="M169 43 L170 28"/>
+        <circle class="route-start" cx="82" cy="160" r="5"/><circle class="route-iterate" cx="169" cy="43" r="5"/><circle class="route-end" cx="170" cy="28" r="6"/>
+      </svg>
+      <p>Moves through the interior toward the boundary. Each iteration solves a Newton system; optional crossover recovers a vertex.</p>
+    </section>
+  </div>
+</div></figure>
+<figure><div class="viz-shell fill-figure" aria-labelledby="fill-heading">
+  <header class="viz-heading">
+    <div class="viz-kicker">Sparse elimination</div>
+    <h3 id="fill-heading">Eliminate the hub first and ten new links appear</h3>
+    <p>The starting graph never changes. Only the order does.</p>
+  </header>
+  <fieldset class="viz-segment fill-controls" aria-label="Elimination order">
+    <legend>Elimination order</legend>
+    <label><input type="radio" name="fill-step" id="fill-original" checked> Original star</label>
+    <label><input type="radio" name="fill-step" id="fill-hub"> Hub first</label>
+    <label><input type="radio" name="fill-step" id="fill-leaves"> Leaves first</label>
+  </fieldset>
+  <div class="fill-stage">
+    <svg viewBox="0 0 520 285" role="img" aria-labelledby="fill-svg-title fill-svg-desc">
+      <title id="fill-svg-title">Fill-in created by eliminating a star graph</title>
+      <desc id="fill-svg-desc">The original graph has one hub and five leaves. Eliminating the hub first connects every pair of leaves, creating ten fill edges. Eliminating leaves first creates none.</desc>
+      <g class="fill-state fill-state-original"><line class="fill-original-edge" x1="260.0" y1="146.0" x2="260.0" y2="35.0"/><line class="fill-original-edge" x1="260.0" y1="146.0" x2="385.0" y2="112.0"/><line class="fill-original-edge" x1="260.0" y1="146.0" x2="337.0" y2="250.0"/><line class="fill-original-edge" x1="260.0" y1="146.0" x2="183.0" y2="250.0"/><line class="fill-original-edge" x1="260.0" y1="146.0" x2="135.0" y2="112.0"/><circle class="fill-hub" cx="260.0" cy="146.0" r="21"/><circle class="fill-leaf" cx="260.0" cy="35.0" r="17"/><circle class="fill-leaf" cx="385.0" cy="112.0" r="17"/><circle class="fill-leaf" cx="337.0" cy="250.0" r="17"/><circle class="fill-leaf" cx="183.0" cy="250.0" r="17"/><circle class="fill-leaf" cx="135.0" cy="112.0" r="17"/></g>
+      <g class="fill-state fill-state-hub"><line class="fill-new-edge" x1="260.0" y1="35.0" x2="385.0" y2="112.0"/><line class="fill-new-edge" x1="260.0" y1="35.0" x2="337.0" y2="250.0"/><line class="fill-new-edge" x1="260.0" y1="35.0" x2="183.0" y2="250.0"/><line class="fill-new-edge" x1="260.0" y1="35.0" x2="135.0" y2="112.0"/><line class="fill-new-edge" x1="385.0" y1="112.0" x2="337.0" y2="250.0"/><line class="fill-new-edge" x1="385.0" y1="112.0" x2="183.0" y2="250.0"/><line class="fill-new-edge" x1="385.0" y1="112.0" x2="135.0" y2="112.0"/><line class="fill-new-edge" x1="337.0" y1="250.0" x2="183.0" y2="250.0"/><line class="fill-new-edge" x1="337.0" y1="250.0" x2="135.0" y2="112.0"/><line class="fill-new-edge" x1="183.0" y1="250.0" x2="135.0" y2="112.0"/><circle class="fill-ghost" cx="260.0" cy="146.0" r="21"/><circle class="fill-leaf" cx="260.0" cy="35.0" r="17"/><circle class="fill-leaf" cx="385.0" cy="112.0" r="17"/><circle class="fill-leaf" cx="337.0" cy="250.0" r="17"/><circle class="fill-leaf" cx="183.0" cy="250.0" r="17"/><circle class="fill-leaf" cx="135.0" cy="112.0" r="17"/></g>
+      <g class="fill-state fill-state-leaves"><circle class="fill-hub" cx="260.0" cy="146.0" r="21"/><g class="fill-eliminated"><circle class="fill-leaf" cx="260.0" cy="35.0" r="17"/><circle class="fill-leaf" cx="385.0" cy="112.0" r="17"/><circle class="fill-leaf" cx="337.0" cy="250.0" r="17"/><circle class="fill-leaf" cx="183.0" cy="250.0" r="17"/><circle class="fill-leaf" cx="135.0" cy="112.0" r="17"/></g></g>
+    </svg>
+  </div>
+  <div class="fill-messages" aria-live="polite">
+    <p class="fill-message fill-message-original"><strong>5 original edges</strong><span>No fill has been created.</span></p>
+    <p class="fill-message fill-message-hub"><strong>C(5, 2) = 10 fill edges</strong><span>The five surviving neighbours become a clique.</span></p>
+    <p class="fill-message fill-message-leaves"><strong>0 fill edges</strong><span>A leaf has only one surviving neighbour, so there is no pair to connect.</span></p>
+  </div>
+</div></figure>
+<figure><div class="viz-shell km-figure" aria-labelledby="km-heading">
+  <header class="viz-heading">
+    <div class="viz-kicker">Klee–Minty · three dimensions</div>
+    <h3 id="km-heading">The largest-reduced-cost rule takes the long way around</h3>
+    <p>A distorted cube keeps every pivot improving while forcing a visit to every vertex.</p>
+  </header>
+  <div class="km-layout">
+    <svg viewBox="0 0 500 380" role="img" aria-labelledby="km-svg-title km-svg-desc">
+      <title id="km-svg-title">The eight-vertex Klee-Minty path</title>
+      <desc id="km-svg-desc">A projection of a distorted three-dimensional cube. A red path numbered one through eight visits every vertex in increasing objective order.</desc>
+      <g><line class="km-edge" x1="80.0" y1="320.0" x2="320.0" y2="270.0"/><line class="km-edge" x1="80.0" y1="320.0" x2="220.0" y2="355.0"/><line class="km-edge" x1="80.0" y1="320.0" x2="80.0" y2="100.0"/><line class="km-edge" x1="320.0" y1="270.0" x2="432.0" y2="298.0"/><line class="km-edge" x1="320.0" y1="270.0" x2="320.0" y2="54.4"/><line class="km-edge" x1="220.0" y1="355.0" x2="432.0" y2="298.0"/><line class="km-edge" x1="220.0" y1="355.0" x2="220.0" y2="179.0"/><line class="km-edge" x1="80.0" y1="100.0" x2="320.0" y2="54.4"/><line class="km-edge" x1="80.0" y1="100.0" x2="220.0" y2="179.0"/><line class="km-edge" x1="432.0" y1="298.0" x2="432.0" y2="117.6"/><line class="km-edge" x1="320.0" y1="54.4" x2="432.0" y2="117.6"/><line class="km-edge" x1="220.0" y1="179.0" x2="432.0" y2="117.6"/></g><polyline class="km-path" points="80.0,320.0 320.0,270.0 432.0,298.0 220.0,355.0 220.0,179.0 432.0,117.6 320.0,54.4 80.0,100.0"/><g><circle class="km-node" cx="80.0" cy="320.0" r="16"/><text x="80.0" y="325.0" text-anchor="middle">1</text></g><g><circle class="km-node" cx="320.0" cy="270.0" r="16"/><text x="320.0" y="275.0" text-anchor="middle">2</text></g><g><circle class="km-node" cx="432.0" cy="298.0" r="16"/><text x="432.0" y="303.0" text-anchor="middle">3</text></g><g><circle class="km-node" cx="220.0" cy="355.0" r="16"/><text x="220.0" y="360.0" text-anchor="middle">4</text></g><g><circle class="km-node" cx="220.0" cy="179.0" r="16"/><text x="220.0" y="184.0" text-anchor="middle">5</text></g><g><circle class="km-node" cx="432.0" cy="117.6" r="16"/><text x="432.0" y="122.6" text-anchor="middle">6</text></g><g><circle class="km-node" cx="320.0" cy="54.4" r="16"/><text x="320.0" y="59.4" text-anchor="middle">7</text></g><g><circle class="km-node" cx="80.0" cy="100.0" r="16"/><text x="80.0" y="105.0" text-anchor="middle">8</text></g>
+    </svg>
+    <div class="km-equations" aria-label="Klee-Minty linear program">
+      <div><span>maximise</span><strong>100<i>x</i><sub>1</sub> + 10<i>x</i><sub>2</sub> + <i>x</i><sub>3</sub></strong></div>
+      <div><span>subject to</span><strong><i>x</i><sub>1</sub> ≤ 1</strong></div>
+      <div><span></span><strong>20<i>x</i><sub>1</sub> + <i>x</i><sub>2</sub> ≤ 100</strong></div>
+      <div><span></span><strong>200<i>x</i><sub>1</sub> + 20<i>x</i><sub>2</sub> + <i>x</i><sub>3</sub> ≤ 10,000</strong></div>
+      <div><span></span><strong><i>x</i> ≥ 0</strong></div>
+    </div>
+  </div>
+  <div class="km-counts"><div><strong>3 variables</strong><span>8 vertices · 7 pivots</span></div><div><strong><i>n</i> variables</strong><span>2<sup><i>n</i></sup> vertices · 2<sup><i>n</i></sup> − 1 pivots</span></div></div>
+</div></figure>
+<figure><div class="viz-shell progress-figure" aria-labelledby="progress-heading">
+  <header class="viz-heading">
+    <div class="viz-kicker">LP solver progress · roughly 2001 to 2020</div>
+    <h3 id="progress-heading">Two levers produced about 180 times more speed</h3>
+    <p>The factors come from different experiments and should be read as estimates, not physical constants.</p>
+  </header>
+  <div class="progress-flow" role="img" aria-label="Old LP code gained about twenty times from modern hardware; newer solver software added about nine times; combined estimate about one hundred eighty times">
+    <div class="progress-stage"><small>Starting point</small><strong>1×</strong><span>old LP code<br>old hardware</span></div>
+    <div class="progress-arrow"><strong>≈20×</strong><span>hardware</span></div>
+    <div class="progress-stage"><small>Controlled rerun</small><strong>20×</strong><span>old LP code<br>modern hardware</span></div>
+    <div class="progress-arrow"><strong>≈9×</strong><span>software</span></div>
+    <div class="progress-stage progress-stage-final"><small>Combined estimate</small><strong>≈180×</strong><span>2020-era virtual-best<br>modern hardware</span></div>
+  </div>
+  <div class="progress-evidence">
+    <span><strong>56 shared LPs</strong>solved by old and new portfolios within 24 hours</span>
+    <span><strong>Slowest old-day case → &lt;3 min</strong>for the newer portfolio</span>
+  </div>
+  <p class="viz-source">Koch, Berthold, Pedersen &amp; Vanaret (2022), §§2.1, 3.2 and 4.1. Candidates taking under 10 seconds on old software or under one second on new software were excluded; remaining sub-second timings were clipped to one second.</p>
 </div></figure>
 </main><script defer src="article-viz.js"></script></body></html>

@@ -16,18 +16,21 @@ Python 3.10 or later; no third-party packages are required.
 
 ```sh
 python3 analyze_structure.py | tee out/structure.txt
+python3 verify_klee_minty.py
 python3 make_figures.py
 ```
 
-The first command also writes `out/netlib-summary.csv`. The second writes:
+The first command also writes `out/netlib-summary.csv`. The second checks all
+eight vertices—and the seven pivots between them—of the three-variable
+Klee–Minty instance using exact rational arithmetic. The third writes:
 
 - two standalone SVG figures for GitHub and sharing;
-- two progressively enhanced HTML fragments used in the article; and
+- seven responsive HTML fragments used in the article; and
 - `demo.html`, a local interactive preview.
 
 Open `demo.html` directly in a modern browser after running the commands. The
 interaction is dependency-free: the benchmark chart supports mouse, touch and
-keyboard selection, and the basis story uses native radio controls.
+keyboard selection; the basis and fill-in stories use native radio controls.
 
 ## Visual argument
 
@@ -37,15 +40,27 @@ decision column. Stigler moves from 84.0 per cent versus a 0.97 per cent Netlib
 median to 8.4 relationships per choice versus a 4.8 median; 21 Netlib models
 are more coupled by the latter measure.
 
-The second figure keeps three ideas separate: 86 available columns, almost
-half a trillion candidate nine-column selections, and the nine positions in
-the solved basis computed by the Post 1 solver. The available-column bar is
+The second quantitative figure keeps three ideas separate: 86 available columns, almost
+half a trillion candidate nine-column selections, and the nine positive columns
+forming the basis at the Post 1 optimum. The available-column bar is
 proportional (77 foods to nine surpluses), and the final four-plus-five layout
 reflows to a three-by-three grid on narrow screens.
 
 ![Stigler compared with Netlib on density and relationships per choice](out/fig1-structure-not-size.svg)
 
 ![From 86 available columns to the nine positions in Stigler's solved basis](out/fig2-nine-positions.svg)
+
+The remaining article fragments explain the four objects in the LP notation,
+contrast simplex with interior-point routes, demonstrate fill-in under two
+elimination orders, project an exact three-variable Klee–Minty path, and unpack
+the hardware/software factors in Koch et al.'s solver-progress study.
+
+## Editorial illustration
+
+`assets/stigler-matrix-machine.jpg` is the opening matrix caricature.
+`image-prompt.md` records the exact OpenAI image-generation prompt and explains
+the boundary between the conceptual illustration and the data-driven figures.
+The illustration is not used as evidence for any numerical claim.
 
 ## Data and counting conventions
 
@@ -82,3 +97,9 @@ degeneracy lets multiple genuine bases describe the same vertex.
 - Timothy A. Davis, Sivasankaran Rajamanickam and Wissam M. Sid-Lakhdar,
   “A survey of direct methods for sparse linear systems,” *Acta Numerica* 25
   (2016), 383–566.
+- Victor Klee and George J. Minty, “How Good Is the Simplex Algorithm?”, 1972;
+  Benjamin Grimmer's freely adaptable [Johns Hopkins handout](https://www.ams.jhu.edu/~grimmer/Klee.pdf)
+  is credited as the visual reference for the independently generated projection.
+- Thorsten Koch, Timo Berthold, Jaap Pedersen and Charlie Vanaret,
+  [“Progress in Mathematical Programming Solvers from 2001 to 2020”](https://arxiv.org/pdf/2206.09787),
+  2022.

@@ -1,0 +1,28 @@
+<div class="viz-shell routes-figure" aria-labelledby="routes-heading">
+  <header class="viz-heading">
+    <div class="viz-kicker">Two algorithm families</div>
+    <h3 id="routes-heading">Same feasible region, different route</h3>
+    <p>The geometry is shared; the objects updated at each step are not.</p>
+  </header>
+  <div class="routes-grid">
+    <section class="route-panel">
+      <h4>Simplex</h4>
+      <svg viewBox="0 0 280 220" role="img" aria-label="A path following the boundary from vertex to vertex">
+        <polygon class="route-region" points="26,166 63,54 170,28 250,91 219,181 106,202"/>
+        <polyline class="route-path" points="26,166 106,202 219,181 250,91 170,28"/>
+        <g class="route-nodes"><circle cx="26" cy="166" r="5"/><circle cx="106" cy="202" r="5"/><circle cx="219" cy="181" r="5"/><circle cx="250" cy="91" r="5"/><circle cx="170" cy="28" r="6"/></g>
+      </svg>
+      <p>Walks along edges. Each pivot exchanges one column in the basis.</p>
+    </section>
+    <section class="route-panel">
+      <h4>Interior point</h4>
+      <svg viewBox="0 0 280 220" role="img" aria-label="A curved path starting inside the feasible region and approaching the optimum, followed by an optional dashed crossover to the vertex">
+        <polygon class="route-region" points="26,166 63,54 170,28 250,91 219,181 106,202"/>
+        <path class="route-path" d="M82 160 C101 135 116 118 139 102 C158 84 166 61 169 43"/>
+        <path class="route-limit" d="M169 43 L170 28"/>
+        <circle class="route-start" cx="82" cy="160" r="5"/><circle class="route-iterate" cx="169" cy="43" r="5"/><circle class="route-end" cx="170" cy="28" r="6"/>
+      </svg>
+      <p>Moves through the interior toward the boundary. Each iteration solves a Newton system; optional crossover recovers a vertex.</p>
+    </section>
+  </div>
+</div>
