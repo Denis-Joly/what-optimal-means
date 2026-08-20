@@ -4,7 +4,7 @@
     <h3 id="bnb-heading">Branch-and-bound narrows a certified interval</h3>
     <p>For this <strong>maximisation</strong>, the best integer solution found is the incumbent <i>L</i>, a lower bound. Open-node LP relaxations supply a valid raw upper bound <i>U</i>. At every step with an incumbent: <strong><i>L</i> ≤ <i>z</i>* ≤ <i>U</i></strong>.</p>
   </header>
-  <div class="bnb-fallback"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 748 650" width="100%" role="img" aria-labelledby="fig2-bnb-title fig2-bnb-desc">
+  <div class="bnb-fallback" tabindex="0" role="region" aria-label="Complete branch-and-bound tree; scroll horizontally on small screens"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 748 650" width="100%" role="img" aria-labelledby="fig2-bnb-title fig2-bnb-desc">
 <title id="fig2-bnb-title">Branch-and-bound turns the proof into a narrowing interval</title>
 <desc id="fig2-bnb-desc">For this maximization problem, the incumbent L is a certified lower bound and the open-node relaxations give an upper bound U. The root LP bound is 165/4. L2 gives incumbent 39; L4 lowers the raw LP upper bound to 365/9, which can be floored to 40 because the integer objective is integral; L5 does not improve; L6 closes the interval at 40.</desc>
 <style>
@@ -87,6 +87,7 @@ text{font-family:"Plex Mono",ui-monospace,monospace;fill:var(--viz-ink,#0a0a0a);
 <text class="source" x="24" y="630">Raw-LP-bound trace on the Bradley–Hax–Magnanti tree. Not a HiGHS internal solver log.</text>
 </svg>
 </div>
+  <p class="bnb-mobile-hint">Swipe horizontally to inspect the full tree →</p>
   <div class="bnb-enhanced" hidden>
     <h4 class="bnb-live-heading">Step through the certificate</h4>
     <div class="bnb-layout">

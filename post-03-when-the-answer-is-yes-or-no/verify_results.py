@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import argparse
 from fractions import Fraction as F
+from pathlib import Path
 
 from branch_and_bound import trace
 from example import (
@@ -23,6 +24,17 @@ from example import (
 
 def close(actual: float, expected: float, tolerance: float = 1e-7) -> None:
     assert abs(actual - expected) <= tolerance, (actual, expected)
+
+
+def verify_mobile_figure_contract() -> None:
+    """Keep the generated tree discoverable and usable on narrow screens."""
+    here = Path(__file__).resolve().parent
+    fragment = (here / "out" / "fig2-branch-and-bound.html").read_text(encoding="utf-8")
+    css = (here / "visuals.css").read_text(encoding="utf-8")
+    assert 'class="bnb-fallback" tabindex="0" role="region"' in fragment
+    assert 'class="bnb-mobile-hint"' in fragment
+    assert ".viz-bnb .bnb-mobile-hint" in css
+    assert "-webkit-overflow-scrolling: touch" in css
 
 
 def verify(with_highs: bool = True) -> None:
@@ -111,6 +123,8 @@ def verify(with_highs: bool = True) -> None:
         close(mip_highs[0], 0.0)
         close(mip_highs[1], 5.0)
         close(mip_highs_value, 40.0)
+
+    verify_mobile_figure_contract()
 
 
 if __name__ == "__main__":

@@ -335,7 +335,8 @@ def branch_fragment(static_svg: str) -> str:
     <h3 id="bnb-heading">Branch-and-bound narrows a certified interval</h3>
     <p>For this <strong>maximisation</strong>, the best integer solution found is the incumbent <i>L</i>, a lower bound. Open-node LP relaxations supply a valid raw upper bound <i>U</i>. At every step with an incumbent: <strong><i>L</i> ≤ <i>z</i>* ≤ <i>U</i></strong>.</p>
   </header>
-  <div class="bnb-fallback">{static_svg}</div>
+  <div class="bnb-fallback" tabindex="0" role="region" aria-label="Complete branch-and-bound tree; scroll horizontally on small screens">{static_svg}</div>
+  <p class="bnb-mobile-hint">Swipe horizontally to inspect the full tree →</p>
   <div class="bnb-enhanced" hidden>
     <h4 class="bnb-live-heading">Step through the certificate</h4>
     <div class="bnb-layout">

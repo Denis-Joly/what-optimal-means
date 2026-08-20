@@ -63,7 +63,9 @@
   --viz-signal: var(--p3-signal);
 }
 
-.bnb-fallback { overflow-x: auto; }
+.bnb-fallback { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+.bnb-fallback:focus-visible { outline: 2px solid var(--p3-signal); outline-offset: 3px; }
+.viz-bnb .bnb-mobile-hint { display: none; }
 
 .integrality-enhanced,
 .bnb-enhanced { margin-top: 1.25rem; }
@@ -201,6 +203,13 @@
   .viz-integrality,
   .viz-bnb { padding: .85rem; }
   .bnb-fallback svg { max-width: none; min-width: 640px; }
+  .viz-bnb .bnb-mobile-hint {
+    color: var(--p3-muted);
+    display: block;
+    font-size: .72rem;
+    letter-spacing: .02em;
+    margin: .45rem .2rem 0;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
