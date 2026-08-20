@@ -1,8 +1,8 @@
 # When the Answer Is Yes or No
 
 Reproducibility files for Post 3 of Spatium Novum's **What Optimal Means**
-series. The article asks what survives when a decision must be an integer—or
-literally yes or no—and follows the certificate produced by branch-and-bound.
+series. The article asks what survives when a decision must be a whole number,
+or literally yes or no, and follows the certificate produced by branch-and-bound.
 
 The package uses the two-variable example in chapter 9 of Bradley, Hax and
 Magnanti's *Applied Mathematical Programming*:
@@ -49,7 +49,7 @@ the HTML fragments progressively enhance when `visuals.css` and
 
 ## What is verified
 
-- The LP relaxation—obtained by temporarily dropping the integer rule—has
+- The LP relaxation, obtained by temporarily dropping the integer rule, has
   optimum `(9/4, 15/4) = (2.25, 3.75)` and objective `165/4 = 41.25`.
 - Nearest-coordinate rounding gives `(2, 4)`. It keeps `x1 + x2 <= 6`, but
   violates the other row: `5(2) + 9(4) = 46 > 45`.
@@ -61,9 +61,9 @@ the HTML fragments progressively enhance when `visuals.css` and
 - The absolute root integrality gap is `41.25 - 40 = 1.25` objective units.
 - The valid integer cut `2x1 + 3x2 <= 15` holds for all 25 feasible integer
   points, while the fractional LP optimum gives `63/4 > 15` and is removed.
-- The tight pedagogical branch-and-bound trace starts with upper bound
+- The pedagogical raw-LP-bound trace starts with upper bound
   `U = 165/4`. Solving both root children makes `(3, 3)` the first incumbent
-  and gives `39 <= z* <= 41`. Solving `L3` and `L4` tightens this to
+  and gives `39 <= z* <= 41`. Solving `L3` and `L4` lowers the raw LP bound to
   `39 <= z* <= 365/9`; `L5` cannot improve it. Solving `L6` closes the proof
   at `40 = z* = 40`.
 
@@ -74,11 +74,14 @@ particular LP relaxation. Here its absolute value is 1.25. It is a retrospective
 description of how loose that relaxation was.
 
 The **optimality gap** during branch-and-bound is live. For this maximisation,
-the incumbent `L`—the best integer solution found—is a valid lower bound. The
+the incumbent `L`, the best integer solution found, is a valid lower bound. The
 LP relaxations of open nodes supply a valid upper bound `U`, so
 `L <= z* <= U`. The interval closes as the search proves that no remaining
-branch can beat the incumbent. The trace retains the raw LP bound `365/9`
-rather than rounding it. Bound directions reverse for minimisation.
+branch can beat the incumbent. The trace deliberately retains the raw LP bound
+`365/9`. Because every integer-feasible objective value here is integral,
+flooring it gives the stronger valid upper bound `U = 40`; the fraction is kept
+to show what the LP relaxation itself supplied. Bound directions reverse for
+minimisation.
 
 The article uses the absolute interval rather than a percentage gap because
 commercial and open-source solvers use slightly different normalisations when
@@ -90,8 +93,8 @@ the incumbent is zero, negative or close to zero.
 - `example.py` implements exact feasibility, vertex and lattice enumeration,
   plus the independent PuLP/HiGHS cross-check.
 - `branch_and_bound.py` uses the textbook branch tree with an explicit
-  deterministic schedule—both root children are solved first—and exact
-  `fractions.Fraction` arithmetic. It is explanatory code, not a general solver
+  deterministic schedule, in which both root children are solved first, and
+  exact `fractions.Fraction` arithmetic. It is explanatory code, not a solver
   and not a claim about HiGHS's internal search path.
 - `solve_example.py` writes `out/results.txt`, `out/results.json`,
   `out/integer-points.csv` and `out/branch-and-bound-trace.json`.
@@ -117,12 +120,13 @@ maximisation certificate `L <= z* <= U` visible.
 
 - Stephen P. Bradley, Arnoldo C. Hax and Thomas L. Magnanti,
   [*Applied Mathematical Programming*, chapter 9](https://web.mit.edu/15.053/www/AMP-Chapter-09.pdf),
-  Addison-Wesley, 1977. The example and branch sequence are in section 9.5.
+  Addison-Wesley, 1977. The model and the four-way comparison are in section
+  9.4 (Table 9.1); the branching tree and the L0-L6 node labels are in 9.5.
 - A. H. Land and A. G. Doig, “An Automatic Method of Solving Discrete
   Programming Problems,” *Econometrica* 28(3), 1960, 497–520.
 
 Only the tiny coefficient table is recorded locally; the source PDF is linked,
 not redistributed. Real solver traces depend on solver version, parameters,
 hardware, branching, cuts, presolve and heuristics. The exact pedagogical trace
-therefore declares its schedule and uses logical search state—not invented
-wall-clock time.
+therefore declares its schedule and reports logical search state rather than
+invented wall-clock time.

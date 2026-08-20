@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>When the Answer Is Yes or No — figure demo</title>
+  <title>When the Answer Is Yes or No: figure demo</title>
   <link rel="stylesheet" href="visuals.css">
   <style>body{margin:0;background:#e8e8e5;color:#0a0a0a;font-family:Arial,sans-serif}main{max-width:900px;margin:auto;padding:32px 16px}figure{margin:0 0 48px}figcaption{font-size:14px;line-height:1.5;margin-top:10px}</style>
 </head>
@@ -125,14 +125,15 @@ text{font-family:"Plex Mono",ui-monospace,monospace;fill:var(--viz-ink,#0a0a0a);
 <button type="button" data-integrality-step="nearest" aria-pressed="false"><span>3</span>Nearest feasible</button>
 <button type="button" data-integrality-step="integer" aria-pressed="false"><span>4</span>Integer optimum</button></div>
     <div class="integrality-layout">
-      <svg class="integrality-chart" viewBox="20 84 480 454" role="img" aria-labelledby="integrality-live-title integrality-live-desc">
+      <svg class="integrality-chart" viewBox="20 84 480 474" role="img" aria-labelledby="integrality-live-title integrality-live-desc">
         <title id="integrality-live-title">The LP relaxation and three integer alternatives</title>
         <desc id="integrality-live-desc">Select a step to compare the fractional LP optimum, its infeasible rounding, the nearest feasible integer, and the integer optimum.</desc>
         <rect x="24" y="88" width="470" height="438" rx="3" class="integrality-panel"/>
+        <line class="integrality-grid" x1="48.0" y1="116" x2="48.0" y2="494"/><text class="integrality-tick" x="48.0" y="513" text-anchor="middle">0</text><line class="integrality-grid" x1="48" y1="494.0" x2="470" y2="494.0"/><text class="integrality-tick" x="37" y="498.0" text-anchor="end">0</text><line class="integrality-grid" x1="112.9" y1="116" x2="112.9" y2="494"/><text class="integrality-tick" x="112.9" y="513" text-anchor="middle">1</text><line class="integrality-grid" x1="48" y1="431.0" x2="470" y2="431.0"/><text class="integrality-tick" x="37" y="435.0" text-anchor="end">1</text><line class="integrality-grid" x1="177.8" y1="116" x2="177.8" y2="494"/><text class="integrality-tick" x="177.8" y="513" text-anchor="middle">2</text><line class="integrality-grid" x1="48" y1="368.0" x2="470" y2="368.0"/><text class="integrality-tick" x="37" y="372.0" text-anchor="end">2</text><line class="integrality-grid" x1="242.8" y1="116" x2="242.8" y2="494"/><text class="integrality-tick" x="242.8" y="513" text-anchor="middle">3</text><line class="integrality-grid" x1="48" y1="305.0" x2="470" y2="305.0"/><text class="integrality-tick" x="37" y="309.0" text-anchor="end">3</text><line class="integrality-grid" x1="307.7" y1="116" x2="307.7" y2="494"/><text class="integrality-tick" x="307.7" y="513" text-anchor="middle">4</text><line class="integrality-grid" x1="48" y1="242.0" x2="470" y2="242.0"/><text class="integrality-tick" x="37" y="246.0" text-anchor="end">4</text><line class="integrality-grid" x1="372.6" y1="116" x2="372.6" y2="494"/><text class="integrality-tick" x="372.6" y="513" text-anchor="middle">5</text><line class="integrality-grid" x1="48" y1="179.0" x2="470" y2="179.0"/><text class="integrality-tick" x="37" y="183.0" text-anchor="end">5</text><line class="integrality-grid" x1="437.5" y1="116" x2="437.5" y2="494"/><text class="integrality-tick" x="437.5" y="513" text-anchor="middle">6</text><line class="integrality-grid" x1="48" y1="116.0" x2="470" y2="116.0"/><text class="integrality-tick" x="37" y="120.0" text-anchor="end">6</text><text class="integrality-axis-title" x="466" y="513" text-anchor="end">x₁</text><text class="integrality-axis-title" x="31" y="108">x₂</text>
         <path d="M 48.0 494.0 L 48.0 179.0 L 194.1 257.8 L 437.5 494.0 Z" class="integrality-region"/>
         <circle cx="48.0" cy="494.0" r="3" class="integrality-lattice-dot"/><circle cx="48.0" cy="431.0" r="3" class="integrality-lattice-dot"/><circle cx="48.0" cy="368.0" r="3" class="integrality-lattice-dot"/><circle cx="48.0" cy="305.0" r="3" class="integrality-lattice-dot"/><circle cx="48.0" cy="242.0" r="3" class="integrality-lattice-dot"/><circle cx="48.0" cy="179.0" r="3" class="integrality-lattice-dot"/><circle cx="112.9" cy="494.0" r="3" class="integrality-lattice-dot"/><circle cx="112.9" cy="431.0" r="3" class="integrality-lattice-dot"/><circle cx="112.9" cy="368.0" r="3" class="integrality-lattice-dot"/><circle cx="112.9" cy="305.0" r="3" class="integrality-lattice-dot"/><circle cx="112.9" cy="242.0" r="3" class="integrality-lattice-dot"/><circle cx="177.8" cy="494.0" r="3" class="integrality-lattice-dot"/><circle cx="177.8" cy="431.0" r="3" class="integrality-lattice-dot"/><circle cx="177.8" cy="368.0" r="3" class="integrality-lattice-dot"/><circle cx="177.8" cy="305.0" r="3" class="integrality-lattice-dot"/><circle cx="242.8" cy="494.0" r="3" class="integrality-lattice-dot"/><circle cx="242.8" cy="431.0" r="3" class="integrality-lattice-dot"/><circle cx="242.8" cy="368.0" r="3" class="integrality-lattice-dot"/><circle cx="242.8" cy="305.0" r="3" class="integrality-lattice-dot"/><circle cx="307.7" cy="494.0" r="3" class="integrality-lattice-dot"/><circle cx="307.7" cy="431.0" r="3" class="integrality-lattice-dot"/><circle cx="307.7" cy="368.0" r="3" class="integrality-lattice-dot"/><circle cx="372.6" cy="494.0" r="3" class="integrality-lattice-dot"/><circle cx="372.6" cy="431.0" r="3" class="integrality-lattice-dot"/><circle cx="437.5" cy="494.0" r="3" class="integrality-lattice-dot"/>
         <g class="integrality-special integrality-special-lp" data-stage-point="lp"><circle cx="194.1" cy="257.8" r="10"/><text x="207.1" y="261.8">LP relaxation (2.25, 3.75)</text></g><g class="integrality-special integrality-special-round" data-stage-point="round"><circle cx="177.8" cy="242.0" r="10"/><text x="190.8" y="246.0">Nearest rounding (2, 4), infeasible</text></g><g class="integrality-special integrality-special-nearest" data-stage-point="nearest"><circle cx="177.8" cy="305.0" r="10"/><text x="190.8" y="309.0">Nearest feasible integer (2, 3)</text></g><g class="integrality-special integrality-special-integer" data-stage-point="integer"><circle cx="48.0" cy="179.0" r="10"/><text x="61.0" y="183.0">Integer optimum (0, 5)</text></g>
-        <text x="48" y="515" class="integrality-axis-label">LP-feasible region · 25 feasible lattice points</text>
+        <text x="48" y="546" class="integrality-axis-label">LP-feasible region · 25 feasible lattice points</text>
       </svg>
       <div class="integrality-readout" data-integrality-readout aria-live="polite">
         <small>LP relaxation</small><strong>(2.25, 3.75)</strong><b>z = 41.25</b>
@@ -147,11 +148,11 @@ text{font-family:"Plex Mono",ui-monospace,monospace;fill:var(--viz-ink,#0a0a0a);
   <header class="bnb-heading">
     <div class="bnb-kicker">A proof in progress</div>
     <h3 id="bnb-heading">Branch-and-bound narrows a certified interval</h3>
-    <p>For this <strong>maximisation</strong>, the best integer solution found is the incumbent <i>L</i>, a lower bound. Open-node LP relaxations supply a valid global upper bound <i>U</i>. At every step with an incumbent: <strong><i>L</i> ≤ <i>z</i>* ≤ <i>U</i></strong>.</p>
+    <p>For this <strong>maximisation</strong>, the best integer solution found is the incumbent <i>L</i>, a lower bound. Open-node LP relaxations supply a valid raw upper bound <i>U</i>. At every step with an incumbent: <strong><i>L</i> ≤ <i>z</i>* ≤ <i>U</i></strong>.</p>
   </header>
   <div class="bnb-fallback"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 748 650" width="100%" role="img" aria-labelledby="fig2-bnb-title fig2-bnb-desc">
 <title id="fig2-bnb-title">Branch-and-bound turns the proof into a narrowing interval</title>
-<desc id="fig2-bnb-desc">For this maximization problem, the incumbent L is a certified lower bound and the open-node relaxations give an upper bound U. The root bound is 165/4. L2 gives incumbent 39; L4 lowers U to 365/9; L5 does not improve; L6 closes the interval at 40.</desc>
+<desc id="fig2-bnb-desc">For this maximization problem, the incumbent L is a certified lower bound and the open-node relaxations give an upper bound U. The root LP bound is 165/4. L2 gives incumbent 39; L4 lowers the raw LP upper bound to 365/9, which can be floored to 40 because the integer objective is integral; L5 does not improve; L6 closes the interval at 40.</desc>
 <style>
 text{font-family:"Plex Mono",ui-monospace,monospace;fill:var(--viz-ink,#0a0a0a);font-size:12px}
 .headline{font-family:"Archivo",Helvetica,Arial,sans-serif;font-size:24px;font-weight:700;letter-spacing:-.5px}
@@ -163,8 +164,8 @@ text{font-family:"Plex Mono",ui-monospace,monospace;fill:var(--viz-ink,#0a0a0a);
 </style>
 <rect class="paper" width="748" height="650"/>
 <text class="headline" x="24" y="38">Branch-and-bound turns proof into a narrowing interval</text>
-<text class="small" x="24" y="63">Maximisation certificate: incumbent L ≤ true integer optimum z* ≤ global LP bound U</text>
-<text class="section" x="24" y="105">The exact textbook tree</text>
+<text class="small" x="24" y="63">Maximisation certificate: incumbent L ≤ true integer optimum z* ≤ raw LP bound U</text>
+<text class="section" x="24" y="105">The textbook branching tree</text>
 <text class="small" x="275" y="105">green = incumbent · red = infeasible</text>
 <line x1="250" y1="165" x2="142" y2="197" stroke="var(--viz-muted,#9a9a94)" stroke-width="1.5"/>
 <line x1="250" y1="165" x2="358" y2="197" stroke="var(--viz-muted,#9a9a94)" stroke-width="1.5"/>
@@ -211,7 +212,7 @@ text{font-family:"Plex Mono",ui-monospace,monospace;fill:var(--viz-ink,#0a0a0a);
 <line class="grid" x1="494" y1="88" x2="494" y2="500"/>
 <text class="section" x="518" y="105">The certificate</text>
 <text class="small" x="518" y="134">L = best integer found</text>
-<text class="small" x="518" y="151">U = valid open-node bound</text>
+<text class="small" x="518" y="151">U = raw open-node LP bound</text>
 <text class="small" x="518" y="185">AFTER L1 / L2</text>
 <text class="value" x="518" y="212">39 ≤ z* ≤ 41</text>
 <line x1="518" y1="226" x2="690" y2="226" stroke="#676762" stroke-width="8"/><circle cx="518" cy="226" r="6" fill="#087f5b"/><circle cx="690" cy="226" r="5" fill="#0a0a0a"/>
@@ -229,7 +230,7 @@ text{font-family:"Plex Mono",ui-monospace,monospace;fill:var(--viz-ink,#0a0a0a);
 <text class="section" x="42" y="544">The LP is still doing the proving.</text>
 <text x="42" y="568">Every node drops integrality, solves an LP relaxation, then uses that bound</text>
 <text x="42" y="588">to prune a whole region without enumerating every integer point inside it.</text>
-<text class="source" x="24" y="630">Tight-bound trace on the Bradley–Hax–Magnanti tree—not a HiGHS internal solver log.</text>
+<text class="source" x="24" y="630">Raw-LP-bound trace on the Bradley–Hax–Magnanti tree. Not a HiGHS internal solver log.</text>
 </svg>
 </div>
   <div class="bnb-enhanced" hidden>
@@ -237,7 +238,7 @@ text{font-family:"Plex Mono",ui-monospace,monospace;fill:var(--viz-ink,#0a0a0a);
     <div class="bnb-layout">
       <div class="bnb-steps" aria-label="Step through the exact branch-and-bound trace"><button type="button" data-bnb-step="0" aria-pressed="true"><span>0</span>Solve root relaxation L0</button>
 <button type="button" data-bnb-step="1" aria-pressed="false"><span>1</span>Solve both root children: L2 gives the first incumbent</button>
-<button type="button" data-bnb-step="2" aria-pressed="false"><span>2</span>L3 is infeasible; L4 tightens the global upper bound</button>
+<button type="button" data-bnb-step="2" aria-pressed="false"><span>2</span>L3 is infeasible; L4 tightens the raw LP upper bound</button>
 <button type="button" data-bnb-step="3" aria-pressed="false"><span>3</span>L5 is integer but cannot improve the incumbent; L6 remains open</button>
 <button type="button" data-bnb-step="4" aria-pressed="false"><span>4</span>L6 improves the incumbent and closes the certificate</button></div>
       <div class="bnb-certificate" data-bnb-certificate aria-live="polite">
@@ -245,12 +246,12 @@ text{font-family:"Plex Mono",ui-monospace,monospace;fill:var(--viz-ink,#0a0a0a);
         <strong>No incumbent yet</strong>
         <div class="bnb-interval" aria-hidden="true"><i style="--bnb-left:0%;--bnb-width:100%"></i></div>
         <p>Solve root relaxation L0</p>
-        <span>Open node: L0 · LP upper bound U = 41.25</span>
+        <span>Open node: L0 · raw LP upper bound U = 41.25</span>
       </div>
     </div>
   </div>
-  <script type="application/json" class="bnb-data">{"snapshots":[{"step":0,"event":"Solve root relaxation L0","lower":null,"upper":"165/4","incumbent":null,"open_nodes":["L0"],"open_bounds":{"L0":"165/4"}},{"step":1,"event":"Solve both root children: L2 gives the first incumbent","lower":"39","upper":"41","incumbent":{"x1":"3","x2":"3"},"open_nodes":["L1"],"open_bounds":{"L1":"41"}},{"step":2,"event":"L3 is infeasible; L4 tightens the global upper bound","lower":"39","upper":"365/9","incumbent":{"x1":"3","x2":"3"},"open_nodes":["L4"],"open_bounds":{"L4":"365/9"}},{"step":3,"event":"L5 is integer but cannot improve the incumbent; L6 remains open","lower":"39","upper":"365/9","incumbent":{"x1":"3","x2":"3"},"open_nodes":["L6"],"open_bounds":{"L6":"365/9"}},{"step":4,"event":"L6 improves the incumbent and closes the certificate","lower":"40","upper":"40","incumbent":{"x1":"0","x2":"5"},"open_nodes":[],"open_bounds":{}}],"scale_minimum":39.0,"scale_maximum":41.25}</script>
-  <p class="bnb-source">Each node solves an LP relaxation with exact rational arithmetic. The figure uses the textbook branch tree with an explicit deterministic schedule—both root children are solved first—and is not a log of HiGHS's internal MIP search. Green marks incumbents; red marks infeasibility.</p>
+  <script type="application/json" class="bnb-data">{"snapshots":[{"step":0,"event":"Solve root relaxation L0","lower":null,"upper":"165/4","incumbent":null,"open_nodes":["L0"],"open_bounds":{"L0":"165/4"}},{"step":1,"event":"Solve both root children: L2 gives the first incumbent","lower":"39","upper":"41","incumbent":{"x1":"3","x2":"3"},"open_nodes":["L1"],"open_bounds":{"L1":"41"}},{"step":2,"event":"L3 is infeasible; L4 tightens the raw LP upper bound","lower":"39","upper":"365/9","incumbent":{"x1":"3","x2":"3"},"open_nodes":["L4"],"open_bounds":{"L4":"365/9"}},{"step":3,"event":"L5 is integer but cannot improve the incumbent; L6 remains open","lower":"39","upper":"365/9","incumbent":{"x1":"3","x2":"3"},"open_nodes":["L6"],"open_bounds":{"L6":"365/9"}},{"step":4,"event":"L6 improves the incumbent and closes the certificate","lower":"40","upper":"40","incumbent":{"x1":"0","x2":"5"},"open_nodes":[],"open_bounds":{}}],"scale_minimum":39.0,"scale_maximum":41.25}</script>
+  <p class="bnb-source">Each node solves an LP relaxation with exact rational arithmetic. The figure follows the textbook branch tree on an explicit deterministic schedule, in which both root children are solved first. It is not a log of HiGHS's internal MIP search. Green marks incumbents; red marks infeasibility.</p>
 </div><figcaption>For maximisation, the live certificate is L ≤ z* ≤ U.</figcaption></figure>
 </main><script src="article-viz.js"></script></body>
 </html>

@@ -2,11 +2,11 @@
   <header class="bnb-heading">
     <div class="bnb-kicker">A proof in progress</div>
     <h3 id="bnb-heading">Branch-and-bound narrows a certified interval</h3>
-    <p>For this <strong>maximisation</strong>, the best integer solution found is the incumbent <i>L</i>, a lower bound. Open-node LP relaxations supply a valid global upper bound <i>U</i>. At every step with an incumbent: <strong><i>L</i> ≤ <i>z</i>* ≤ <i>U</i></strong>.</p>
+    <p>For this <strong>maximisation</strong>, the best integer solution found is the incumbent <i>L</i>, a lower bound. Open-node LP relaxations supply a valid raw upper bound <i>U</i>. At every step with an incumbent: <strong><i>L</i> ≤ <i>z</i>* ≤ <i>U</i></strong>.</p>
   </header>
   <div class="bnb-fallback"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 748 650" width="100%" role="img" aria-labelledby="fig2-bnb-title fig2-bnb-desc">
 <title id="fig2-bnb-title">Branch-and-bound turns the proof into a narrowing interval</title>
-<desc id="fig2-bnb-desc">For this maximization problem, the incumbent L is a certified lower bound and the open-node relaxations give an upper bound U. The root bound is 165/4. L2 gives incumbent 39; L4 lowers U to 365/9; L5 does not improve; L6 closes the interval at 40.</desc>
+<desc id="fig2-bnb-desc">For this maximization problem, the incumbent L is a certified lower bound and the open-node relaxations give an upper bound U. The root LP bound is 165/4. L2 gives incumbent 39; L4 lowers the raw LP upper bound to 365/9, which can be floored to 40 because the integer objective is integral; L5 does not improve; L6 closes the interval at 40.</desc>
 <style>
 text{font-family:"Plex Mono",ui-monospace,monospace;fill:var(--viz-ink,#0a0a0a);font-size:12px}
 .headline{font-family:"Archivo",Helvetica,Arial,sans-serif;font-size:24px;font-weight:700;letter-spacing:-.5px}
@@ -18,8 +18,8 @@ text{font-family:"Plex Mono",ui-monospace,monospace;fill:var(--viz-ink,#0a0a0a);
 </style>
 <rect class="paper" width="748" height="650"/>
 <text class="headline" x="24" y="38">Branch-and-bound turns proof into a narrowing interval</text>
-<text class="small" x="24" y="63">Maximisation certificate: incumbent L ≤ true integer optimum z* ≤ global LP bound U</text>
-<text class="section" x="24" y="105">The exact textbook tree</text>
+<text class="small" x="24" y="63">Maximisation certificate: incumbent L ≤ true integer optimum z* ≤ raw LP bound U</text>
+<text class="section" x="24" y="105">The textbook branching tree</text>
 <text class="small" x="275" y="105">green = incumbent · red = infeasible</text>
 <line x1="250" y1="165" x2="142" y2="197" stroke="var(--viz-muted,#9a9a94)" stroke-width="1.5"/>
 <line x1="250" y1="165" x2="358" y2="197" stroke="var(--viz-muted,#9a9a94)" stroke-width="1.5"/>
@@ -66,7 +66,7 @@ text{font-family:"Plex Mono",ui-monospace,monospace;fill:var(--viz-ink,#0a0a0a);
 <line class="grid" x1="494" y1="88" x2="494" y2="500"/>
 <text class="section" x="518" y="105">The certificate</text>
 <text class="small" x="518" y="134">L = best integer found</text>
-<text class="small" x="518" y="151">U = valid open-node bound</text>
+<text class="small" x="518" y="151">U = raw open-node LP bound</text>
 <text class="small" x="518" y="185">AFTER L1 / L2</text>
 <text class="value" x="518" y="212">39 ≤ z* ≤ 41</text>
 <line x1="518" y1="226" x2="690" y2="226" stroke="#676762" stroke-width="8"/><circle cx="518" cy="226" r="6" fill="#087f5b"/><circle cx="690" cy="226" r="5" fill="#0a0a0a"/>
@@ -84,7 +84,7 @@ text{font-family:"Plex Mono",ui-monospace,monospace;fill:var(--viz-ink,#0a0a0a);
 <text class="section" x="42" y="544">The LP is still doing the proving.</text>
 <text x="42" y="568">Every node drops integrality, solves an LP relaxation, then uses that bound</text>
 <text x="42" y="588">to prune a whole region without enumerating every integer point inside it.</text>
-<text class="source" x="24" y="630">Tight-bound trace on the Bradley–Hax–Magnanti tree—not a HiGHS internal solver log.</text>
+<text class="source" x="24" y="630">Raw-LP-bound trace on the Bradley–Hax–Magnanti tree. Not a HiGHS internal solver log.</text>
 </svg>
 </div>
   <div class="bnb-enhanced" hidden>
@@ -92,7 +92,7 @@ text{font-family:"Plex Mono",ui-monospace,monospace;fill:var(--viz-ink,#0a0a0a);
     <div class="bnb-layout">
       <div class="bnb-steps" aria-label="Step through the exact branch-and-bound trace"><button type="button" data-bnb-step="0" aria-pressed="true"><span>0</span>Solve root relaxation L0</button>
 <button type="button" data-bnb-step="1" aria-pressed="false"><span>1</span>Solve both root children: L2 gives the first incumbent</button>
-<button type="button" data-bnb-step="2" aria-pressed="false"><span>2</span>L3 is infeasible; L4 tightens the global upper bound</button>
+<button type="button" data-bnb-step="2" aria-pressed="false"><span>2</span>L3 is infeasible; L4 tightens the raw LP upper bound</button>
 <button type="button" data-bnb-step="3" aria-pressed="false"><span>3</span>L5 is integer but cannot improve the incumbent; L6 remains open</button>
 <button type="button" data-bnb-step="4" aria-pressed="false"><span>4</span>L6 improves the incumbent and closes the certificate</button></div>
       <div class="bnb-certificate" data-bnb-certificate aria-live="polite">
@@ -100,10 +100,10 @@ text{font-family:"Plex Mono",ui-monospace,monospace;fill:var(--viz-ink,#0a0a0a);
         <strong>No incumbent yet</strong>
         <div class="bnb-interval" aria-hidden="true"><i style="--bnb-left:0%;--bnb-width:100%"></i></div>
         <p>Solve root relaxation L0</p>
-        <span>Open node: L0 · LP upper bound U = 41.25</span>
+        <span>Open node: L0 · raw LP upper bound U = 41.25</span>
       </div>
     </div>
   </div>
-  <script type="application/json" class="bnb-data">{"snapshots":[{"step":0,"event":"Solve root relaxation L0","lower":null,"upper":"165/4","incumbent":null,"open_nodes":["L0"],"open_bounds":{"L0":"165/4"}},{"step":1,"event":"Solve both root children: L2 gives the first incumbent","lower":"39","upper":"41","incumbent":{"x1":"3","x2":"3"},"open_nodes":["L1"],"open_bounds":{"L1":"41"}},{"step":2,"event":"L3 is infeasible; L4 tightens the global upper bound","lower":"39","upper":"365/9","incumbent":{"x1":"3","x2":"3"},"open_nodes":["L4"],"open_bounds":{"L4":"365/9"}},{"step":3,"event":"L5 is integer but cannot improve the incumbent; L6 remains open","lower":"39","upper":"365/9","incumbent":{"x1":"3","x2":"3"},"open_nodes":["L6"],"open_bounds":{"L6":"365/9"}},{"step":4,"event":"L6 improves the incumbent and closes the certificate","lower":"40","upper":"40","incumbent":{"x1":"0","x2":"5"},"open_nodes":[],"open_bounds":{}}],"scale_minimum":39.0,"scale_maximum":41.25}</script>
-  <p class="bnb-source">Each node solves an LP relaxation with exact rational arithmetic. The figure uses the textbook branch tree with an explicit deterministic schedule—both root children are solved first—and is not a log of HiGHS's internal MIP search. Green marks incumbents; red marks infeasibility.</p>
+  <script type="application/json" class="bnb-data">{"snapshots":[{"step":0,"event":"Solve root relaxation L0","lower":null,"upper":"165/4","incumbent":null,"open_nodes":["L0"],"open_bounds":{"L0":"165/4"}},{"step":1,"event":"Solve both root children: L2 gives the first incumbent","lower":"39","upper":"41","incumbent":{"x1":"3","x2":"3"},"open_nodes":["L1"],"open_bounds":{"L1":"41"}},{"step":2,"event":"L3 is infeasible; L4 tightens the raw LP upper bound","lower":"39","upper":"365/9","incumbent":{"x1":"3","x2":"3"},"open_nodes":["L4"],"open_bounds":{"L4":"365/9"}},{"step":3,"event":"L5 is integer but cannot improve the incumbent; L6 remains open","lower":"39","upper":"365/9","incumbent":{"x1":"3","x2":"3"},"open_nodes":["L6"],"open_bounds":{"L6":"365/9"}},{"step":4,"event":"L6 improves the incumbent and closes the certificate","lower":"40","upper":"40","incumbent":{"x1":"0","x2":"5"},"open_nodes":[],"open_bounds":{}}],"scale_minimum":39.0,"scale_maximum":41.25}</script>
+  <p class="bnb-source">Each node solves an LP relaxation with exact rational arithmetic. The figure follows the textbook branch tree on an explicit deterministic schedule, in which both root children are solved first. It is not a log of HiGHS's internal MIP search. Green marks incumbents; red marks infeasibility.</p>
 </div>

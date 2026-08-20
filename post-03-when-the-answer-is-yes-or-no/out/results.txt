@@ -15,11 +15,11 @@ At the LP root its left side is 63/4 > 15, so the cut removes the fractional opt
 Branch-and-bound certificate (maximization; both root children solved first)
 -------------------------------------------
 At every snapshot with an incumbent: L <= z* <= U.
-step 0: no incumbent — Solve root relaxation L0
-step 1: 39 <= z* <= 41 — Solve both root children: L2 gives the first incumbent
-step 2: 39 <= z* <= 365/9 — L3 is infeasible; L4 tightens the global upper bound
-step 3: 39 <= z* <= 365/9 — L5 is integer but cannot improve the incumbent; L6 remains open
-step 4: 40 <= z* <= 40 — L6 improves the incumbent and closes the certificate
+step 0: no incumbent  (Solve root relaxation L0)
+step 1: 39 <= z* <= 41  (Solve both root children: L2 gives the first incumbent)
+step 2: 39 <= z* <= 365/9  (L3 is infeasible; L4 tightens the raw LP upper bound)
+step 3: 39 <= z* <= 365/9  (L5 is integer but cannot improve the incumbent; L6 remains open)
+step 4: 40 <= z* <= 40  (L6 improves the incumbent and closes the certificate)
 
 The root integrality gap compares the integer optimum with one LP relaxation.
 The live optimality gap is the certified interval U - L during the search.

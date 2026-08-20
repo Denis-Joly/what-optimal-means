@@ -75,7 +75,7 @@
       certificate.innerHTML = "<small>" + caption + "</small><strong>" + heading
         + "</strong><div class=\"bnb-interval\" aria-hidden=\"true\"><i style=\"--bnb-left:"
         + left + "%;--bnb-width:" + width + "%\"></i></div><p>" + snapshot.event
-        + "</p><span>" + open + " · global upper bound U = " + snapshot.upper + "</span>";
+        + "</p><span>" + open + " · raw LP upper bound U = " + snapshot.upper + "</span>";
     }
 
     buttons.forEach(function (button) {

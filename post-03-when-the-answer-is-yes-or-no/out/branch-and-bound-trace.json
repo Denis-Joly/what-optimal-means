@@ -1,5 +1,5 @@
 {
-  "note": "Exact trace on the textbook branch tree with an explicit deterministic tight-bound schedule; both root children are solved first. Not a solver log.",
+  "note": "Exact trace on the textbook branch tree with an explicit deterministic raw-LP-bound schedule; both root children are solved first. Not a solver log.",
   "nodes": [
     {
       "name": "L0",
@@ -132,7 +132,7 @@
     },
     {
       "step": 2,
-      "event": "L3 is infeasible; L4 tightens the global upper bound",
+      "event": "L3 is infeasible; L4 tightens the raw LP upper bound",
       "lower": "39",
       "upper": "365/9",
       "incumbent": {

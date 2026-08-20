@@ -119,4 +119,4 @@ if __name__ == "__main__":
     args = parser.parse_args()
     verify(with_highs=not args.no_highs)
     suffix = " and solver cross-check" if not args.no_highs else ""
-    print(f"OK: exact enumeration and tight branch-and-bound certificates{suffix} agree.")
+    print(f"OK: exact enumeration and raw-LP-bound branch-and-bound certificates{suffix} agree.")

@@ -156,12 +156,12 @@ def branch_svg() -> str:
         height,
         "fig2-bnb",
         "Branch-and-bound turns the proof into a narrowing interval",
-        "For this maximization problem, the incumbent L is a certified lower bound and the open-node relaxations give an upper bound U. The root bound is 165/4. L2 gives incumbent 39; L4 lowers U to 365/9; L5 does not improve; L6 closes the interval at 40.",
+        "For this maximization problem, the incumbent L is a certified lower bound and the open-node relaxations give an upper bound U. The root LP bound is 165/4. L2 gives incumbent 39; L4 lowers the raw LP upper bound to 365/9, which can be floored to 40 because the integer objective is integral; L5 does not improve; L6 closes the interval at 40.",
     )
     out += [
         '<text class="headline" x="24" y="38">Branch-and-bound turns proof into a narrowing interval</text>',
-        '<text class="small" x="24" y="63">Maximisation certificate: incumbent L ≤ true integer optimum z* ≤ global LP bound U</text>',
-        '<text class="section" x="24" y="105">The exact textbook tree</text>',
+        '<text class="small" x="24" y="63">Maximisation certificate: incumbent L ≤ true integer optimum z* ≤ raw LP bound U</text>',
+        '<text class="section" x="24" y="105">The textbook branching tree</text>',
         '<text class="small" x="275" y="105">green = incumbent · red = infeasible</text>',
     ]
     positions = {
@@ -208,7 +208,7 @@ def branch_svg() -> str:
         '<line class="grid" x1="494" y1="88" x2="494" y2="500"/>',
         '<text class="section" x="518" y="105">The certificate</text>',
         '<text class="small" x="518" y="134">L = best integer found</text>',
-        '<text class="small" x="518" y="151">U = valid open-node bound</text>',
+        '<text class="small" x="518" y="151">U = raw open-node LP bound</text>',
         '<text class="small" x="518" y="185">AFTER L1 / L2</text>',
         f'<text class="value" x="518" y="212">{format_fraction(snapshots[1].lower)} ≤ z* ≤ {format_fraction(snapshots[1].upper)}</text>',
         '<line x1="518" y1="226" x2="690" y2="226" stroke="#676762" stroke-width="8"/><circle cx="518" cy="226" r="6" fill="#087f5b"/><circle cx="690" cy="226" r="5" fill="#0a0a0a"/>',
@@ -226,7 +226,7 @@ def branch_svg() -> str:
         '<text class="section" x="42" y="544">The LP is still doing the proving.</text>',
         '<text x="42" y="568">Every node drops integrality, solves an LP relaxation, then uses that bound</text>',
         '<text x="42" y="588">to prune a whole region without enumerating every integer point inside it.</text>',
-        '<text class="source" x="24" y="630">Tight-bound trace on the Bradley–Hax–Magnanti tree—not a HiGHS internal solver log.</text>',
+        '<text class="source" x="24" y="630">Raw-LP-bound trace on the Bradley–Hax–Magnanti tree. Not a HiGHS internal solver log.</text>',
         "</svg>",
     ]
     svg = "\n".join(out) + "\n"
@@ -250,6 +250,19 @@ def rounding_fragment(static_svg: str) -> str:
     for point in integer_feasible_points(model):
         x, y = chart_coordinates(point)
         dots.append(f'<circle cx="{x:.1f}" cy="{y:.1f}" r="3" class="integrality-lattice-dot"/>')
+
+    # The enhanced chart carries the same grid, ticks and axis titles as the
+    # static fallback. Without them a reader cannot tell (2, 3) from (2, 4).
+    grid = []
+    for tick in range(7):
+        x, _ = chart_coordinates(Point(Fraction(tick), Fraction(0)))
+        grid.append(f'<line class="integrality-grid" x1="{x:.1f}" y1="116" x2="{x:.1f}" y2="494"/>')
+        grid.append(f'<text class="integrality-tick" x="{x:.1f}" y="513" text-anchor="middle">{tick}</text>')
+        _, y = chart_coordinates(Point(Fraction(0), Fraction(tick)))
+        grid.append(f'<line class="integrality-grid" x1="48" y1="{y:.1f}" x2="470" y2="{y:.1f}"/>')
+        grid.append(f'<text class="integrality-tick" x="37" y="{y + 4:.1f}" text-anchor="end">{tick}</text>')
+    grid.append('<text class="integrality-axis-title" x="466" y="513" text-anchor="end">x₁</text>')
+    grid.append('<text class="integrality-axis-title" x="31" y="108">x₂</text>')
     special = []
     for key, point, label in [
         ("lp", lp_point, "LP relaxation (2.25, 3.75)"),
@@ -275,14 +288,15 @@ def rounding_fragment(static_svg: str) -> str:
   <div class="integrality-enhanced" hidden>
     <div class="integrality-steps" aria-label="Follow the failed rounding argument">{controls}</div>
     <div class="integrality-layout">
-      <svg class="integrality-chart" viewBox="20 84 480 454" role="img" aria-labelledby="integrality-live-title integrality-live-desc">
+      <svg class="integrality-chart" viewBox="20 84 480 474" role="img" aria-labelledby="integrality-live-title integrality-live-desc">
         <title id="integrality-live-title">The LP relaxation and three integer alternatives</title>
         <desc id="integrality-live-desc">Select a step to compare the fractional LP optimum, its infeasible rounding, the nearest feasible integer, and the integer optimum.</desc>
         <rect x="24" y="88" width="470" height="438" rx="3" class="integrality-panel"/>
+        {''.join(grid)}
         <path d="{polygon_path(vertices)}" class="integrality-region"/>
         {''.join(dots)}
         {''.join(special)}
-        <text x="48" y="515" class="integrality-axis-label">LP-feasible region · 25 feasible lattice points</text>
+        <text x="48" y="546" class="integrality-axis-label">LP-feasible region · 25 feasible lattice points</text>
       </svg>
       <div class="integrality-readout" data-integrality-readout aria-live="polite">
         <small>LP relaxation</small><strong>(2.25, 3.75)</strong><b>z = 41.25</b>
@@ -319,7 +333,7 @@ def branch_fragment(static_svg: str) -> str:
   <header class="bnb-heading">
     <div class="bnb-kicker">A proof in progress</div>
     <h3 id="bnb-heading">Branch-and-bound narrows a certified interval</h3>
-    <p>For this <strong>maximisation</strong>, the best integer solution found is the incumbent <i>L</i>, a lower bound. Open-node LP relaxations supply a valid global upper bound <i>U</i>. At every step with an incumbent: <strong><i>L</i> ≤ <i>z</i>* ≤ <i>U</i></strong>.</p>
+    <p>For this <strong>maximisation</strong>, the best integer solution found is the incumbent <i>L</i>, a lower bound. Open-node LP relaxations supply a valid raw upper bound <i>U</i>. At every step with an incumbent: <strong><i>L</i> ≤ <i>z</i>* ≤ <i>U</i></strong>.</p>
   </header>
   <div class="bnb-fallback">{static_svg}</div>
   <div class="bnb-enhanced" hidden>
@@ -331,12 +345,12 @@ def branch_fragment(static_svg: str) -> str:
         <strong>No incumbent yet</strong>
         <div class="bnb-interval" aria-hidden="true"><i style="--bnb-left:0%;--bnb-width:100%"></i></div>
         <p>Solve root relaxation L0</p>
-        <span>Open node: L0 · LP upper bound U = 41.25</span>
+        <span>Open node: L0 · raw LP upper bound U = 41.25</span>
       </div>
     </div>
   </div>
   <script type="application/json" class="bnb-data">{payload}</script>
-  <p class="bnb-source">Each node solves an LP relaxation with exact rational arithmetic. The figure uses the textbook branch tree with an explicit deterministic schedule—both root children are solved first—and is not a log of HiGHS's internal MIP search. Green marks incumbents; red marks infeasibility.</p>
+  <p class="bnb-source">Each node solves an LP relaxation with exact rational arithmetic. The figure follows the textbook branch tree on an explicit deterministic schedule, in which both root children are solved first. It is not a log of HiGHS's internal MIP search. Green marks incumbents; red marks infeasibility.</p>
 </div>'''
     (OUT / "fig2-branch-and-bound.html").write_text(fragment + "\n", encoding="utf-8")
     return fragment
@@ -348,7 +362,7 @@ def write_demo(rounding: str, branch: str) -> None:
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>When the Answer Is Yes or No — figure demo</title>
+  <title>When the Answer Is Yes or No: figure demo</title>
   <link rel="stylesheet" href="visuals.css">
   <style>body{{margin:0;background:#e8e8e5;color:#0a0a0a;font-family:Arial,sans-serif}}main{{max-width:900px;margin:auto;padding:32px 16px}}figure{{margin:0 0 48px}}figcaption{{font-size:14px;line-height:1.5;margin-top:10px}}</style>
 </head>

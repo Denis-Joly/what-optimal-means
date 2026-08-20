@@ -69,7 +69,7 @@ def build() -> str:
     }, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
 
     (OUT / "branch-and-bound-trace.json").write_text(json.dumps({
-        "note": "Exact trace on the textbook branch tree with an explicit deterministic tight-bound schedule; both root children are solved first. Not a solver log.",
+        "note": "Exact trace on the textbook branch tree with an explicit deterministic raw-LP-bound schedule; both root children are solved first. Not a solver log.",
         "nodes": [node_as_json(nodes[name]) for name in ("L0", "L1", "L2", "L3", "L4", "L5", "L6")],
         "snapshots": [snapshot_as_json(snapshot) for snapshot in snapshots],
     }, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
@@ -95,7 +95,7 @@ def build() -> str:
         *[
             f"step {snapshot.step}: "
             + ("no incumbent" if snapshot.lower is None else f"{format_fraction(snapshot.lower)} <= z* <= {format_fraction(snapshot.upper)}")
-            + f" — {snapshot.event}"
+            + f"  ({snapshot.event})"
             for snapshot in snapshots
         ],
         "",

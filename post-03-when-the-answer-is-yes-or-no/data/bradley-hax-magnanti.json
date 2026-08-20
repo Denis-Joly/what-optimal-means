@@ -13,7 +13,7 @@
     "authors": ["Stephen P. Bradley", "Arnoldo C. Hax", "Thomas L. Magnanti"],
     "title": "Applied Mathematical Programming",
     "year": 1977,
-    "chapter": "9, section 9.5",
+    "chapter": "9, sections 9.4 (model, Table 9.1) and 9.5 (branching tree)",
     "url": "https://web.mit.edu/15.053/www/AMP-Chapter-09.pdf"
   }
 }

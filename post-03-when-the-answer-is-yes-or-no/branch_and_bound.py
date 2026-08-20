@@ -2,9 +2,9 @@
 """A deterministic, exact trace on the textbook Post 3 branch-and-bound tree.
 
 This is explanatory code, not a general mixed-integer solver. It uses Bradley,
-Hax and Magnanti's branch tree with an explicit schedule—both root children
-are solved first—and solves each two-dimensional LP by enumerating vertices
-with exact rational arithmetic.
+Hax and Magnanti's branch tree on an explicit schedule, in which both root
+children are solved first, and solves each two-dimensional LP by enumerating
+vertices with exact rational arithmetic.
 """
 
 from __future__ import annotations
@@ -79,7 +79,7 @@ def solve_nodes(model: Model) -> dict[str, NodeResult]:
 
 
 def trace(model: Model) -> tuple[dict[str, NodeResult], list[Snapshot]]:
-    """Return a tight, deterministic trace with bounds derived from state.
+    """Return a deterministic trace that retains raw LP bounds.
 
     L2 is solved with L1. Its LP optimum is already integer, so it becomes the
     first incumbent at 39. When L4 branches, unresolved L6 inherits its
@@ -125,7 +125,7 @@ def trace(model: Model) -> tuple[dict[str, NodeResult], list[Snapshot]]:
 
     frontier.pop("L1")
     frontier["L4"] = nodes["L4"].lp_bound  # type: ignore[assignment]
-    record("L3 is infeasible; L4 tightens the global upper bound")
+    record("L3 is infeasible; L4 tightens the raw LP upper bound")
 
     inherited_l6_bound = frontier.pop("L4")
     frontier["L6"] = inherited_l6_bound
