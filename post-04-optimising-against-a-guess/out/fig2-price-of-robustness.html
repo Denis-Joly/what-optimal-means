@@ -1,0 +1,167 @@
+<figure class="fig fig-wide sn-repro-figure sn-repro-figure--price-of-robustness" id="figure-2">
+  <style>
+    .sn-repro-figure { margin: 2.25rem auto; max-width: 60rem; color: var(--ink, #17232f); }
+    .sn-repro-scroll { overflow-x: visible; }
+    .sn-repro-mobile-hint { display: none; }
+    .sn-repro-figure svg { display: block; width: 100%; height: auto; background: #fff; border: 1px solid var(--rule, #d8e0e6); border-radius: 0.8rem; }
+    .sn-repro-figure figcaption { margin: 0.8rem 0.2rem 0; font: 0.94rem/1.55 ui-sans-serif, system-ui, sans-serif; color: var(--muted, #526475); }
+    .sn-repro-figure figcaption strong { color: var(--ink, #17232f); }
+    @media (max-width: 640px) {
+      .sn-repro-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+      .sn-repro-scroll svg { min-width: 700px; }
+      .sn-repro-mobile-hint { display: block; margin: 0.45rem 0.2rem 0; color: var(--muted, #526475); font: 0.72rem/1.4 ui-monospace, monospace; letter-spacing: 0.02em; }
+    }
+  </style>
+  <div class="sn-repro-scroll">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 700" role="img" aria-labelledby="fig2-title fig2-desc">
+<title id="fig2-title">Higher robustness budgets cost more and reduce empirical violations</title>
+<desc id="fig2-desc">Two line charts over Gamma from zero to six. The upper chart shows the defensive allocation cost rising by 59.46 percent. The lower chart shows an empirical violation rate falling from 10.33 percent to zero in 150,000 uniform-shock simulations. A side panel states separately the deterministic robust guarantee, the empirical sampling statement, and that no concentration bound is shown.</desc>
+<style>
+      text { font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #17232F; }
+      .title { font-size: 24px; font-weight: 720; letter-spacing: -0.3px; }
+      .subtitle { font-size: 14px; fill: #526475; }
+      .axis-title { font-size: 13px; font-weight: 650; fill: #17232F; }
+      .tick { font-size: 12px; fill: #526475; }
+      .label { font-size: 13px; fill: #17232F; }
+      .small { font-size: 12px; fill: #526475; }
+      .metric { font-size: 17px; font-weight: 720; fill: #17232F; }
+      .kicker { font-size: 11px; font-weight: 760; letter-spacing: 1.1px; fill: #526475; }
+      .grid { stroke: #D8E0E6; stroke-width: 1; }
+      .axis { stroke: #17232F; stroke-width: 1.2; }
+    </style>
+<rect width="960" height="700" fill="#FFFFFF"/>
+<text x="48.00" y="43.00" class="title" text-anchor="start" >The price of robustness is a curve, not a slogan</text>
+<text x="48.00" y="69.00" class="subtitle" text-anchor="start" >A six-asset linear portfolio; Γ admits half-unit protection budgets.</text>
+<text x="76.00" y="101.00" class="kicker" text-anchor="start" >DEFENSIVE COST ABOVE Γ = 0</text>
+<text x="76.00" y="385.00" class="kicker" text-anchor="start" >EMPIRICAL RETURN-CONSTRAINT VIOLATIONS</text>
+<line x1="76.0" y1="319.00" x2="684.0" y2="319.00" class="grid"/>
+<text x="65.00" y="323.00" class="tick" text-anchor="end" >0%</text>
+<line x1="76.0" y1="252.00" x2="684.0" y2="252.00" class="grid"/>
+<text x="65.00" y="256.00" class="tick" text-anchor="end" >20%</text>
+<line x1="76.0" y1="185.00" x2="684.0" y2="185.00" class="grid"/>
+<text x="65.00" y="189.00" class="tick" text-anchor="end" >40%</text>
+<line x1="76.0" y1="118.00" x2="684.0" y2="118.00" class="grid"/>
+<text x="65.00" y="122.00" class="tick" text-anchor="end" >60%</text>
+<line x1="76.0" y1="612.00" x2="684.0" y2="612.00" class="grid"/>
+<text x="65.00" y="616.00" class="tick" text-anchor="end" >0%</text>
+<line x1="76.0" y1="559.50" x2="684.0" y2="559.50" class="grid"/>
+<text x="65.00" y="563.50" class="tick" text-anchor="end" >3%</text>
+<line x1="76.0" y1="507.00" x2="684.0" y2="507.00" class="grid"/>
+<text x="65.00" y="511.00" class="tick" text-anchor="end" >6%</text>
+<line x1="76.0" y1="454.50" x2="684.0" y2="454.50" class="grid"/>
+<text x="65.00" y="458.50" class="tick" text-anchor="end" >9%</text>
+<line x1="76.0" y1="402.00" x2="684.0" y2="402.00" class="grid"/>
+<text x="65.00" y="406.00" class="tick" text-anchor="end" >12%</text>
+<line x1="76.00" y1="118.0" x2="76.00" y2="319.0" class="grid"/>
+<line x1="76.00" y1="402.0" x2="76.00" y2="612.0" class="grid"/>
+<text x="76.00" y="636.00" class="tick" text-anchor="middle" >0</text>
+<line x1="177.33" y1="118.0" x2="177.33" y2="319.0" class="grid"/>
+<line x1="177.33" y1="402.0" x2="177.33" y2="612.0" class="grid"/>
+<text x="177.33" y="636.00" class="tick" text-anchor="middle" >1</text>
+<line x1="278.67" y1="118.0" x2="278.67" y2="319.0" class="grid"/>
+<line x1="278.67" y1="402.0" x2="278.67" y2="612.0" class="grid"/>
+<text x="278.67" y="636.00" class="tick" text-anchor="middle" >2</text>
+<line x1="380.00" y1="118.0" x2="380.00" y2="319.0" class="grid"/>
+<line x1="380.00" y1="402.0" x2="380.00" y2="612.0" class="grid"/>
+<text x="380.00" y="636.00" class="tick" text-anchor="middle" >3</text>
+<line x1="481.33" y1="118.0" x2="481.33" y2="319.0" class="grid"/>
+<line x1="481.33" y1="402.0" x2="481.33" y2="612.0" class="grid"/>
+<text x="481.33" y="636.00" class="tick" text-anchor="middle" >4</text>
+<line x1="582.67" y1="118.0" x2="582.67" y2="319.0" class="grid"/>
+<line x1="582.67" y1="402.0" x2="582.67" y2="612.0" class="grid"/>
+<text x="582.67" y="636.00" class="tick" text-anchor="middle" >5</text>
+<line x1="684.00" y1="118.0" x2="684.00" y2="319.0" class="grid"/>
+<line x1="684.00" y1="402.0" x2="684.00" y2="612.0" class="grid"/>
+<text x="684.00" y="636.00" class="tick" text-anchor="middle" >6</text>
+<line x1="76.0" y1="319.0" x2="684.0" y2="319.0" class="axis"/>
+<line x1="76.0" y1="118.0" x2="76.0" y2="319.0" class="axis"/>
+<line x1="76.0" y1="612.0" x2="684.0" y2="612.0" class="axis"/>
+<line x1="76.0" y1="402.0" x2="76.0" y2="612.0" class="axis"/>
+<polyline points="76.00,319.00 126.67,319.00 177.33,318.33 228.00,304.72 278.67,281.37 329.33,256.82 380.00,223.68 430.67,203.26 481.33,160.14 532.00,137.40 582.67,129.16 633.33,119.80 684.00,119.80" fill="none" stroke="#C15F1B" stroke-width="3" stroke-linejoin="round"/>
+<polyline points="76.00,431.21 126.67,431.21 177.33,436.04 228.00,523.74 278.67,568.05 329.33,588.67 380.00,604.30 430.67,608.65 481.33,611.44 532.00,611.97 582.67,612.00 633.33,612.00 684.00,612.00" fill="none" stroke="#087F8C" stroke-width="3" stroke-linejoin="round"/>
+<circle cx="76.00" cy="319.00" r="4.5" fill="#FFFFFF" stroke="#7C3D12" stroke-width="2"/>
+<line x1="76.00" y1="428.50" x2="76.00" y2="433.89" stroke="#075A63" stroke-width="1.2"/>
+<line x1="72.00" y1="428.50" x2="80.00" y2="428.50" stroke="#075A63" stroke-width="1.2"/>
+<line x1="72.00" y1="433.89" x2="80.00" y2="433.89" stroke="#075A63" stroke-width="1.2"/>
+<rect x="72.00" y="427.21" width="8" height="8" fill="#087F8C" stroke="#FFFFFF" stroke-width="1"/>
+<circle cx="126.67" cy="319.00" r="4.5" fill="#FFFFFF" stroke="#7C3D12" stroke-width="2"/>
+<line x1="126.67" y1="428.50" x2="126.67" y2="433.89" stroke="#075A63" stroke-width="1.2"/>
+<line x1="122.67" y1="428.50" x2="130.67" y2="428.50" stroke="#075A63" stroke-width="1.2"/>
+<line x1="122.67" y1="433.89" x2="130.67" y2="433.89" stroke="#075A63" stroke-width="1.2"/>
+<rect x="122.67" y="427.21" width="8" height="8" fill="#087F8C" stroke="#FFFFFF" stroke-width="1"/>
+<circle cx="177.33" cy="318.33" r="4.5" fill="#FFFFFF" stroke="#7C3D12" stroke-width="2"/>
+<line x1="177.33" y1="433.36" x2="177.33" y2="438.69" stroke="#075A63" stroke-width="1.2"/>
+<line x1="173.33" y1="433.36" x2="181.33" y2="433.36" stroke="#075A63" stroke-width="1.2"/>
+<line x1="173.33" y1="438.69" x2="181.33" y2="438.69" stroke="#075A63" stroke-width="1.2"/>
+<rect x="173.33" y="432.04" width="8" height="8" fill="#087F8C" stroke="#FFFFFF" stroke-width="1"/>
+<circle cx="228.00" cy="304.72" r="4.5" fill="#FFFFFF" stroke="#7C3D12" stroke-width="2"/>
+<line x1="228.00" y1="521.78" x2="228.00" y2="525.66" stroke="#075A63" stroke-width="1.2"/>
+<line x1="224.00" y1="521.78" x2="232.00" y2="521.78" stroke="#075A63" stroke-width="1.2"/>
+<line x1="224.00" y1="525.66" x2="232.00" y2="525.66" stroke="#075A63" stroke-width="1.2"/>
+<rect x="224.00" y="519.74" width="8" height="8" fill="#087F8C" stroke="#FFFFFF" stroke-width="1"/>
+<circle cx="278.67" cy="281.37" r="4.5" fill="#FFFFFF" stroke="#7C3D12" stroke-width="2"/>
+<line x1="278.67" y1="566.64" x2="278.67" y2="569.42" stroke="#075A63" stroke-width="1.2"/>
+<line x1="274.67" y1="566.64" x2="282.67" y2="566.64" stroke="#075A63" stroke-width="1.2"/>
+<line x1="274.67" y1="569.42" x2="282.67" y2="569.42" stroke="#075A63" stroke-width="1.2"/>
+<rect x="274.67" y="564.05" width="8" height="8" fill="#087F8C" stroke="#FFFFFF" stroke-width="1"/>
+<circle cx="329.33" cy="256.82" r="4.5" fill="#FFFFFF" stroke="#7C3D12" stroke-width="2"/>
+<line x1="329.33" y1="587.63" x2="329.33" y2="589.66" stroke="#075A63" stroke-width="1.2"/>
+<line x1="325.33" y1="587.63" x2="333.33" y2="587.63" stroke="#075A63" stroke-width="1.2"/>
+<line x1="325.33" y1="589.66" x2="333.33" y2="589.66" stroke="#075A63" stroke-width="1.2"/>
+<rect x="325.33" y="584.67" width="8" height="8" fill="#087F8C" stroke="#FFFFFF" stroke-width="1"/>
+<circle cx="380.00" cy="223.68" r="4.5" fill="#FFFFFF" stroke="#7C3D12" stroke-width="2"/>
+<line x1="380.00" y1="603.69" x2="380.00" y2="604.86" stroke="#075A63" stroke-width="1.2"/>
+<line x1="376.00" y1="603.69" x2="384.00" y2="603.69" stroke="#075A63" stroke-width="1.2"/>
+<line x1="376.00" y1="604.86" x2="384.00" y2="604.86" stroke="#075A63" stroke-width="1.2"/>
+<rect x="376.00" y="600.30" width="8" height="8" fill="#087F8C" stroke="#FFFFFF" stroke-width="1"/>
+<circle cx="430.67" cy="203.26" r="4.5" fill="#FFFFFF" stroke="#7C3D12" stroke-width="2"/>
+<line x1="430.67" y1="608.24" x2="430.67" y2="609.02" stroke="#075A63" stroke-width="1.2"/>
+<line x1="426.67" y1="608.24" x2="434.67" y2="608.24" stroke="#075A63" stroke-width="1.2"/>
+<line x1="426.67" y1="609.02" x2="434.67" y2="609.02" stroke="#075A63" stroke-width="1.2"/>
+<rect x="426.67" y="604.65" width="8" height="8" fill="#087F8C" stroke="#FFFFFF" stroke-width="1"/>
+<circle cx="481.33" cy="160.14" r="4.5" fill="#FFFFFF" stroke="#7C3D12" stroke-width="2"/>
+<line x1="481.33" y1="611.26" x2="481.33" y2="611.58" stroke="#075A63" stroke-width="1.2"/>
+<line x1="477.33" y1="611.26" x2="485.33" y2="611.26" stroke="#075A63" stroke-width="1.2"/>
+<line x1="477.33" y1="611.58" x2="485.33" y2="611.58" stroke="#075A63" stroke-width="1.2"/>
+<rect x="477.33" y="607.44" width="8" height="8" fill="#087F8C" stroke="#FFFFFF" stroke-width="1"/>
+<circle cx="532.00" cy="137.40" r="4.5" fill="#FFFFFF" stroke="#7C3D12" stroke-width="2"/>
+<line x1="532.00" y1="611.90" x2="532.00" y2="611.99" stroke="#075A63" stroke-width="1.2"/>
+<line x1="528.00" y1="611.90" x2="536.00" y2="611.90" stroke="#075A63" stroke-width="1.2"/>
+<line x1="528.00" y1="611.99" x2="536.00" y2="611.99" stroke="#075A63" stroke-width="1.2"/>
+<rect x="528.00" y="607.97" width="8" height="8" fill="#087F8C" stroke="#FFFFFF" stroke-width="1"/>
+<circle cx="582.67" cy="129.16" r="4.5" fill="#FFFFFF" stroke="#7C3D12" stroke-width="2"/>
+<line x1="582.67" y1="611.96" x2="582.67" y2="612.00" stroke="#075A63" stroke-width="1.2"/>
+<line x1="578.67" y1="611.96" x2="586.67" y2="611.96" stroke="#075A63" stroke-width="1.2"/>
+<line x1="578.67" y1="612.00" x2="586.67" y2="612.00" stroke="#075A63" stroke-width="1.2"/>
+<rect x="578.67" y="608.00" width="8" height="8" fill="#087F8C" stroke="#FFFFFF" stroke-width="1"/>
+<circle cx="633.33" cy="119.80" r="4.5" fill="#FFFFFF" stroke="#7C3D12" stroke-width="2"/>
+<line x1="633.33" y1="611.96" x2="633.33" y2="612.00" stroke="#075A63" stroke-width="1.2"/>
+<line x1="629.33" y1="611.96" x2="637.33" y2="611.96" stroke="#075A63" stroke-width="1.2"/>
+<line x1="629.33" y1="612.00" x2="637.33" y2="612.00" stroke="#075A63" stroke-width="1.2"/>
+<rect x="629.33" y="608.00" width="8" height="8" fill="#087F8C" stroke="#FFFFFF" stroke-width="1"/>
+<circle cx="684.00" cy="119.80" r="4.5" fill="#FFFFFF" stroke="#7C3D12" stroke-width="2"/>
+<line x1="684.00" y1="611.96" x2="684.00" y2="612.00" stroke="#075A63" stroke-width="1.2"/>
+<line x1="680.00" y1="611.96" x2="688.00" y2="611.96" stroke="#075A63" stroke-width="1.2"/>
+<line x1="680.00" y1="612.00" x2="688.00" y2="612.00" stroke="#075A63" stroke-width="1.2"/>
+<rect x="680.00" y="608.00" width="8" height="8" fill="#087F8C" stroke="#FFFFFF" stroke-width="1"/>
+<text x="380.00" y="665.00" class="axis-title" text-anchor="middle" >Robustness budget Γ</text>
+<text x="84.00" y="138.00" class="label" text-anchor="start" >Cost reaches +59.5%</text>
+<text x="84.00" y="422.00" class="small" text-anchor="start" >Squares: empirical rates; bars: 95% Wilson MC intervals</text>
+<rect x="716" y="108" width="214" height="504" rx="14" fill="#F4F7F8"/>
+<text x="738.00" y="139.00" class="kicker" text-anchor="start" >ROBUST GUARANTEE</text>
+<text x="738.00" y="165.00" class="small"><tspan x="738.00" dy="0.00">For every Γ, the exact LP</tspan><tspan x="738.00" dy="19.00">keeps worst-case return ≥ 6.7%</tspan><tspan x="738.00" dy="19.00">inside that Γ-budget set.</tspan></text>
+<line x1="738" y1="228" x2="906" y2="228" stroke="#D8E0E6"/>
+<text x="738.00" y="257.00" class="kicker" text-anchor="start" >EMPIRICAL SIMULATION</text>
+<text x="738.00" y="283.00" class="small"><tspan x="738.00" dy="0.00">150,000 common iid draws</tspan><tspan x="738.00" dy="19.00">from Uniform[−1, 1]. Draws</tspan><tspan x="738.00" dy="19.00">outside the robust set remain</tspan><tspan x="738.00" dy="19.00">in the empirical rate.</tspan></text>
+<line x1="738" y1="365" x2="906" y2="365" stroke="#D8E0E6"/>
+<text x="738.00" y="394.00" class="kicker" text-anchor="start" >CONCENTRATION BOUND</text>
+<text x="738.00" y="420.00" class="small"><tspan x="738.00" dy="0.00">None is computed or plotted.</tspan><tspan x="738.00" dy="19.00">Such a bound would be a third,</tspan><tspan x="738.00" dy="19.00">assumption-dependent object.</tspan></text>
+<line x1="738" y1="486" x2="906" y2="486" stroke="#D8E0E6"/>
+<text x="738.00" y="515.00" class="kicker" text-anchor="start" >ENDPOINTS</text>
+<text x="738.00" y="543.00" class="label" text-anchor="start" >Violation: 10.33% → 0.00%</text>
+<text x="738.00" y="570.00" class="label" text-anchor="start" >Cost: 0% → +59.46%</text>
+</svg>
+  </div>
+  <span class="sn-repro-mobile-hint">Swipe horizontally to inspect the full chart →</span>
+  <figcaption><strong>Figure 2.</strong> The orange series is the optimisation cost relative to Γ = 0; the teal series is an empirical violation rate under the stated iid Uniform[−1, 1] law. The robust guarantee applies deterministically inside each Γ-budget set. No concentration bound is shown.</figcaption>
+</figure>
