@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 520" role="img" aria-labelledby="post5-fig1-title post5-fig1-desc">
+  <title id="post5-fig1-title">Three successful local-solver terminations on the Haverly pooling problem</title>
+  <desc id="post5-fig1-desc">Horizontal comparison of three SLSQP runs. Fixed start 7 returns zero dollars, fixed start 8 returns one hundred dollars, and fixed start 0 returns four hundred dollars. Every run has solver status success. Only the four-hundred-dollar result is independently documented as globally optimal.</desc>
+  <style>
+    text { font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #23313d; }
+    .eyebrow { font-size: 13px; font-weight: 750; letter-spacing: .12em; text-transform: uppercase; fill: #5a6975; }
+    .headline { font-family: Georgia, "Times New Roman", serif; font-size: 29px; font-weight: 700; }
+    .subhead { font-size: 15px; fill: #5a6975; }
+    .grid { stroke: #dce3e8; stroke-width: 1; }
+    .track { stroke: #dce3e8; stroke-width: 24; stroke-linecap: round; }
+    .tick { font-size: 12px; fill: #65737e; }
+    .row-label { font-size: 15px; font-weight: 720; }
+    .row-sub { font-size: 12px; fill: #65737e; }
+    .value { font-size: 15px; font-weight: 780; }
+    .status-pill { fill: #e3f3ed; stroke: #84b9a7; }
+    .status { font-size: 12px; font-weight: 750; fill: #176c5a; }
+    .global-note { font-size: 13px; font-weight: 720; fill: #176c5a; }
+    .global-line { stroke: #168579; stroke-width: 1.5; stroke-dasharray: 4 4; }
+    @media (prefers-color-scheme: dark) {
+      text { fill: #e9eef2; }
+      .eyebrow, .subhead, .tick, .row-sub { fill: #a9b4bd; }
+      .grid { stroke: #394750; }
+      .track { stroke: #394750; }
+      .status-pill { fill: #153f37; stroke: #3f8877; }
+      .status, .global-note { fill: #77d1bc; }
+      .global-line { stroke: #77d1bc; }
+    }
+  </style>
+  <rect width="920" height="520" rx="18" fill="transparent"/>
+  <text class="eyebrow" x="36" y="38">same model · same method · different starts</text>
+  <text class="headline" x="36" y="76">A success message is not a global bound</text>
+  <text class="subhead" x="36" y="103">Haverly pooling data · SciPy SLSQP · fixed seed 20260820</text>
+  <line class="grid" x1="246.00" y1="138" x2="246.00" y2="420"/><text class="tick" x="246.00" y="124" text-anchor="middle">$0</text><line class="grid" x1="371.00" y1="138" x2="371.00" y2="420"/><text class="tick" x="371.00" y="124" text-anchor="middle">$100</text><line class="grid" x1="496.00" y1="138" x2="496.00" y2="420"/><text class="tick" x="496.00" y="124" text-anchor="middle">$200</text><line class="grid" x1="621.00" y1="138" x2="621.00" y2="420"/><text class="tick" x="621.00" y="124" text-anchor="middle">$300</text><line class="grid" x1="746.00" y1="138" x2="746.00" y2="420"/><text class="tick" x="746.00" y="124" text-anchor="middle">$400</text>
+  <text class="row-label" x="36" y="192">zero-flow result</text><text class="row-sub" x="36" y="215">fixed start #7</text><line class="track" x1="246" y1="190" x2="746" y2="190"/><circle cx="246" cy="190" r="7" fill="#7b8794" aria-hidden="true"/><text class="value" x="274.00" y="195">$0</text><rect class="status-pill" x="795" y="175" width="88" height="30" rx="15"/><text class="status" x="839" y="195" text-anchor="middle">success</text><text class="row-label" x="36" y="297">X-only result</text><text class="row-sub" x="36" y="320">fixed start #8</text><line class="track" x1="246" y1="295" x2="746" y2="295"/><rect x="246" y="283" width="125.00" height="24" rx="12" fill="#d08b32"/><text class="value" x="383.00" y="300">$100</text><rect class="status-pill" x="795" y="280" width="88" height="30" rx="15"/><text class="status" x="839" y="300" text-anchor="middle">success</text><text class="row-label" x="36" y="402">global result</text><text class="row-sub" x="36" y="425">fixed start #0</text><line class="track" x1="246" y1="400" x2="746" y2="400"/><rect x="246" y="388" width="500.00" height="24" rx="12" fill="#168579"/><text class="value" x="700.00" y="405">$400</text><rect class="status-pill" x="795" y="385" width="88" height="30" rx="15"/><text class="status" x="839" y="405" text-anchor="middle">success</text>
+  <line class="global-line" x1="746" y1="138" x2="746" y2="449"/>
+  <text class="global-note" x="746" y="474" text-anchor="end">independently documented global optimum</text>
+  <text class="subhead" x="36" y="505">“success” records the local solver's stopping test, not a proof over the full feasible region.</text>
+</svg>

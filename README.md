@@ -15,7 +15,7 @@ in this repository rather than typed in by hand.
 | 2 | [Rows, Columns, and What They Cost](https://spatium-novum.com/posts/rows-columns-and-what-they-cost) | [`post-02-rows-columns-and-what-they-cost`](post-02-rows-columns-and-what-they-cost) | Recomputes the Stigler and Netlib matrix statistics, counts standard-form candidate column sets, and generates the article's static and interactive figures. |
 | 3 | [When the Answer Is Yes or No](https://spatium-novum.com/posts/when-the-answer-is-yes-or-no) | [`post-03-when-the-answer-is-yes-or-no`](post-03-when-the-answer-is-yes-or-no) | Solves and independently cross-checks the integer example, enumerates all lattice points, verifies a valid cut, records an exact branch-and-bound certificate trace, and generates the static and interactive figures. |
 | 4 | [Optimising Against a Guess](https://spatium-novum.com/posts/optimising-against-a-guess) | [`post-04-optimising-against-a-guess`](post-04-optimising-against-a-guess) | Simulates the optimizer's curse with declared Monte Carlo uncertainty, solves a Bertsimas–Sim robust portfolio across a full Γ sweep, independently verifies every robust objective, and generates the article's static figures. |
-| 5 | Where the Proof Runs Out | `post-05-…` | *not written yet* |
+| 5 | [Where the Proof Runs Out](https://spatium-novum.com/posts/where-the-proof-runs-out) | [`post-05-where-the-proof-runs-out`](post-05-where-the-proof-runs-out) | Solves the continuous, non-convex Haverly pooling model with SLSQP from fixed starting points, verifies the returned plans, keeps local statuses separate from the independent global benchmark, and generates the article's static figure. |
 
 ## Run it
 
@@ -39,8 +39,9 @@ else. It is already in `.gitignore`.
 `make` runs every post's scripts and rewrites its figures. To run one post
 only, `cd` into its folder and read its own README — each is self-contained.
 
-Python 3.10 or later. The dependency list is short on purpose: **PuLP** as the
-modelling layer and **HiGHS** as the solver, both open source. The same models
+Python 3.12 or later. The dependency list is short on purpose: **PuLP** as the
+linear modelling layer, **HiGHS** as its open-source solver, and **NumPy** plus
+**SciPy** for the final article's numerical experiment. The same linear models
 would go to Gurobi or CPLEX by changing one argument, which is worth knowing
 and not worth paying for here.
 
@@ -62,7 +63,7 @@ You can skip git entirely if you want — see the note at the end of step 2.
 
 ### Step 1 — install Python and git
 
-- **macOS.** Open Terminal and type `python3 --version`. If it prints 3.10 or
+- **macOS.** Open Terminal and type `python3 --version`. If it prints 3.12 or
   higher you are done. If it prints nothing useful, install Python from
   [python.org/downloads](https://www.python.org/downloads/) — the installer
   from the website, not the `python` that ships with the system, which is old
@@ -108,32 +109,32 @@ source .venv/bin/activate      # Windows, in Git Bash: source .venv/Scripts/acti
 
 This step is optional and you should do it anyway. A virtual environment is a
 private folder of libraries belonging to this project only. Without it, the
-next step installs PuLP and HiGHS system-wide, where they can collide with
-something a different project needs. With it, the collision is impossible and
-deleting `.venv` undoes everything.
+next step installs the project's Python packages system-wide, where they can
+collide with something a different project needs. With it, the collision is
+impossible and deleting `.venv` undoes everything.
 
 You will know it worked because your prompt grows a `(.venv)` prefix. It lasts
 until you close the terminal; reopening one means running the `activate` line
 again.
 
-### Step 4 — install the two dependencies
+### Step 4 — install the dependencies
 
 ```
 python3 -m pip install -r requirements.txt
 ```
 
-`requirements.txt` lists PuLP and HiGHS with minimum versions. `pip` is
-Python's package installer; `-r` means "read the list from this file" rather
-than naming packages by hand.
+`requirements.txt` pins PuLP, HiGHS, NumPy and SciPy to the tested versions.
+`pip` is Python's package installer; `-r` means "read the list from this file"
+rather than naming packages by hand.
 
 Note the `python3 -m` in front. Plain `pip install` runs whichever `pip`
 happens to be first on your PATH, and on a Mac with Homebrew that is often
 attached to a different Python from the `python3` that will run the scripts.
 The install then succeeds, and the code fails a minute later saying the
 package is missing. `python3 -m pip` installs into the interpreter you are
-about to use, so the two cannot drift apart. It downloads from PyPI, the public Python
-package index, and takes a few seconds. HiGHS arrives as a precompiled wheel,
-so there is nothing to build and no compiler to install.
+about to use, so the two cannot drift apart. It downloads from PyPI, the public
+Python package index, and takes a few seconds. HiGHS, NumPy and SciPy arrive as
+precompiled wheels, so there is nothing to build and no compiler to install.
 
 ### Step 5 — run one script and read what it says
 
@@ -188,9 +189,9 @@ It exists so that no figure in a published post can drift away from the number
 in the sentence next to it: regenerating the figures and recomputing the
 numbers is one command, not a checklist I might skip.
 
-**Windows has no `make`.** Either install it, or ignore it and run the four
-`python3` lines from each post's README by hand, which is exactly what the
-`Makefile` automates.
+**Windows has no `make`.** Either install it, or ignore it and run the commands
+listed in each post's README by hand, which is exactly what the `Makefile`
+automates.
 
 ### When it does not work
 
@@ -206,8 +207,8 @@ numbers is one command, not a checklist I might skip.
   `python3 -m venv .venv && source .venv/bin/activate`, then install again.
   Homebrew will suggest `--break-system-packages`; you do not need it, and it
   is called that for a reason.
-- **`ModuleNotFoundError: No module named 'pulp'` right after a successful
-  install.** The classic one, and not your fault: `pip` and `python3` were
+- **`ModuleNotFoundError` right after a successful install.** The classic one,
+  and not your fault: `pip` and `python3` were
   different interpreters. Check with `which -a python3 pip` and
   `python3 -m pip -V`. The cure is to install through the interpreter itself,
   `python3 -m pip install -r requirements.txt`, and `make` now refuses to

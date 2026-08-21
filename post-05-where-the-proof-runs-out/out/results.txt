@@ -1,0 +1,30 @@
+Haverly pooling problem: fixed-start SLSQP experiment
+Python 3.14.6; NumPy 2.5.2; SciPy 1.18.0
+Seed 20260820
+
+Start 7 (zero-flow result)
+  success: True (Optimization terminated successfully)
+  profit: $0.00
+  solution [a,b,p_x,p_y,c_x,c_y,q]: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 2.11234]
+  max equality residual: 0.000e+00
+  min inequality slack: -0.000e+00
+
+Start 8 (X-only result)
+  success: True (Optimization terminated successfully)
+  profit: $100.00
+  solution [a,b,p_x,p_y,c_x,c_y,q]: [50.0, 0.0, 50.0, 0.0, 50.0, 0.0, 3.0]
+  max equality residual: 0.000e+00
+  min inequality slack: -0.000e+00
+
+Start 0 (global result)
+  success: True (Optimization terminated successfully)
+  profit: $400.00
+  solution [a,b,p_x,p_y,c_x,c_y,q]: [0.0, 100.0, 0.0, 100.0, 0.0, 100.0, 1.0]
+  max equality residual: 0.000e+00
+  min inequality slack: -1.000e-12
+
+Independent benchmark
+  documented global profit: $400.00
+  GAMS uses the opposite sign and reports -400 for haverly1.
+
+SLSQP success records satisfaction of that local solver's stopping tests. It is not a certificate of global optimality.

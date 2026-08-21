@@ -1,0 +1,130 @@
+{
+  "independent_global_benchmark": {
+    "profit": 400.0,
+    "reference": "GAMS Model Library, A Pooling Problem (POOL), haverly1; objective -400 under its minimisation sign convention",
+    "solution": {
+      "a": 0.0,
+      "b": 100.0,
+      "c_x": 0.0,
+      "c_y": 100.0,
+      "p_x": 0.0,
+      "p_y": 100.0,
+      "q": 1.0
+    }
+  },
+  "interpretation": "SLSQP success records satisfaction of that local solver's stopping tests. It is not a certificate of global optimality.",
+  "model": "Haverly pooling problem",
+  "runs": [
+    {
+      "function_evaluations": 180,
+      "iterations": 15,
+      "label": "zero-flow result",
+      "maximum_equality_residual": 0.0,
+      "message": "Optimization terminated successfully",
+      "minimum_inequality_slack": -0.0,
+      "profit": 0.0,
+      "solution": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        2.11234
+      ],
+      "start": [
+        106.393806,
+        117.936321,
+        3.581046,
+        9.990166,
+        86.799828,
+        17.036859,
+        2.316695
+      ],
+      "start_index": 7,
+      "status": 0,
+      "success": true
+    },
+    {
+      "function_evaluations": 296,
+      "iterations": 28,
+      "label": "X-only result",
+      "maximum_equality_residual": 0.0,
+      "message": "Optimization terminated successfully",
+      "minimum_inequality_slack": -0.0,
+      "profit": 100.0,
+      "solution": [
+        50.0,
+        0.0,
+        50.0,
+        0.0,
+        50.0,
+        0.0,
+        3.0
+      ],
+      "start": [
+        171.33529,
+        61.422015,
+        1.578991,
+        80.095908,
+        87.312828,
+        28.609456,
+        2.569368
+      ],
+      "start_index": 8,
+      "status": 0,
+      "success": true
+    },
+    {
+      "function_evaluations": 121,
+      "iterations": 16,
+      "label": "global result",
+      "maximum_equality_residual": 0.0,
+      "message": "Optimization terminated successfully",
+      "minimum_inequality_slack": -1e-12,
+      "profit": 400.0,
+      "solution": [
+        0.0,
+        100.0,
+        0.0,
+        100.0,
+        0.0,
+        100.0,
+        1.0
+      ],
+      "start": [
+        66.546624,
+        19.301622,
+        38.910411,
+        71.899287,
+        9.675587,
+        26.175056,
+        2.387246
+      ],
+      "start_index": 0,
+      "status": 0,
+      "success": true
+    }
+  ],
+  "runtime": {
+    "numpy": "2.5.2",
+    "platform": "macOS-26.5.2-arm64-arm-64bit-Mach-O",
+    "python": "3.14.6",
+    "scipy": "1.18.0"
+  },
+  "schema_version": 1,
+  "settings": {
+    "feasibility_tolerance": 1e-06,
+    "ftol": 1e-11,
+    "generated_start_count": 9,
+    "generator": "numpy.random.Generator(PCG64)",
+    "maximum_iterations": 3000,
+    "random_seed": 20260820,
+    "selected_start_indices": [
+      7,
+      8,
+      0
+    ],
+    "solver": "scipy.optimize.minimize(method='SLSQP')"
+  }
+}

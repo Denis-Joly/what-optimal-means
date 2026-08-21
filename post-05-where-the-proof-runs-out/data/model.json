@@ -1,0 +1,48 @@
+{
+  "name": "Haverly pooling problem",
+  "source": {
+    "citation": "C. A. Haverly, Studies of the Behavior of Recursion for the Pooling Problem, ACM SIGMAP Bulletin 25 (1978), 19-28",
+    "doi": "10.1145/1111237.1111238"
+  },
+  "units": {
+    "flow": "units",
+    "sulphur": "percent",
+    "money": "dollars"
+  },
+  "feeds": {
+    "A": {"sulphur": 3.0, "cost": 6.0, "route": "pool"},
+    "B": {"sulphur": 1.0, "cost": 16.0, "route": "pool"},
+    "C": {"sulphur": 2.0, "cost": 10.0, "route": "direct"}
+  },
+  "products": {
+    "X": {"maximum_sulphur": 2.5, "price": 9.0, "maximum_demand": 100.0},
+    "Y": {"maximum_sulphur": 1.5, "price": 15.0, "maximum_demand": 200.0}
+  },
+  "variables": ["a", "b", "p_x", "p_y", "c_x", "c_y", "q"],
+  "bounds": {
+    "flow": [0.0, 300.0],
+    "pool_sulphur_q": [1.0, 3.0]
+  },
+  "equations": {
+    "pool_flow_balance": "a + b = p_x + p_y",
+    "pool_sulphur_balance": "q(a + b) = 3a + b",
+    "product_x_quality": "q p_x + 2 c_x <= 2.5(p_x + c_x)",
+    "product_y_quality": "q p_y + 2 c_y <= 1.5(p_y + c_y)",
+    "objective": "max 9(p_x+c_x) + 15(p_y+c_y) - 6a - 16b - 10(c_x+c_y)"
+  },
+  "experiment": {
+    "random_seed": 20260820,
+    "generator": "numpy.random.Generator(PCG64)",
+    "generated_start_count": 9,
+    "selected_start_indices": [7, 8, 0],
+    "solver": "scipy.optimize.minimize(method='SLSQP')",
+    "ftol": 1e-11,
+    "maximum_iterations": 3000,
+    "feasibility_tolerance": 1e-6
+  },
+  "independent_global_benchmark": {
+    "profit": 400.0,
+    "solution": {"a": 0.0, "b": 100.0, "p_x": 0.0, "p_y": 100.0, "c_x": 0.0, "c_y": 100.0, "q": 1.0},
+    "reference": "GAMS Model Library, A Pooling Problem (POOL), haverly1; objective -400 under its minimisation sign convention"
+  }
+}

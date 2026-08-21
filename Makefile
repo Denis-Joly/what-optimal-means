@@ -4,7 +4,7 @@
 SHELL := /bin/bash
 .SHELLFLAGS := -eo pipefail -c
 
-.PHONY: all venv deps check post01 post02 post03 post04 clean
+.PHONY: all venv deps check post01 post02 post03 post04 post05 clean
 
 # Override if your interpreter is named something else: make PY=python3.12
 PY ?= python3
@@ -12,8 +12,9 @@ POST01 = post-01-the-last-place-optimal-means-anything
 POST02 = post-02-rows-columns-and-what-they-cost
 POST03 = post-03-when-the-answer-is-yes-or-no
 POST04 = post-04-optimising-against-a-guess
+POST05 = post-05-where-the-proof-runs-out
 
-all: check post01 post02 post03 post04
+all: check post01 post02 post03 post04 post05
 
 # Installs into the SAME interpreter that will run the scripts. Calling `pip`
 # on its own is the usual way to end up with the packages in one Python and
@@ -33,9 +34,9 @@ deps:
 	$(PY) -m pip install -r requirements.txt
 
 check:
-	@$(PY) -c "import pulp, highspy" 2>/dev/null || { \
+	@$(PY) -c "import pulp, highspy, numpy, scipy" 2>/dev/null || { \
 	  echo ""; \
-	  echo "PuLP or HiGHS is missing from the interpreter make is about to use:"; \
+	  echo "A required package is missing from the interpreter make is about to use:"; \
 	  echo "    $$($(PY) -c 'import sys; print(sys.executable)')"; \
 	  echo ""; \
 	  echo "Install into that same interpreter:"; \
@@ -75,6 +76,11 @@ post04:
 	$(PY) $(POST04)/run_experiments.py
 	$(PY) $(POST04)/make_figures.py
 	$(PY) $(POST04)/verify_results.py
+
+post05:
+	$(PY) $(POST05)/run_experiment.py
+	$(PY) $(POST05)/make_figure.py
+	$(PY) $(POST05)/verify_results.py
 
 clean:
 	rm -rf */out/*.txt */__pycache__
